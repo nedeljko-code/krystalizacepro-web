@@ -87,7 +87,7 @@ const CustomHeading = (props: Props) => {
           h4 strong .svg-decoration,
           h5 strong .svg-decoration,
           h6 strong .svg-decoration {
-            display: block;
+            display: none;
           }
         }
       `}</style>

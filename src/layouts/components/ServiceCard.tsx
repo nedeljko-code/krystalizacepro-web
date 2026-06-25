@@ -21,7 +21,7 @@ const ServiceCard = ({ service }: { service: Service }) => {
       )}
 
       <div className="p-6">
-        <div className="flex flex-wrap items-center gap-2.5 mb-3">
+        {/* <div className="flex flex-wrap items-center gap-2.5 mb-3">
           {categories!.map((category: string, index: number) => (
             <p key={index} className="text-primary">
               {humanize(category)}
@@ -31,7 +31,7 @@ const ServiceCard = ({ service }: { service: Service }) => {
           <div className="bg-black/30 h-[3px] w-[3px] rounded-full opacity-100"></div>
 
           <p className="text-text/50 text-base">{dateFormat(date!)}</p>
-        </div>
+        </div> */}
         <a href={`/services/${service.slug}`}>
           <h5
             dangerouslySetInnerHTML={markdownify(title!)}

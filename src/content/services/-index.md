@@ -1,14 +1,13 @@
 ---
-title: "We provide our best <br> cleaning **services**"
+title: "Moderní řešení pro <br> hydroizolaci **betonu**"
 homepage_section_enable: true
-home_title: "We provide our best <br> **cleaning** services for you"
+home_title: "Moderní řešení pro <br> hydroizolaci **betonu**"
 meta_title: ""
-description: "this is service page"
-subtitle: "HIGHEST LEVEL OF SERVICE"
+description: "Produkty a technologie pro ochranu betonových konstrukcí."
+subtitle: "O NÁS"
 descriptions:
-  - "Our company provides a wide range of cleaning services, from home cleaning to office cleaning. We use only advanced technologies to keep your room looking the best."
-  - "Our team of experts who have been in the profession for years focuses on helping you achieve optimal clean surface."
-
+  - "Zaměřujeme se na krystalizační hydroizolační systémy pro betonové a železobetonové konstrukce."
+  - "Naším cílem je nabídnout profesionální řešení pro ochranu betonu proti vodě, vlhkosti a dlouhodobé degradaci."
 process:
   title: "The process we have been doing <br> for **over 25 years** of service"
   content: "Our clinic provides a wide range of oral care services, from checkups to fitting braces. We use only advanced technologies to keep your smile looking the best. Our clinic provides a wide range of oral care services,"

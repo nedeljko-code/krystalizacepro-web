@@ -1,8 +1,8 @@
 ---
-title: "Pest <br> Control"
+title: "HYDRA PLUG A"
 meta_title: ""
-description: "this is meta descriptio"
-icon: "FaSprayCan"
+description: "Rychlé utěsnění aktivních průsaků"
+icon: "FaWater"
 banner: "/images/service/3.png"
 date: 2025-04-04T05:00:00Z
 categories: ["Kitchen"]

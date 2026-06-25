@@ -84,19 +84,25 @@ const ServiceSingle = async (props: {
               data-aos-delay="200"
             >
               <div className="rounded-xl overflow-hidden lg:w-fit lg:ml-auto">
-                <ImageFallback
-                  src={banner!}
-                  width={323}
-                  height={230}
-                  alt="apply banner"
-                  loading="lazy"
-                />
-                <a
-                  href={config.notification.link}
-                  className="w-full font-semibold text-center block px-7.5 py-6 bg-secondary"
-                >
-                  {config.notification.label}
-                </a>
+               <div className="bg-body px-7.5 py-7 border border-border">
+                <p className="text-sm text-primary font-semibold mb-4">
+                  TECHNICKÉ INFORMACE
+                </p>
+
+                <div className="space-y-3 text-base-sm">
+                  <p><strong>Balení:</strong> 6 kg / 15 kg</p>
+                  <p><strong>Aplikace:</strong> nátěr / nástřik</p>
+                  <p><strong>Použití:</strong> beton / železobeton</p>
+                  <p><strong>Typ:</strong> krystalizační ochrana</p>
+                </div>
+              </div>
+
+              <a
+                href={config.notification.link}
+                className="w-full font-semibold text-center block px-7.5 py-6 bg-secondary"
+              >
+                Technický list
+              </a>
                 <a
                   href={config.navigation_button.link}
                   className="w-full font-semibold text-text-light text-center block px-7.5 py-6 bg-primary"
@@ -115,7 +121,7 @@ const ServiceSingle = async (props: {
             className="text-h3 md:text-h2 text-center mb-16"
             data-aos="fade-up-sm"
           >
-            More services
+            Další produkty
           </h2>
 
           <div className="row justify-center g-4">

@@ -1,22 +1,22 @@
 ---
 hero:
-  title: "Professional **Cleaning** <br> Services in Auburn."
-  subtitle: "AWARD WINNING CLEANING SERVICE COMPANY"
+  title: "Vodotěsné řešení<br> pro betonové konstrukce."
+  subtitle: "PROFESIONÁLNÍ HYDROIZOLACE BETONU"
   buttons:
     - enable: true
-      label: "Call: +1-394-495-5993"
-      link: "tel:+1-394-495-5993"
+      label: "Zavolajte + 420 778 200 100"
+      link: "Zavolajte + 420 778 200 100"
       icon: "FaPhone"
-    - enable: true
-      label: "Make An Appointment"
+    - enable: false
+      label: "Kontaktujte nás"
       link: "appointment"
   image: "/images/home/banner.png"
   reviews:
     - name: "Company Logo with star ratings"
-      company_logo: "/images/home/2.svg"
+      company_logo: "/images/home/PastedGraphic-5.tiff"
       rating: 4.7
     - name: "Company Logo with star ratings"
-      company_logo: "/images/home/1.svg"
+      company_logo: "/images/home/PastedGrafic-5.tiff"
       rating: 4.8
 
 about:
@@ -26,13 +26,13 @@ about:
   content: "We appreciate your trust greatly. Our patients choose our clinic because they know we are the best in the field."
   schedule:
     - day: MON-FRI
-      time: 9 AM – 22 PM
-    - day: SATURDAY
-      time: 9 AM – 20 PM
+      time: 8 AM – 16 PM
+    # - day: SATURDAY
+    #   time: 9 AM – 20 PM
   button:
     enable: true
-    label: "Call: +1-394-495-5993"
-    link: "tel:+1-394-495-5993"
+    label: "Call: +Zavolajte + 420 778 200 100"
+    link: "tel:+420 778 200 100"
   badge: "/images/home/about/badge.svg"
   images:
     - "/images/home/about/1.avif"

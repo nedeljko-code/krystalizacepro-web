@@ -1,8 +1,8 @@
 ---
-title: "House <br> Cleaning"
+title: "H-KRYSTAL MR"
 meta_title: ""
-description: "this is meta descriptio"
-icon: "FaHouseChimneyWindow"
+description: "Krystalizační přísada do čerstvého betonu"
+icon: "FaCube"
 banner: "/images/service/2.png"
 date: 2025-04-04T05:00:00Z
 categories: ["Kitchen"]

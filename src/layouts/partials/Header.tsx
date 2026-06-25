@@ -72,7 +72,7 @@ const Header = () => {
   return (
     <>
       <div
-        className="absolute top-0 z-20 flex flex-col sm:flex-row justify-center items-center gap-4.5 w-full bg-primary py-2"
+        className="hidden absolute top-0 z-20 flex flex-col sm:flex-row justify-center items-center gap-4.5 w-full bg-primary py-2"
         data-aos="fade-down-sm"
       >
         <p
@@ -146,9 +146,9 @@ const Header = () => {
                       data-aos-delay={100 + i * 50}
                     >
                       <a
-                        href={menu.url}
-                        className={`nav-link text-base-sm ${(pathname === `${menu.url}/` || pathname === menu.url) && "active"}`}
-                      >
+                      href={menu.url}
+                      className={`nav-link text-base-sm text-white ${(pathname === `${menu.url}/` || pathname === menu.url) && "active"}`}
+                    >
                         {menu.name}
                       </a>
                     </li>

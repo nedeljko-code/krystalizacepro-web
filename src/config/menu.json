@@ -1,23 +1,23 @@
 {
   "main": [
     {
-      "name": "About Us",
+      "name": "O nás",
       "url": "/about"
     },
     {
-      "name": "Services",
+      "name": "Produkty",
       "url": "/services"
     },
     {
-      "name": "Gallery",
+      "name": "Technologie",
       "url": "/gallery"
     },
     {
-      "name": "Blog",
+      "name": "Reference",
       "url": "/blog"
     },
     {
-      "name": "Contact",
+      "name": "Kontakt",
       "url": "/contact"
     }
   ],

@@ -1,8 +1,8 @@
 ---
-title: "Window <br> Cleaning"
+title: "HYDRA PLUG B"
 meta_title: ""
-description: "this is meta descriptio"
-icon: "FaRegWindowRestore"
+description: "Rychletvrdnoucí cementová malta"
+icon: "FaTrowelBricks"
 banner: "/images/service/5.png"
 date: 2025-04-04T05:00:00Z
 categories: ["Kitchen"]

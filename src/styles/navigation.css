@@ -45,7 +45,8 @@
 
 .header-reveal {
   animation: slide-in-header 0.5s ease;
-  @apply fixed bg-body !top-0 backdrop-blur-lg shadow;
+  @apply fixed !top-0 backdrop-blur-lg shadow;
+background-color: rgba(15, 23, 42, 0.92);
 }
 
 @keyframes slide-in-header {

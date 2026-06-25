@@ -5,11 +5,11 @@
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
-    "logo": "/images/logo-dark.svg",
+    "logo": "/images/logo-dark.png",
     "footer_logo": "/images/logo.svg",
     "logo_width": "142",
     "logo_height": "40",
-    "logo_text": "cleaner"
+    "logo_text": "KRYSTALIZACEPRO"
   },
 
   "settings": {
@@ -33,7 +33,7 @@
 
   "navigation_button": {
     "enable": true,
-    "label": "Make An Appointment ",
+    "label": "Kontaktujte nás ",
     "link": "/appointment"
   },
 
