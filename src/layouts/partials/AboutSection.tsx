@@ -20,7 +20,7 @@ const AboutSection = () => {
                     alt="about images"
                     width={549}
                     height={465}
-                    className="rounded top-0 xl:-top-12 w-[80%]"
+                    className="rounded top-0 xl:-top-12 w-[92%]"
                     data_aos="zoom-in-sm"
                   />
                   <ImageFallback
@@ -28,11 +28,11 @@ const AboutSection = () => {
                     alt="about images"
                     width={470}
                     height={317}
-                    className="absolute rounded right-0 -bottom-20 w-[60%]"
+                    className="absolute rounded right-[-4%] -bottom-20 w-[52%]"
                     data_aos="zoom-in-sm"
                     data_aos_delay="20"
                   />
-                  <div data-aos="zoom-in-sm" data-aos-delay="40">
+                  {/* <div data-aos="zoom-in-sm" data-aos-delay="40">
                     <ImageFallback
                       src={about.badge}
                       alt={about.badge}
@@ -40,7 +40,7 @@ const AboutSection = () => {
                       height={223}
                       className="hidden md:block absolute right-0 top-1/2 translate-y-[-140%] translate-x-[40%] spin-animation scale-80 w-[30%]"
                     />
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="lg:w-[33%]">

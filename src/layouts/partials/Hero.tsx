@@ -76,7 +76,7 @@ const Hero = () => {
                     Projekt Budžak Building
                   </p>
                   <p className="text-sm opacity-80">
-                    Hydroizolace • Ochrana betonu
+                    
                   </p>
                 </div>
               </div>

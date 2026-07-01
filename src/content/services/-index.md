@@ -4,7 +4,7 @@ homepage_section_enable: true
 home_title: "Moderní řešení pro <br> hydroizolaci **betonu**"
 meta_title: ""
 description: "Produkty a technologie pro ochranu betonových konstrukcí."
-subtitle: "O NÁS"
+subtitle: "PRODUKTY"
 descriptions:
   - "Zaměřujeme se na krystalizační hydroizolační systémy pro betonové a železobetonové konstrukce."
   - "Naším cílem je nabídnout profesionální řešení pro ochranu betonu proti vodě, vlhkosti a dlouhodobé degradaci."

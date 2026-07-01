@@ -21,48 +21,49 @@ hero:
 
 about:
   enable: true
-  title: "Your **comfort** is our main priority"
-  subtitle: "WHO ARE WE"
-  content: "We appreciate your trust greatly. Our patients choose our clinic because they know we are the best in the field."
-  schedule:
-    - day: MON-FRI
-      time: 8 AM – 16 PM
-    # - day: SATURDAY
-    #   time: 9 AM – 20 PM
+  title: "Trvalá ochrana <br> proti vodě a vlhkosti"
+  subtitle: "PROBLÉM + ŘEŠENÍ"
+  content: "Krystalizační technologie aktivně proniká do struktury betonu, utěsňuje póry a mikrotrhliny a poskytuje dlouhodobou ochranu betonových a železobetonových konstrukcí."
+  schedule: []
   button:
     enable: true
-    label: "Call: +Zavolajte + 420 778 200 100"
-    link: "tel:+420 778 200 100"
-  badge: "/images/home/about/badge.svg"
+    label: "Zjistit více"
+    link: "/technologie"
+  badge: ""
   images:
-    - "/images/home/about/1.avif"
-    - "/images/home/about/2.avif"
+    - "/images/home/about/concrete-3.png"
+    - "/images/home/about/concrete-2.jpg"
 
 responsibility:
   enable: true
-  title: "**Best cleaning** <br> company in the town"
-  subtitle: "WHAT WE DO"
-  content: "Our professional dental clinic offers the whole range of <br> dentistry services: treatment of caries, gum diseases, <br> tooth whitening, implantation, dentures, h whitening, <br> implantation, dentures surgery, etc."
+  title: "Kvalita, za kterou <br> si stojíme"
+  subtitle: "PROČ KRYSTALIZACEPRO"
+  content: "Dodáváme ověřená řešení pro hydroizolaci <br>a dlouhodobou ochranu betonových konstrukcí."
+
   image: "/images/home/responsibility/1.png"
+
   video:
     thumbnail: "/images/home/responsibility/thumb.webp"
-    url: "https://www.youtube.com/embed/dyZcRRWiuuw?autoplay=1&mute=0"
+    url: ""
+
   job:
-    - title: "Service and guarantees"
-      content: "We will provide you with the best possible care in an atmosphere of comfort and compassion."
-    - title: "Team of professionals"
-      content: "We will eliminate the chance of multiple visits by delivering the premium quality service."
+    - title: "Vyrobeno v České republice"
+      content: "Lokální výroba, ověřená kvalita a spolehlivé řešení pro profesionální použití ve stavebnictví."
+
+    - title: "Garance realizace"
+      content: "Pokud aplikaci provádí náš tým, garantujeme kvalitu provedení a v případě problému zajistíme opravu."
 
 customer:
   enable: true
   title:
-    value: "4035"
-    text: "Happy Customers & Counting"
+    value: "Partneři"
+    text: "Firmy, které nám důvěřují"
   logo:
-    - "/images/home/review/client/1.svg"
-    - "/images/home/review/client/2.svg"
-    - "/images/home/review/client/3.svg"
-    - "/images/home/review/client/4.svg"
+    - "/images/partners/DEK.png"
+    - "/images/partners/PRO-DOMA.svg"
+    - "/images/partners/budzak.png"
+    - "/images/partners/CEMEX.jpg"
+    - "/images/partners/skanska.svg"
 
 testimonial:
   enable: true
