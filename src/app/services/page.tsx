@@ -1,6 +1,5 @@
 import { getListPage } from "@/lib/contentParser";
 import CallToAction from "@/partials/CallToAction";
-import ProcessSection from "@/partials/ProcessSection";
 import SeoMeta from "@/partials/SeoMeta";
 import ServiceSection from "@/partials/ServiceSection";
 
@@ -16,7 +15,7 @@ const Services = () => {
         image={image}
       />
       <ServiceSection hero />
-      <ProcessSection />
+      
       <CallToAction />
     </>
   );

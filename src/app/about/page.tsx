@@ -1,42 +1,90 @@
+import CustomButton from "@/components/CustomButton";
+import CustomHeading from "@/components/CustomHeading";
 import ImageFallback from "@/helpers/ImageFallback";
-import MDXContent from "@/helpers/MDXContent";
-import { getListPage } from "@/lib/contentParser";
-import { markdownify } from "@/lib/utils/textConverter";
 import SeoMeta from "@/partials/SeoMeta";
-import { RegularPage } from "@/types";
 
 const About = () => {
-  const data: RegularPage = getListPage("about/_index.md");
-  const { frontmatter, content } = data;
-  const { title, meta_title, description, image } = frontmatter;
-
   return (
     <>
       <SeoMeta
-        title={title}
-        meta_title={meta_title}
-        description={description}
-        image={image}
+        title="O nás"
+        meta_title="O nás"
+        description="Specialisté na hydroizolaci betonových konstrukcí"
       />
-      <section className="section-sm">
+
+      <section className="section">
         <div className="container">
-          <div className="row justify-center">
-            <div className="text-center md:col-10 lg:col-7">
-              {image && (
+          <div className="flex flex-col lg:flex-row justify-between gap-14 lg:gap-10 items-center">
+            <div className="lg:w-[55%]">
+              <div className="relative">
                 <ImageFallback
-                  className="mx-auto mb-6 rounded-lg"
-                  src={image}
-                  width={200}
-                  height={200}
-                  alt={title}
+                  src="/images/about/1.png"
+                  alt="Hydroizolace betonových konstrukcí"
+                  width={549}
+                  height={465}
+                  className="rounded w-full lg:w-[92%] object-cover"
+                  data_aos="zoom-in-sm"
                 />
-              )}
-              <h2
-                dangerouslySetInnerHTML={markdownify(title)}
-                className="h3 mb-6"
+
+                <ImageFallback
+                  src="/images/about/2.png"
+                  alt="Krystalizační směsi pro beton"
+                  width={470}
+                  height={317}
+                  className="absolute rounded right-0 -bottom-14 w-[52%] object-cover shadow-lg max-md:hidden"
+                  data_aos="zoom-in-sm"
+                  data_aos_delay="20"
+                />
+              </div>
+            </div>
+
+            <div className="lg:w-[38%]">
+              <p
+                className="mb-6 text-base-sm text-primary text-center lg:text-left uppercase font-medium"
+                data-aos="fade-up-sm"
+              >
+                O NÁS
+              </p>
+
+              <CustomHeading
+                as="h1"
+                text="Specialisté na hydroizolaci betonových konstrukcí"
+                className="text-h3 md:text-h2 text-balance mb-7 text-center lg:text-left"
+                dataAos="fade-up-sm"
+                dataAosDelay="50"
               />
-              <div className="content">
-                <MDXContent content={content} />
+
+              <p
+                className="mb-6 text-center lg:text-left text-text/80"
+                data-aos="fade-up-sm"
+                data-aos-delay="100"
+              >
+                Specializujeme se na vývoj a výrobu vysoce kvalitních
+                hydroizolačních krystalizačních směsí pro dlouhodobou ochranu
+                betonových konstrukcí.
+              </p>
+
+              <p
+                className="mb-8 text-center lg:text-left text-text/80"
+                data-aos="fade-up-sm"
+                data-aos-delay="130"
+              >
+                Díky osobnímu přístupu, odborným znalostem a otevřené komunikaci
+                pomáháme nacházet řešení, která skutečně fungují.
+              </p>
+
+              <div
+                className="w-full flex justify-center lg:justify-start"
+                data-aos="fade-up-sm"
+                data-aos-delay="160"
+              >
+                <CustomButton
+                  link="/services"
+                  label="Prohlédnout produkty"
+                  className="btn-sm! sm:btn!"
+                  variant="secondary"
+                  icon="FaArrowRightLong"
+                />
               </div>
             </div>
           </div>

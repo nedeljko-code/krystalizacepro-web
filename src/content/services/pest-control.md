@@ -2,8 +2,10 @@
 title: "HYDRA PLUG A"
 meta_title: ""
 description: "Rychlé utěsnění aktivních průsaků"
-icon: "FaWater"
-banner: "/images/service/3.png"
+# icon: "FaWater"
+# banner: "/images/service/3.png"
+card_image: "/images/products/hidra-plug-a-cutout.png"
+card_description: "Rychletuhnoucí těsnicí hmota pro okamžité zastavení aktivních průsaků vody v betonu. Spolehlivé řešení pro havarijní opravy a utěsnění netěsností."
 date: 2025-04-04T05:00:00Z
 categories: ["Kitchen"]
 weight: 3

@@ -4,6 +4,8 @@ import { getListPage, getSinglePage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
 import { Service } from "@/types";
 import React from "react";
+import ImageFallback from "@/helpers/ImageFallback";
+
 
 const ServiceSection = ({ hero }: { hero?: boolean }) => {
   const { homepage_section_enable, subtitle, descriptions, title, home_title } =
@@ -55,58 +57,48 @@ const ServiceSection = ({ hero }: { hero?: boolean }) => {
               </div>
 
               <div className="col-12">
-                <div className="flex flex-wrap justify-center md:justify-between items-center mt-10 lg:mt-16 max-lg:gap-10 gap-y-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 mt-16 lg:mt-24">
                   {allServices.map((service: Service, i: number) => (
-                    <React.Fragment key={i}>
-                      <div
-                        className="group"
-                        data-aos="fade-right-sm"
-                        data-aos-delay={100 + i * 50}
-                      >
-                        <div className="group-child">
-                          {service?.frontmatter?.icon && (
-                            <DynamicIcon
-                              icon={service?.frontmatter?.icon}
-                              className="mb-6 text-5xl p-2 rounded bg-secondary/70"
-                            />
-                          )}
-
-                          <p
-                            dangerouslySetInnerHTML={markdownify(
-                              service.frontmatter.title!,
-                            )}
-                            className="text-xl font-medium mb-3 leading-[33px] [&>br]:block w-fit"
+                    <a
+                      key={i}
+                      href={`/services/${service.slug}`}
+                      className="group flex h-full flex-col rounded-2xl   bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                      data-aos="fade-up-sm"
+                      data-aos-delay={100 + i * 50}
+                    >
+                      {service?.frontmatter?.card_image && (
+                        <div className="mb-7 flex h-[170px] items-center justify-center">
+                          <ImageFallback
+                            src={service.frontmatter.card_image}
+                            alt={service.frontmatter.title || "Produkt"}
+                            width={260}
+                            height={190}
+                            className="h-[160px] w-auto object-contain drop-shadow-xl transition-transform duration-300 group-hover:scale-105"
                           />
-
-                          <div className="relative overflow-hidden w-fit">
-                            <a
-                              href={`/services/${service.slug}`}
-                              className="font-medium text-nowrap inline-block group text-base-sm"
-                            >
-                              <span className="-translate-x-[86%] transform transition-transform duration-300 inline-flex items-center group-hover:translate-x-0">
-                                Discover More
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  viewBox="0 0 24 24"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  strokeWidth="2"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  className="w-4 h-4 ml-1"
-                                >
-                                  <line x1="5" y1="12" x2="19" y2="12" />
-                                  <polyline points="12 5 19 12 12 19" />
-                                </svg>
-                              </span>
-                            </a>
-                          </div>
                         </div>
-                      </div>
-                      {i !== allServices.length - 1 && (
-                        <hr className="w-30 hidden lg:block border-border rotate-90" />
                       )}
-                    </React.Fragment>
+
+                      <h3
+                        dangerouslySetInnerHTML={markdownify(service.frontmatter.title!)}
+                        className="mb-3 text-xl font-semibold leading-tight"
+                      />
+
+                      <div className="mb-5 h-[2px] w-6 bg-primary transition-all duration-300 group-hover:w-12" />
+
+                      {service?.frontmatter?.card_description && (
+                       <p
+                        dangerouslySetInnerHTML={markdownify(service.frontmatter.card_description)}
+                        className="mb-6 text-sm leading-6 text-text/70"
+                      />
+                      )}
+
+                      <span className="mt-auto inline-flex items-center gap-2 font-medium text-primary">
+                        Detail produktu
+                        <span className="transition-transform duration-300 group-hover:translate-x-1">
+                          →
+                        </span>
+                      </span>
+                    </a>
                   ))}
                 </div>
               </div>

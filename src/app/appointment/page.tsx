@@ -8,7 +8,7 @@ import CallToAction from "@/partials/CallToAction";
 import SeoMeta from "@/partials/SeoMeta";
 
 const AppointmentPage = () => {
-  const { title, subtitle, description, meta_title, contact_way } = getListPage(
+  const { title, subtitle, description, meta_title, contact_way, form, contact_title } = getListPage(
     "appointment/-index.md",
   ).frontmatter;
 
@@ -57,13 +57,13 @@ const AppointmentPage = () => {
                       >
                         <label htmlFor="f-name" className="form-label">
                           {" "}
-                          First Name{" "}
+                          {form.first_name_label}
                         </label>
                         <input
                           id="f-name"
                           name="f-name"
                           className="form-input"
-                          placeholder="Your First Name"
+                          placeholder={form.first_name_placeholder}
                           type="text"
                           required
                         />
@@ -77,13 +77,13 @@ const AppointmentPage = () => {
                       >
                         <label htmlFor="l-name" className="form-label">
                           {" "}
-                          Last Name{" "}
+                          {form.last_name_label}
                         </label>
                         <input
                           id="l-name"
                           name="l-name"
                           className="form-input"
-                          placeholder="Your Last Name"
+                          placeholder={form.last_name_placeholder}
                           type="text"
                           required
                         />
@@ -96,13 +96,13 @@ const AppointmentPage = () => {
                         data-aos-delay="160"
                       >
                         <label htmlFor="email" className="form-label">
-                          Email Address
+                          {form.email_label}
                         </label>
                         <input
                           id="email"
                           name="email"
                           className="form-input"
-                          placeholder="Your Email Address"
+                          placeholder={form.email_placeholder}
                           type="email"
                           required
                         />
@@ -116,13 +116,13 @@ const AppointmentPage = () => {
                       >
                         <label htmlFor="message" className="form-label">
                           {" "}
-                          Message{" "}
+                          {form.message_label}
                         </label>
                         <textarea
                           id="message"
                           name="message"
                           className="form-input"
-                          placeholder="How can we help you?"
+                          placeholder={form.message_placeholder}
                           rows={9}
                           required
                         ></textarea>
@@ -134,7 +134,7 @@ const AppointmentPage = () => {
                       data-aos-delay="200"
                     >
                       <CustomButton
-                        label="Make An Appointment"
+                        label={form.submit_label}
                         variant="primary"
                         button_type="submit"
                       />
@@ -153,7 +153,7 @@ const AppointmentPage = () => {
                 data-aos="fade-up-sm"
                 data-aos-delay="100"
               >
-                Contact us directly
+                {contact_title}
               </h2>
               {contact_way.map((contact: { icon: string; value: string; name: string }, i: number) => (
                 <div

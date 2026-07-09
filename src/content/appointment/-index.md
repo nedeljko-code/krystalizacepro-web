@@ -1,19 +1,37 @@
 ---
-title: "Schedule an <br> **appointment**"
-subtitle: "BOOK A SERVICE"
-meta_title: ""
-description: "this is meta description"
+title: "Kontaktujte <br> **nás**"
+subtitle: "KONTAKT"
+meta_title: "Kontakt | KrystalizacePro"
+description: "Kontaktujte KrystalizacePro pro technickou konzultaci, cenovou nabídku nebo výběr vhodného řešení hydroizolace betonu."
+
 contact_way:
-  - name: "Phone Number"
+  - name: "Telefon"
     icon: "FaPhone"
-    value: "+1 840 841 25 69"
-  - name: "Location"
+    value: "+420 778 200 100"
+
+  - name: "Adresa"
     icon: "FaLocationDot"
-    value: "785 15h Street, Office 478 <br> New York, USA 70004"
-  - name: "Time"
+    value: "Praha, Česká republika"
+
+  - name: "Pracovní doba"
     icon: "FaClock"
-    value: "Mon-Fri: 9 AM – 6 PM <br> Sat-Sun: 9 AM – 4 PM"
-  - name: "Mail"
+    value: "Po–Pá: 8:00 – 16:00"
+
+  - name: "E-mail"
     icon: "FaEnvelope"
-    value: "info@email.com"
+    value: "info@krystalizacepro.cz"
+form:
+    first_name_label: "Jméno"
+    first_name_placeholder: "Vaše jméno"
+    last_name_label: "Příjmení"
+    last_name_placeholder: "Vaše příjmení"
+    company_label: "Firma"
+    company_placeholder: "Název firmy"
+    email_label: "E-mail"
+    email_placeholder: "Váš e-mail"
+    message_label: "Zpráva"
+    message_placeholder: "Popište váš problém nebo projekt"
+    submit_label: "Odeslat zprávu"
+
+contact_title: "Kontaktujte nás přímo"
 ---

@@ -25,7 +25,7 @@ const Responsibility = () => {
           />
           <p
             dangerouslySetInnerHTML={markdownify(responsibility.content)}
-            className="mb-7 xl:pl-[208px] max-xl:text-center text-text/80"
+            className="mb-7 xl:pl-[80px] max-xl:text-center text-text/80"
             data-aos="fade-up-sm"
             data-aos-delay="40"
           />

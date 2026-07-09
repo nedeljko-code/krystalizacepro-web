@@ -11,5 +11,5 @@ buttons:
 
   - enable: true
     label: "Kontaktujte nás"
-    link: "/contact"
+    link: /appointment
 ---

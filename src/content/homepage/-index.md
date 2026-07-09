@@ -36,9 +36,14 @@ about:
 
 responsibility:
   enable: true
-  title: "Kvalita, za kterou <br> si stojíme"
+  title: "Technologie, <br>která chrání beton dlouhodobě"
   subtitle: "PROČ KRYSTALIZACEPRO"
-  content: "Dodáváme ověřená řešení pro hydroizolaci <br>a dlouhodobou ochranu betonových konstrukcí."
+  content: |
+    Krystalizační technologie aktivně proniká do struktury betonu, <br>kde vytváří nerozpustné krystaly v pórech, kapilárách a mikrotrhlinách.<br>
+
+    Při kontaktu s vodou se proces krystalizace znovu aktivuje,<br> čímž dochází k postupnému utěsnění nových mikrotrhlin a omezení pronikání vlhkosti.<br>
+
+    Díky tomu beton získává dlouhodobou ochranu proti vodě,<br> vyšší odolnost vůči degradaci a prodlužuje se jeho životnost.<br>
 
   image: "/images/home/responsibility/1.png"
 
@@ -66,7 +71,7 @@ customer:
     - "/images/partners/skanska.svg"
 
 testimonial:
-  enable: true
+  enable: false
   review:
     - name: "Jack Morrison"
       about: "36 y, New York"
@@ -82,7 +87,7 @@ testimonial:
       says: "Cleaner is the best service i have ever get provides a wide range of cleaning services, from home cleaning to office cleaning. They used advanced technologies to keep our room looking the best. <br> <br> Their team of experts who have been in the profession for years focuses on helped us achieve optimal clean surface."
 
 blog:
-  enable: true
+  enable: false
   title: "Our **latest news** from blog"
   subtitle: "RECENT POSTS"
 ---

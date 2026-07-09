@@ -37,6 +37,8 @@ export type Service = {
     date?: string;
     weight?: number;
     draft?: boolean;
+    card_image?: string;
+    card_description?: string;
   };
   slug?: string;
   content?: string;

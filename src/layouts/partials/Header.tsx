@@ -28,6 +28,7 @@ const Header = () => {
 
   // get current path
   const pathname = usePathname();
+  const hideNavigationButton = pathname === "/" || pathname === "/appointment";
 
   // scroll to top on route change and initialize sticky header
   useEffect(() => {
@@ -96,7 +97,7 @@ const Header = () => {
             <Logo />
           </div>
           <div className="flex items-center gap-4.5">
-            {navigation_button.enable && (
+            {navigation_button.enable && !hideNavigationButton && (
               <CustomButton
                 link={navigation_button.link}
                 label={navigation_button.label}
@@ -147,7 +148,7 @@ const Header = () => {
                     >
                       <a
                       href={menu.url}
-                      className={`nav-link text-base-sm text-white ${(pathname === `${menu.url}/` || pathname === menu.url) && "active"}`}
+                      className={`nav-link text-base-lg  text-white ${(pathname === `${menu.url}/` || pathname === menu.url) && "active"}`}
                     >
                         {menu.name}
                       </a>
@@ -157,7 +158,7 @@ const Header = () => {
               ))}
             </ul>
           </div>
-          {navigation_button.enable && (
+          {navigation_button.enable && !hideNavigationButton && (
             <CustomButton
               link={navigation_button.link}
               label={navigation_button.label}

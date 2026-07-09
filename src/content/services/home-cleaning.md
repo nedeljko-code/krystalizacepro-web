@@ -2,8 +2,10 @@
 title: "H-KRYSTAL MR"
 meta_title: ""
 description: "Krystalizační přísada do čerstvého betonu"
-icon: "FaCube"
-banner: "/images/service/2.png"
+# icon: "FaCube"
+# banner: "/images/products/h-krystal-mr-cutout.png"
+card_image: "/images/products/h-krystal-mr-cutout.png"
+card_description: "Krystalizační přísada do betonu, která vytváří vodotěsnou strukturu již během výroby směsi. Zvyšuje odolnost a prodlužuje životnost betonových konstrukcí."
 date: 2025-04-04T05:00:00Z
 categories: ["Kitchen"]
 weight: 1

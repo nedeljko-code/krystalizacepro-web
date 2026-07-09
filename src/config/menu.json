@@ -17,8 +17,8 @@
       "url": "/blog"
     },
     {
-      "name": "Kontakt",
-      "url": "/contact"
+      "name": "Contact",
+      "url": "/appointment"
     }
   ],
   "footer": [
@@ -42,8 +42,8 @@
           "url": "/elements"
         },
         {
-          "name": "Contacts",
-          "url": "/contact"
+          "name": "Contact",
+          "url": "/appointment"
         }
       ]
     },
