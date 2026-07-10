@@ -3,7 +3,7 @@ title: "HYDRA PLUG B"
 meta_title: ""
 description: "Rychletvrdnoucí cementová malta"
 # icon: "FaTrowelBricks"
-# banner: "/images/service/5.png"
+banner: "/images/service/5.png"
 card_image: "/images/products/hidra-plug-b-cutout.png"
 card_description: "Trvale odolná opravná a těsnicí hmota pro opravy spár, trhlin a poškozených betonových konstrukcí. Vytváří pevné a vodotěsné spojení."
 date: 2025-04-04T05:00:00Z
@@ -12,20 +12,18 @@ weight: 2
 draft: false
 ---
 
-### We give the best services
+### Trvalá oprava a ochrana betonových konstrukcí
 
-Companies seem to dislike the term ‘turnaround consulting’ because it represents failure. The truth is that turnaround consulting represents success at realizing the company is going in the wrong direction. The only time the company fails is when it is not possible to do a turnaround anymore. We help to all companies pivot into more profitable directions where they can expand and grow. It is inevitable that companies will end up making a few mistakes; we help them correct these mistakes.
+HYDRA PLUG B je speciální opravná a těsnicí hmota určená pro trvalé opravy betonových konstrukcí po odstranění aktivních průsaků vody. Vytváří pevné spojení s podkladem a zajišťuje dlouhodobou odolnost vůči vlhkosti i mechanickému namáhání.
 
-USA champions professionalism in the cleaning industry by providing top-quality cleaning and related services that meet and exceed the expectations of today’s demanding corporate, office, industrial and warehouse clients…courteously, responsively, responsibly, dependably, economically and on-time. We provide janitorial.
+Produkt je ideální pro opravy poškozených míst, vyplnění dutin, pracovních spár a lokálních vad betonu před aplikací dalších hydroizolačních systémů.
 
-A neatly maintained building is an important asset to every organization. It reflects who you are and influences how your customers perceive you.
+###### Přehled použití
 
-###### Service overview
+HYDRA PLUG B je vhodný pro opravy betonových a železobetonových konstrukcí, sanaci trhlin, pracovních spár, výtluků a dalších poškozených částí staveb. Používá se ve sklepech, podzemních objektech, vodojemech, tunelech, šachtách i průmyslových stavbách.
 
-A neatly maintained building is an important asset to every organization. It reflects who you are and influences how your customers perceive you to complete depending on the size.
+Po vytvrzení vytváří pevný, voděodolný podklad připravený pro další ochranné vrstvy nebo finální povrchové úpravy.
 
-Condition of your home. We work in teams of 2-4 or more. A team leader or the owner.
+###### Hlavní výhody
 
-###### Service quality
-
-As a app web crawler expert, I help organizations adjust to the expanding significance of internet promoting. or lipsum as it is sometimes known, is dummy text used in laying out print, grap or web designs. USA champions professionalism in the cleaning industry by providing top-quality cleaning and related services that meet and exceed the expectations of today’s demanding corporate.
+Produkt poskytuje vysokou pevnost, výbornou přilnavost k betonovým podkladům a dlouhodobou odolnost vůči vodě i nepříznivým vlivům prostředí. Je vhodný pro profesionální sanační práce i náročné rekonstrukce betonových konstrukcí.

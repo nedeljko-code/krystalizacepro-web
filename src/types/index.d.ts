@@ -33,6 +33,7 @@ export type Service = {
     description?: string;
     icon: string;
     banner: string;
+    image?: string; 
     categories: string[];
     date?: string;
     weight?: number;

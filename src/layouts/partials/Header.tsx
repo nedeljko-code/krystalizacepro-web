@@ -8,7 +8,8 @@ import menu from "@/config/menu.json";
 import DynamicIcon from "@/helpers/DynamicIcon";
 import { markdownify } from "@/lib/utils/textConverter";
 import { usePathname } from "next/navigation";
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
+
 
 export interface ChildNavigationLink {
   name: string;
@@ -28,47 +29,50 @@ const Header = () => {
 
   // get current path
   const pathname = usePathname();
+  const isHome = pathname === "/";
+  const [isScrolled, setIsScrolled] = useState(false);
   const hideNavigationButton = pathname === "/" || pathname === "/appointment";
 
   // scroll to top on route change and initialize sticky header
   useEffect(() => {
-    window.scroll(0, 0);
+  window.scrollTo(0, 0);
+  setIsScrolled(false);
 
-    // Initialize sticky header functionality
-    const stickyNavInit = () => {
-      // fix header on 100px scroll and get back to normal on 90px scroll
-      const header = document.querySelector(".header");
-      let lastScroll = 0;
+  const header = document.querySelector(".header");
+  let lastScroll = 0;
 
-      const onScroll = () => {
-        const currentScroll = window.scrollY;
-        if (
-          sticky_header &&
-          currentScroll > 300 &&
-          currentScroll > lastScroll &&
-          header
-        ) {
-          header.classList.add("header-reveal");
-          header.classList.remove("absolute");
-        } else if (currentScroll < 250 && header) {
-          header.classList.remove("header-reveal");
-          header.classList.add("absolute");
-        }
-        lastScroll = currentScroll;
-      };
+  const onScroll = () => {
+    const currentScroll = window.scrollY;
 
-      window.addEventListener("scroll", onScroll);
-      onScroll(); // Check scroll position on page load
+    setIsScrolled(currentScroll > 250);
 
-      // Cleanup event listener on component unmount
-      return () => {
-        window.removeEventListener("scroll", onScroll);
-      };
-    };
+    if (
+      sticky_header &&
+      currentScroll > 300 &&
+      currentScroll > lastScroll &&
+      header
+    ) {
+      header.classList.add("header-reveal");
+      header.classList.remove("absolute");
+    } else if (currentScroll < 250 && header) {
+      header.classList.remove("header-reveal");
+      header.classList.add("absolute");
+    }
 
-    const cleanup = stickyNavInit();
-    return cleanup;
-  }, [pathname, sticky_header]);
+    lastScroll = currentScroll;
+  };
+
+  window.addEventListener("scroll", onScroll);
+
+  const frame = requestAnimationFrame(() => {
+    onScroll();
+  });
+
+  return () => {
+    cancelAnimationFrame(frame);
+    window.removeEventListener("scroll", onScroll);
+  };
+}, [pathname, sticky_header]);
 
   return (
     <>
@@ -147,9 +151,11 @@ const Header = () => {
                       data-aos-delay={100 + i * 50}
                     >
                       <a
-                      href={menu.url}
-                      className={`nav-link text-base-lg  text-white ${(pathname === `${menu.url}/` || pathname === menu.url) && "active"}`}
-                    >
+                        href={menu.url}
+                        className={`nav-link text-base-lg ${
+                          isHome || isScrolled ? "text-white" : "text-text"
+                        }`}
+                      >
                         {menu.name}
                       </a>
                     </li>

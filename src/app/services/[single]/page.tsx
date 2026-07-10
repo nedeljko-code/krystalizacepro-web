@@ -1,5 +1,6 @@
-import CustomHeading from "@/components/CustomHeading";
+import ProductCard from "@/components/ProductCard";
 import ServiceCard from "@/components/ServiceCard";
+import CustomHeading from "@/components/CustomHeading";
 import config from "@/config/config.json";
 import ImageFallback from "@/helpers/ImageFallback";
 import MDXContent from "@/helpers/MDXContent";
@@ -9,31 +10,44 @@ import CallToAction from "@/partials/CallToAction";
 import SeoMeta from "@/partials/SeoMeta";
 import { Service } from "@/types";
 
-// remove dynamicParams
 export const dynamicParams = false;
 
-// generate static params
 export const generateStaticParams: () => { single: string }[] = () => {
   const services: Service[] = getSinglePage("services");
 
-  const paths = services.map((service) => ({
+  return services.map((service) => ({
     single: service.slug!,
   }));
-
-  return paths;
 };
 
 const ServiceSingle = async (props: {
   params: Promise<{ single: string }>;
 }) => {
   const params = await props.params;
-  const allServices = getSinglePage("services");
-  const services = getSinglePage("services");
-  const service = services.filter((page) => page.slug === params.single)[0];
 
-  const { title, meta_title, description, image, banner } = service.frontmatter;
+  const allServices: Service[] = getSinglePage("services");
+  const service = allServices.find(
+    (page) => page.slug === params.single,
+  );
 
-  const similarServices = similarItems(service, allServices, service.slug!) || [];
+  if (!service) {
+    return null;
+  }
+
+  const {
+    title,
+    meta_title,
+    description,
+    image,
+    banner,
+    card_image,
+  } = service.frontmatter;
+
+  const productImage = card_image || image || banner;
+
+  const similarServices =
+    similarItems(service, allServices, service.slug!) || [];
+
   return (
     <>
       <SeoMeta
@@ -43,72 +57,67 @@ const ServiceSingle = async (props: {
         image={image}
       />
 
-      <section className="section mt-24 sm:mt-20">
+      <section className="section mt-40 sm:mt-36">
         <div className="container">
-          <p
-            className="text-base text-center text-primary mb-4"
-            data-aos="fade-up-sm"
-          >
-            Service
-          </p>
-          {title && (
-            <CustomHeading
-              as="h1"
-              text={title}
-              className="text-h2 md:text-h1 text-center text-balance mb-16 [&>br]:hidden"
-              dataAos="fade-up-sm"
-            />
-          )}
+          <div className="row items-start justify-between">
+            {/* LEVI BLOK */}
+            <div
+              className="col-12 lg:col-7 xl:col-6"
+              data-aos="fade-up-sm"
+            >
+              <p className="mb-4 text-base-sm text-primary">
+                Produkt
+              </p>
 
-          <div className="row justify-center lg:justify-between">
-            <div data-aos="fade-up-sm" className="col-12">
-              <ImageFallback
-                src={banner!}
-                alt={title!}
-                width={1256}
-                height={719}
-                className="w-full aspect-video object-cover rounded-xl mb-11"
-                loading="eager"
-              />
-            </div>
-            <div className="col-12 lg:col-7 mb-11" data-aos="fade-up-sm">
-              <article>
+              {title && (
+                <CustomHeading
+                  as="h1"
+                  text={title}
+                  className="mb-8 text-balance text-h3 md:text-h2 lg:text-h1-sm [&>br]:hidden"
+                  dataAos="fade-up-sm"
+                />
+              )}
+
+              <article className="max-w-[760px]">
                 <div className="content">
                   <MDXContent content={service.content} />
                 </div>
               </article>
             </div>
+
+            {/* DESNI BLOK */}
             <div
-              className="lg:col-5 w-fit"
+              className="col-12 mt-12 lg:col-5 lg:mt-0 xl:col-4"
               data-aos="fade-up-sm"
-              data-aos-delay="200"
+              data-aos-delay="150"
             >
-              <div className="rounded-xl overflow-hidden lg:w-fit lg:ml-auto">
-               <div className="bg-body px-7.5 py-7 border border-border">
-                <p className="text-sm text-primary font-semibold mb-4">
-                  TECHNICKÉ INFORMACE
-                </p>
+              <div className="lg:sticky lg:top-28">
+                {/* JEDAN ZAJEDNIČKI PRODUCT PANEL */}
+                <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
+                  {productImage && (
+                    <div className="flex min-h-[300px] items-center justify-center px-7 pb-5 pt-8">
+                      <ImageFallback
+                        src={productImage}
+                        alt={title || "Produkt"}
+                        width={360}
+                        height={360}
+                        className="mx-auto h-[260px] w-auto max-w-full object-contain drop-shadow-xl"
+                        loading="eager"
+                      />
+                    </div>
+                  )}
 
-                <div className="space-y-3 text-base-sm">
-                  <p><strong>Balení:</strong> 6 kg / 15 kg</p>
-                  <p><strong>Aplikace:</strong> nátěr / nástřik</p>
-                  <p><strong>Použití:</strong> beton / železobeton</p>
-                  <p><strong>Typ:</strong> krystalizační ochrana</p>
+                  <div className="border-t border-border [&>div]:rounded-none [&>div]:border-0 [&>div]:shadow-none">
+                    <ProductCard
+                      type="Krystalizační ochrana"
+                      usage="Beton / železobeton"
+                      packageInfo="6 kg / 15 kg"
+                      application="Nátěr / nástřik"
+                      technicalSheet={config.notification.link}
+                      contactLink={config.navigation_button.link}
+                    />
+                  </div>
                 </div>
-              </div>
-
-              <a
-                href={config.notification.link}
-                className="w-full font-semibold text-center block px-7.5 py-6 bg-secondary"
-              >
-                Technický list
-              </a>
-                <a
-                  href={config.navigation_button.link}
-                  className="w-full font-semibold text-text-light text-center block px-7.5 py-6 bg-primary"
-                >
-                  {config.navigation_button.label}
-                </a>
               </div>
             </div>
           </div>
@@ -118,7 +127,7 @@ const ServiceSingle = async (props: {
       <section className="section pt-0">
         <div className="container">
           <h2
-            className="text-h3 md:text-h2 text-center mb-16"
+            className="mb-16 text-center text-h3 md:text-h2"
             data-aos="fade-up-sm"
           >
             Další produkty
@@ -128,7 +137,7 @@ const ServiceSingle = async (props: {
             {similarServices.slice(0, 3).map((service, i: number) => (
               <div
                 key={service.slug}
-                className="xl:col-4 md:col-5 col-12"
+                className="col-12 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] md:col-5 xl:col-4"
                 data-aos="fade-up-sm"
                 data-aos-delay={`${i * 100}`}
               >

@@ -1,45 +1,46 @@
 import ImageFallback from "@/helpers/ImageFallback";
-import dateFormat from "@/lib/utils/dateFormat";
-import { humanize, markdownify } from "@/lib/utils/textConverter";
+import { markdownify } from "@/lib/utils/textConverter";
 import { Service } from "@/types";
 
 const ServiceCard = ({ service }: { service: Service }) => {
-  const { title, date, categories, banner } = service.frontmatter;
+  const { title, card_image, card_description, description, banner } =
+    service.frontmatter;
+
+  const image = card_image || banner;
+  const text = card_description || description;
 
   return (
-    <>
-      {banner && (
-        <a href={`/services/${service.slug}`}>
+    <a
+      href={`/services/${service.slug}`}
+      className="group block h-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-xl"
+    >
+      {image && (
+        <div className="mb-5 flex h-48 items-center justify-center rounded-xl ">
           <ImageFallback
-            src={banner}
-            alt={title!}
-            width={389}
-            height={277}
-            className="object-cover rounded-t w-full"
+            src={image}
+            alt={title}
+            width={220}
+            height={220}
+            className="max-h-44 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
-        </a>
+        </div>
       )}
 
-      <div className="p-6">
-        {/* <div className="flex flex-wrap items-center gap-2.5 mb-3">
-          {categories!.map((category: string, index: number) => (
-            <p key={index} className="text-primary">
-              {humanize(category)}
-              {index !== categories!.length - 1 && ","}
-            </p>
-          ))}
-          <div className="bg-black/30 h-[3px] w-[3px] rounded-full opacity-100"></div>
+      <h5
+        dangerouslySetInnerHTML={markdownify(title)}
+        className="mb-3 text-xl font-bold text-[#070735] [&>br]:hidden"
+      />
 
-          <p className="text-text/50 text-base">{dateFormat(date!)}</p>
-        </div> */}
-        <a href={`/services/${service.slug}`}>
-          <h5
-            dangerouslySetInnerHTML={markdownify(title!)}
-            className="h6 md:h5 [&>br]:hidden"
-          />
-        </a>
-      </div>
-    </>
+      {text && (
+        <p className="mb-5 text-sm leading-relaxed text-gray-600">
+          {text}
+        </p>
+      )}
+
+      <span className="font-semibold text-[#e07a00]">
+        Zobrazit produkt →
+      </span>
+    </a>
   );
 };
 
