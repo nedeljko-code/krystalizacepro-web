@@ -1,0 +1,27 @@
+.productContent h2 {
+  line-height: 1.12;
+  margin-bottom: 1rem;
+}
+
+.productContent h2 + p {
+  margin-top: 0;
+}
+
+.productContent h3 {
+  line-height: 1.2;
+  margin-top: 2.75rem !important;
+  margin-bottom: 1rem !important;
+}
+
+.productContent h3 + p {
+  margin-top: 0 !important;
+}
+
+.productContent.productContent p {
+  margin: 0.75em 0 !important;
+}
+
+.productContent.productContent h2 + p,
+.productContent.productContent h3 + p {
+  margin-top: 0 !important;
+}

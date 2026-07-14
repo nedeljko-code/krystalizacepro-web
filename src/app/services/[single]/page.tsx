@@ -9,6 +9,7 @@ import similarItems from "@/lib/utils/similarItems";
 import CallToAction from "@/partials/CallToAction";
 import SeoMeta from "@/partials/SeoMeta";
 import { Service } from "@/types";
+import styles from "./product-page.module.css";
 
 export const dynamicParams = false;
 
@@ -26,22 +27,14 @@ const ServiceSingle = async (props: {
   const params = await props.params;
 
   const allServices: Service[] = getSinglePage("services");
-  const service = allServices.find(
-    (page) => page.slug === params.single,
-  );
+  const service = allServices.find((page) => page.slug === params.single);
 
   if (!service) {
     return null;
   }
 
-  const {
-    title,
-    meta_title,
-    description,
-    image,
-    banner,
-    card_image,
-  } = service.frontmatter;
+  const { title, meta_title, description, image, banner, card_image } =
+    service.frontmatter;
 
   const productImage = card_image || image || banner;
 
@@ -59,16 +52,11 @@ const ServiceSingle = async (props: {
 
       <section className="section mt-40 sm:mt-36">
         <div className="container">
-          <div className="row items-start justify-between">
+          <div className="row items-start justify-between ">
             {/* LEVI BLOK */}
             <div
-              className="col-12 lg:col-7 xl:col-6"
-              data-aos="fade-up-sm"
+              className={`col-12 lg:col-7 xl:col-6 content ${styles.productContent}`}
             >
-              <p className="mb-4 text-base-sm text-primary">
-                Produkt
-              </p>
-
               {title && (
                 <CustomHeading
                   as="h1"
@@ -87,27 +75,26 @@ const ServiceSingle = async (props: {
 
             {/* DESNI BLOK */}
             <div
-              className="col-12 mt-12 lg:col-5 lg:mt-0 xl:col-4"
+              className="col-12 mt-12 self-stretch lg:col-5 lg:mt-0 xl:col-4"
               data-aos="fade-up-sm"
               data-aos-delay="150"
             >
-              <div className="lg:sticky lg:top-28">
-                {/* JEDAN ZAJEDNIČKI PRODUCT PANEL */}
-                <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
-                  {productImage && (
-                    <div className="flex min-h-[300px] items-center justify-center px-7 pb-5 pt-8">
-                      <ImageFallback
-                        src={productImage}
-                        alt={title || "Produkt"}
-                        width={360}
-                        height={360}
-                        className="mx-auto h-[260px] w-auto max-w-full object-contain drop-shadow-xl"
-                        loading="eager"
-                      />
-                    </div>
-                  )}
+              <div className="lg:sticky lg:top-24">
+                {productImage && (
+                  <div className="mb-2 flex h-[220px] items-center justify-center">
+                    <ImageFallback
+                      src={productImage}
+                      alt={title || "Produkt"}
+                      width={360}
+                      height={360}
+                      className="mx-auto h-[220px] w-auto max-w-full object-contain drop-shadow-xl"
+                      loading="eager"
+                    />
+                  </div>
+                )}
 
-                  <div className="border-t border-border [&>div]:rounded-none [&>div]:border-0 [&>div]:shadow-none">
+                <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
+                  <div className="[&>div]:rounded-none [&>div]:border-0 [&>div]:shadow-none">
                     <ProductCard
                       type="Krystalizační ochrana"
                       usage="Beton / železobeton"

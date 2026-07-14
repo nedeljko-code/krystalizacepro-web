@@ -20,13 +20,13 @@ Díky této technologii dochází ke snížení propustnosti vody a zároveň ke
 
 H-KRYSTAL je vhodný pro novostavby i rekonstrukce a nabízí spolehlivé řešení pro projekty, kde je klíčová dlouhá životnost, vysoká odolnost a efektivní hydroizolace.
 
-###### Přehled použití
+### Přehled použití
 
 Produkt je ideální pro základové konstrukce, podzemní stavby, sklepy, opěrné stěny, nádrže, tunely a další betonové plochy vystavené působení vody nebo zvýšené vlhkosti.
 
 Aplikace je jednoduchá a efektivní formou nátěru nebo nástřiku. Aktivní složky reagují s vlhkostí uvnitř betonu a vytvářejí ochrannou krystalickou strukturu.
 
-###### Hlavní výhody
+### Hlavní výhody
 
 Krystalizační technologie poskytuje trvalou ochranu bez nutnosti dodatečných vrstev. Výsledkem je zvýšená vodotěsnost, lepší ochrana výztuže před korozí a prodloužení životnosti konstrukce.
 

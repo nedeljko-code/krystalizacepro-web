@@ -45,18 +45,20 @@ responsibility:
 
     Díky tomu beton získává dlouhodobou ochranu proti vodě,<br> vyšší odolnost vůči degradaci a prodlužuje se jeho životnost.<br>
 
-  image: "/images/home/responsibility/1.png"
+  image: "/images/home/radnik.png"
 
   video:
     thumbnail: "/images/home/responsibility/thumb.webp"
     url: ""
 
   job:
-    - title: "Vyrobeno v České republice"
-      content: "Lokální výroba, ověřená kvalita a spolehlivé řešení pro profesionální použití ve stavebnictví."
+  - icon: "cz"
+    title: "Vyrobeno v České republice"
+    content: "Lokální výroba, ověřená kvalita a spolehlivé řešení pro profesionální použití ve stavebnictví."
 
-    - title: "Garance realizace"
-      content: "Pokud aplikaci provádí náš tým, garantujeme kvalitu provedení a v případě problému zajistíme opravu."
+  - icon: "shield"
+    title: "Garance realizace"
+    content: "Pokud aplikaci provádí náš tým, garantujeme kvalitu provedení a v případě problému zajistíme opravu."
 
 customer:
   enable: true

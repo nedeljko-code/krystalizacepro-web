@@ -21,41 +21,47 @@ const ProductCard = ({
 }: ProductCardProps) => {
   return (
     <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
-      <div className="px-6 py-6">
-        <p className="mb-5 text-sm font-semibold uppercase tracking-wide text-primary">
+      <div className="px-5 py-5">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.08em] text-primary">
           Technické informace
         </p>
 
         <div className="divide-y divide-border">
-          <div className="grid grid-cols-[130px_1fr] gap-4 py-3 first:pt-0">
-            <span className="font-semibold text-text">Typ produktu</span>
-            <span className="text-text/70">{type}</span>
+          <div className="grid grid-cols-[112px_1fr] gap-3 py-2.5 first:pt-0">
+            <span className="text-sm font-semibold text-text">
+              Typ produktu
+            </span>
+            <span className="text-sm leading-snug text-text/70">{type}</span>
           </div>
 
-          <div className="grid grid-cols-[130px_1fr] gap-4 py-3">
-            <span className="font-semibold text-text">Použití</span>
-            <span className="text-text/70">{usage}</span>
+          <div className="grid grid-cols-[112px_1fr] gap-3 py-2.5">
+            <span className="text-sm font-semibold text-text">Použití</span>
+            <span className="text-sm leading-snug text-text/70">{usage}</span>
           </div>
 
-          <div className="grid grid-cols-[130px_1fr] gap-4 py-3">
-            <span className="font-semibold text-text">Balení</span>
-            <span className="text-text/70">{packageInfo}</span>
+          <div className="grid grid-cols-[112px_1fr] gap-3 py-2.5">
+            <span className="text-sm font-semibold text-text">Balení</span>
+            <span className="text-sm leading-snug text-text/70">
+              {packageInfo}
+            </span>
           </div>
 
-          <div className="grid grid-cols-[130px_1fr] gap-4 py-3">
-            <span className="font-semibold text-text">Aplikace</span>
-            <span className="text-text/70">{application}</span>
+          <div className="grid grid-cols-[112px_1fr] gap-3 py-2.5">
+            <span className="text-sm font-semibold text-text">Aplikace</span>
+            <span className="text-sm leading-snug text-text/70">
+              {application}
+            </span>
           </div>
         </div>
 
         {(technicalSheet || safetySheet) && (
-          <div className="mt-5 border-t border-border pt-4">
+          <div className="mt-4 border-t border-border pt-3">
             {technicalSheet && (
               <a
                 href={technicalSheet}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center justify-between py-2 font-semibold text-text transition-colors hover:text-primary"
+                className="flex items-center justify-between py-2 text-sm font-semibold text-text transition-colors hover:text-primary"
               >
                 <span>Technický list</span>
                 <span aria-hidden="true">↓</span>
@@ -67,7 +73,7 @@ const ProductCard = ({
                 href={safetySheet}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center justify-between py-2 font-semibold text-text transition-colors hover:text-primary"
+                className="flex items-center justify-between py-2 text-sm font-semibold text-text transition-colors hover:text-primary"
               >
                 <span>Bezpečnostní list</span>
                 <span aria-hidden="true">↓</span>
@@ -79,7 +85,7 @@ const ProductCard = ({
 
       <Link
         href={contactLink}
-        className="block w-full bg-primary px-6 py-4 text-center font-semibold text-text-light transition-opacity hover:opacity-90"
+        className="block w-full bg-primary px-5 py-3.5 text-center text-sm font-semibold text-text-light transition-opacity hover:opacity-90"
       >
         Kontaktujte nás
       </Link>

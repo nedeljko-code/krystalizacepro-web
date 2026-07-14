@@ -3,6 +3,7 @@ import ImageFallback from "@/helpers/ImageFallback";
 import VideoPlayer from "@/helpers/VideoPlayer";
 import { getListPage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
+import { ShieldCheck } from "lucide-react";
 
 const Responsibility = () => {
   const { responsibility } = getListPage("homepage/-index.md").frontmatter;
@@ -44,18 +45,43 @@ const Responsibility = () => {
               data_aos_delay="60"
             />
             <div className="bg-primary flex flex-col justify-center gap-9 p-8">
-              {responsibility.job.map((job: { title: string; content: string }, i: number) => (
-                <div key={i} data-aos="fade-up-sm" data-aos-delay={80 + i * 20}>
-                  <h6
-                    dangerouslySetInnerHTML={markdownify(job.title)}
-                    className="text-text-light mb-2"
-                  />
-                  <p
-                    dangerouslySetInnerHTML={markdownify(job.content)}
-                    className="text-base-sm text-text-light/80"
-                  />
-                </div>
-              ))}
+              {responsibility.job.map(
+                (
+                  job: { icon: string; title: string; content: string },
+                  i: number,
+                ) => (
+                  <div
+                    key={i}
+                    data-aos="fade-up-sm"
+                    data-aos-delay={80 + i * 20}
+                  >
+                    <div className="mb-2 flex items-center gap-3">
+                      {job.icon === "cz" ? (
+                        <span className="flex h-5 w-5 items-center justify-center overflow-hidden rounded-full">
+                          <ImageFallback
+                            src="/images/icons/cz.svg"
+                            alt="Czech Republic"
+                            width={20}
+                            height={20}
+                            className="h-full w-full object-cover"
+                          />
+                        </span>
+                      ) : (
+                        <ShieldCheck className="h-5 w-5 text-white" />
+                      )}
+
+                      <h6
+                        dangerouslySetInnerHTML={markdownify(job.title)}
+                        className="mb-0 text-text-light"
+                      />
+                    </div>
+                    <p
+                      dangerouslySetInnerHTML={markdownify(job.content)}
+                      className="text-base-sm text-text-light/80"
+                    />
+                  </div>
+                ),
+              )}
             </div>
           </div>
         </div>
