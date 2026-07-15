@@ -47,9 +47,7 @@ responsibility:
 
   image: "/images/home/radnik.png"
 
-  video:
-    thumbnail: "/images/home/responsibility/thumb.webp"
-    url: ""
+  side_image: "/images/home/radnik1.png"
 
   job:
   - icon: "cz"

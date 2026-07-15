@@ -4,10 +4,11 @@ import BlogSection from "@/partials/BlogSection";
 import CallToAction from "@/partials/CallToAction";
 import CustomerSection from "@/partials/CustomerSection";
 import Hero from "@/partials/Hero";
-import Responsibility from "@/partials/Responsibility";
+// import Responsibility from "@/partials/Responsibility";
 import SeoMeta from "@/partials/SeoMeta";
 import ServiceSection from "@/partials/ServiceSection";
 import Testimonials from "@/partials/Testimonials";
+import Responsibility from "@/partials/ResponsibilityNew";
 
 const Home = () => {
   const { testimonial } = getListPage("homepage/-index.md").frontmatter;
