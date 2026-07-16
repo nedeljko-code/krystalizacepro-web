@@ -23,48 +23,61 @@
   ],
   "footer": [
     {
-      "title": "Company",
+      "title": "Navigace",
       "children": [
         {
-          "name": "Home",
-          "url": "/"
-        },
-        {
-          "name": "Services",
-          "url": "/services"
-        },
-        {
-          "name": "About Us",
+          "name": "O nás",
           "url": "/about"
         },
         {
-          "name": "Elements",
-          "url": "/elements"
+          "name": "Produkty",
+          "url": "/services"
         },
         {
-          "name": "Contact",
+          "name": "Technologie",
+          "url": "/gallery"
+        },
+        {
+          "name": "Reference",
+          "url": "/blog"
+        },
+        {
+          "name": "Kontakt",
           "url": "/appointment"
         }
       ]
     },
     {
-      "title": "Services",
+      "title": "Produkty",
       "children": [
         {
-          "name": "Home Cleaning",
-          "url": "/services/home-cleaning"
+          "name": "H-Krystal",
+          "url": "/services/h-krystal"
         },
         {
-          "name": "Window Cleaning",
-          "url": "/services/window-cleaning"
+          "name": "H-Krystal MR",
+          "url": "/services/h-krystal-mr"
         },
         {
-          "name": "Pest Control",
-          "url": "/services/pest-control"
+          "name": "Hydra Plug A",
+          "url": "/services/hydra-plug-a"
         },
         {
-          "name": "Floor Cleaning",
-          "url": "/services/floor-cleaning"
+          "name": "Hydra Plug B",
+          "url": "/services/hydra-plug-b"
+        }
+      ]
+    },
+    {
+      "title": "Kontakt",
+      "children": [
+        {
+          "name": "+420 778 200 100",
+          "url": "tel:+420778200100"
+        },
+        {
+          "name": "info@krystalizacepro.cz",
+          "url": "mailto:info@krystalizacepro.cz"
         }
       ]
     }

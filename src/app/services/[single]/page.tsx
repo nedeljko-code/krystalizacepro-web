@@ -33,7 +33,7 @@ const ServiceSingle = async (props: {
     return null;
   }
 
-  const { title, meta_title, description, image, banner, card_image } =
+  const { title, meta_title, description, image, banner, card_image, product_details } =
     service.frontmatter;
 
   const productImage = card_image || image || banner;
@@ -96,10 +96,10 @@ const ServiceSingle = async (props: {
                 <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
                   <div className="[&>div]:rounded-none [&>div]:border-0 [&>div]:shadow-none">
                     <ProductCard
-                      type="Krystalizační ochrana"
-                      usage="Beton / železobeton"
-                      packageInfo="6 kg / 15 kg"
-                      application="Nátěr / nástřik"
+                      type={product_details.type}
+                      usage={product_details.usage}
+                      packageInfo={product_details.package_info}
+                      application={product_details.application}
                       technicalSheet={config.notification.link}
                       contactLink={config.navigation_button.link}
                     />

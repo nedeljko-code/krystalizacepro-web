@@ -40,6 +40,12 @@ export type Service = {
     draft?: boolean;
     card_image?: string;
     card_description?: string;
+    product_details: {
+    type: string;
+    usage: string;
+    package_info: string;
+    application: string;
+  };
   };
   slug?: string;
   content?: string;

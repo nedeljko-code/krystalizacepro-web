@@ -1,5 +1,10 @@
 ---
 title: "H-KRYSTAL MR"
+product_details:
+  type: "Krystalizační ochrana"
+  usage: "Beton / železobeton"
+  package_info: "18 kg / 6×3 kg"
+  application: "Nátěr / nástřik"
 meta_title: ""
 description: "Krystalizační přísada do čerstvého betonu"
 # icon: "FaCube"

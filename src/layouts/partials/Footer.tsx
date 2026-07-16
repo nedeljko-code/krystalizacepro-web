@@ -1,8 +1,9 @@
 "use client";
 
+import Link from "next/link";
+
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
-import social from "@/config/social.json";
 import ImageFallback from "@/helpers/ImageFallback";
 import { markdownify } from "@/lib/utils/textConverter";
 
@@ -11,23 +12,23 @@ const Footer = () => {
   const { footer } = menu;
 
   return (
-    <footer className="section lg:py-[135px] bg-text">
+    <footer className="section bg-text lg:py-[135px]">
       <div className="container">
         <div className="row max-lg:g-5 max-md:justify-center">
-          <div className="col-12 lg:col-6 min-h-full">
-            <div className="flex flex-col justify-between h-full">
+          <div className="col-12 min-h-full lg:col-5">
+            <div className="flex h-full flex-col justify-between">
               <div>
                 <ImageFallback
                   src={config.site.footer_logo}
                   width={184}
                   height={53}
-                  alt="footer logo"
+                  alt="KrystalizacePro"
                   data-aos="fade-in-sm"
-                  className="mb-4"
+                  className="mb-5"
                 />
 
                 <p
-                  className="text-base-sm text-text-light/60"
+                  className="max-w-[420px] text-base-sm leading-relaxed text-text-light/60"
                   dangerouslySetInnerHTML={markdownify(footer_description)}
                   data-aos="fade-up-sm"
                   data-aos-delay="100"
@@ -35,66 +36,55 @@ const Footer = () => {
               </div>
 
               <p
-                className="hidden lg:block text-base-sm text-text-light/60 [&>a]:text-text-light max-lg:mt-10"
+                className="hidden text-base-sm text-text-light/60 [&>a]:text-text-light lg:block"
                 dangerouslySetInnerHTML={markdownify(copyright)}
                 data-aos="fade-up-sm"
               />
             </div>
           </div>
-          <div className="col-12 lg:col-6">
-            <div className="row max-md:gy-5 justify-between">
-              {footer.map((menu, index) => (
+
+          <div className="col-12 lg:col-7">
+            <div className="row justify-between max-md:gy-8">
+              {footer.map((item, index) => (
                 <div
-                  key={index}
-                  className="col-6 md:col-3 pr-0"
+                  key={item.title}
+                  className="col-6 pr-0 md:col-4"
                   data-aos="fade-up-sm"
                   data-aos-delay={50 + index * 50}
                 >
                   <p className="mb-8 font-medium text-text-light">
-                    {menu.title}
+                    {item.title}
                   </p>
+
                   <ul>
-                    {menu.children.map((child) => (
+                    {item.children.map((child) => (
                       <li
                         key={child.url}
-                        className="mb-4 last:mb-0 text-text-light/80 text-base-sm hover:text-secondary hover:underline transition-all duration-300 ease-in-out"
+                        className="mb-4 text-base-sm text-text-light/80 transition-all duration-300 ease-in-out last:mb-0 hover:text-secondary"
                       >
-                        <a
-                          href={child.url}
-                          target={`${menu.title === "Social" ? "_blank" : "_self"}`}
-                        >
-                          {child.name}
-                        </a>
+                        {child.url.startsWith("http") ? (
+                          <a
+                            href={child.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {child.name}
+                          </a>
+                        ) : (
+                          <Link href={child.url}>{child.name}</Link>
+                        )}
                       </li>
                     ))}
                   </ul>
                 </div>
               ))}
-              <div
-                className="col-6 md:col-3 pr-0"
-                data-aos="fade-up-sm"
-                data-aos-delay={50 + footer.length * 50}
-              >
-                <p className="mb-8 font-medium text-text-light">Social</p>
-                <ul>
-                  {social.main.map((social) => (
-                    <li
-                      key={social.link}
-                      className="mb-4 last:mb-0 text-text-light/80 text-base-sm hover:text-secondary hover:underline transition-all duration-300 ease-in-out"
-                    >
-                      <a href={social.link} target="_blank">
-                        {social.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
           </div>
         </div>
+
         <div className="block lg:hidden">
           <p
-            className="text-base-sm text-text-light/60 [&>a]:text-text-light max-lg:mt-10"
+            className="mt-12 text-base-sm text-text-light/60 [&>a]:text-text-light"
             dangerouslySetInnerHTML={markdownify(copyright)}
             data-aos="fade-up-sm"
           />

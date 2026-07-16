@@ -1,5 +1,10 @@
 ---
 title: "H-KRYSTAL"
+product_details:
+  type: "Krystalizační ochrana"
+  usage: "Beton / železobeton"
+  package_info: "6 kg / 15 kg"
+  application: "Nátěr / nástřik"
 meta_title: ""
 description: "this is meta descriptio"
 # icon: "FaDroplet"

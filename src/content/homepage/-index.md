@@ -26,7 +26,7 @@ about:
   content: "Krystalizační technologie aktivně proniká do struktury betonu, utěsňuje póry a mikrotrhliny a poskytuje dlouhodobou ochranu betonových a železobetonových konstrukcí."
   schedule: []
   button:
-    enable: true
+    enable: false
     label: "Zjistit více"
     link: "/technologie"
   badge: ""

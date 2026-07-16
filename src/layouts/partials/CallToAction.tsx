@@ -62,7 +62,7 @@ const CallToAction = () => {
             </div>
           </div>
           {image && (
-            <div className=" lg:absolute lg:bottom-16 lg:right-24 xl:w-auto lg:w-40%] max-lg:w-[80%] max-lg:mx-auto">
+            <div className="lg:absolute lg:bottom-0 lg:right-0 lg:w-[48%] xl:bottom-16 xl:right-20 xl:w-auto max-lg:mx-auto max-lg:w-[80%]">
               <ImageFallback
                 src={image}
                 width={750}

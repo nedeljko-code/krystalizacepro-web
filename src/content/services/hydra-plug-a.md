@@ -1,5 +1,10 @@
 ---
 title: "HYDRA PLUG A"
+product_details:
+  type: "Rychletuhnoucí opravná hmota"
+  usage: "Beton / zdivo"
+  package_info: "6 kg / 15 kg"
+  application: "Ruční aplikace"
 meta_title: ""
 description: "Rychlé utěsnění aktivních průsaků"
 # icon: "FaWater"
