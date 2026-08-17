@@ -1,5 +1,5 @@
 ---
-title: "HYDRA PLUG A"
+title: "Fixit-A"
 product_details:
   type: "Rychletuhnoucí opravná hmota"
   usage: "Beton / zdivo"
@@ -15,6 +15,7 @@ date: 2025-04-04T05:00:00Z
 categories: ["Kitchen"]
 weight: 3
 draft: false
+coming_soon: true
 ---
 
 ### Okamžité zastavení aktivních průsaků vody

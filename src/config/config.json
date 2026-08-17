@@ -6,7 +6,7 @@
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
     "logo": "/images/logo-dark.png",
-    "footer_logo": "/images/logo.svg",
+    "footer_logo": "/images/logo-dark.png",
     "logo_width": "142",
     "logo_height": "40",
     "logo_text": "KRYSTALIZACEPRO"
@@ -19,8 +19,8 @@
   "params": {
     "contact_form_action": "#",
     "appointment_form_action": "#",
-    "footer_description": "Professional cleaning services <br> using innovative technology.",
-    "copyright": "[Themefisher](https://themefisher.com/) © 2025 All Rights Reserved"
+    "footer_description": "Profesionální řešení pro hydroizolaci, ochranu a sanaci betonových konstrukcí.",
+    "copyright": "© 2026 KrystalizacePro. Všechna práva vyhrazena."
   },
 
   "notification": {

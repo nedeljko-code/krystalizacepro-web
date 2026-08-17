@@ -1,7 +1,7 @@
-import CustomHeading from "@/components/CustomHeading";
+
 import ImageFallback from "@/helpers/ImageFallback";
 import { getListPage } from "@/lib/contentParser";
-import { markdownify } from "@/lib/utils/textConverter";
+
 
 const CustomerSection = () => {
   const { customer } = getListPage("homepage/-index.md").frontmatter;

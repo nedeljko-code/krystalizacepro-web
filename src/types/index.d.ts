@@ -37,6 +37,7 @@ export type Service = {
     categories: string[];
     date?: string;
     weight?: number;
+    coming_soon?: boolean;
     draft?: boolean;
     card_image?: string;
     card_description?: string;
@@ -45,9 +46,10 @@ export type Service = {
     usage: string;
     package_info: string;
     application: string;
+    
   };
   };
-  slug?: string;
+  slug: string;
   content?: string;
 };
 

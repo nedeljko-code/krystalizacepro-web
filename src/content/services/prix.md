@@ -1,5 +1,5 @@
 ---
-title: "H-KRYSTAL MR"
+title: "Prix"
 product_details:
   type: "Krystalizační ochrana"
   usage: "Beton / železobeton"

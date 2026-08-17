@@ -5,8 +5,7 @@ type ProductCardProps = {
   usage: string;
   packageInfo: string;
   application: string;
-  technicalSheet?: string;
-  safetySheet?: string;
+  documentationHref: string;
   contactLink: string;
 };
 
@@ -15,8 +14,7 @@ const ProductCard = ({
   usage,
   packageInfo,
   application,
-  technicalSheet,
-  safetySheet,
+  documentationHref,
   contactLink,
 }: ProductCardProps) => {
   return (
@@ -54,33 +52,15 @@ const ProductCard = ({
           </div>
         </div>
 
-        {(technicalSheet || safetySheet) && (
-          <div className="mt-4 border-t border-border pt-3">
-            {technicalSheet && (
-              <a
-                href={technicalSheet}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-between py-2 text-sm font-semibold text-text transition-colors hover:text-primary"
-              >
-                <span>Technický list</span>
-                <span aria-hidden="true">↓</span>
-              </a>
-            )}
-
-            {safetySheet && (
-              <a
-                href={safetySheet}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-between py-2 text-sm font-semibold text-text transition-colors hover:text-primary"
-              >
-                <span>Bezpečnostní list</span>
-                <span aria-hidden="true">↓</span>
-              </a>
-            )}
-          </div>
-        )}
+       <div className="mt-4 border-t border-border pt-3">
+          <a
+            href={documentationHref}
+            className="flex items-center justify-between py-2 text-sm font-semibold text-text transition-colors hover:text-primary"
+          >
+            <span>Dokumentace</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
 
       <Link

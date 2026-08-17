@@ -3,25 +3,30 @@ import { markdownify } from "@/lib/utils/textConverter";
 import { Service } from "@/types";
 
 const ServiceCard = ({ service }: { service: Service }) => {
-  const { title, card_image, card_description, description, banner } =
-    service.frontmatter;
+  const {
+    title,
+    card_image,
+    card_description,
+    description,
+    banner,
+    coming_soon,
+  } = service.frontmatter;
 
   const image = card_image || banner;
   const text = card_description || description;
 
-  return (
-    <a
-      href={`/services/${service.slug}`}
-      className="group block h-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-xl"
-    >
+  const content = (
+    <>
       {image && (
-        <div className="mb-5 flex h-48 items-center justify-center rounded-xl ">
+        <div className="mb-5 flex h-48 items-center justify-center rounded-xl">
           <ImageFallback
             src={image}
             alt={title}
             width={220}
             height={220}
-            className="max-h-44 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            className={`max-h-44 w-auto object-contain transition-transform duration-300 ${
+              coming_soon ? "" : "group-hover:scale-105"
+            }`}
           />
         </div>
       )}
@@ -37,9 +42,29 @@ const ServiceCard = ({ service }: { service: Service }) => {
         </p>
       )}
 
-      <span className="font-semibold text-[#e07a00]">
-        Zobrazit produkt →
+      <span
+        className={`font-semibold ${
+          coming_soon ? "text-gray-500" : "text-[#e07a00]"
+        }`}
+      >
+        {coming_soon ? "Připravujeme" : "Zobrazit produkt →"}
       </span>
+    </>
+  );
+
+  const cardClassName = `group block h-full rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 ${
+    coming_soon
+      ? "cursor-default"
+      : "hover:-translate-y-2 hover:scale-[1.02] hover:shadow-xl"
+  }`;
+
+  if (coming_soon) {
+    return <div className={cardClassName}>{content}</div>;
+  }
+
+  return (
+    <a href={`/services/${service.slug}`} className={cardClassName}>
+      {content}
     </a>
   );
 };

@@ -94,16 +94,14 @@ const ServiceSingle = async (props: {
                 )}
 
                 <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
-                  <div className="[&>div]:rounded-none [&>div]:border-0 [&>div]:shadow-none">
-                    <ProductCard
+                  <ProductCard
                       type={product_details.type}
                       usage={product_details.usage}
                       packageInfo={product_details.package_info}
                       application={product_details.application}
-                      technicalSheet={config.notification.link}
+                      documentationHref={`/dokumentace#${service.slug}`}
                       contactLink={config.navigation_button.link}
                     />
-                  </div>
                 </div>
               </div>
             </div>
@@ -113,26 +111,30 @@ const ServiceSingle = async (props: {
 
       <section className="section pt-0">
         <div className="container">
-          <h2
-            className="mb-16 text-center text-h3 md:text-h2"
-            data-aos="fade-up-sm"
-          >
-            Další produkty
-          </h2>
+  <h2
+    className="mb-16 text-center text-h3 md:text-h2"
+    data-aos="fade-up-sm"
+  >
+    Další produkty
+  </h2>
 
-          <div className="row justify-center g-4">
-            {similarServices.slice(0, 3).map((service, i: number) => (
-              <div
-                key={service.slug}
-                className="col-12 transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] md:col-5 xl:col-4"
-                data-aos="fade-up-sm"
-                data-aos-delay={`${i * 100}`}
-              >
-                <ServiceCard service={service as Service} />
-              </div>
-            ))}
-          </div>
+  <div className="row gy-5">
+    {similarServices.slice(0, 3).map((service, i: number) => {
+      const product = service as Service;
+
+      return (
+        <div
+          key={product.slug}
+          className="col-12 sm:col-6 lg:col-4"
+          data-aos="fade-up-sm"
+          data-aos-delay={100 + i * 50}
+        >
+          <ServiceCard service={product} />
         </div>
+      );
+    })}
+  </div>
+</div>
       </section>
 
       <CallToAction />

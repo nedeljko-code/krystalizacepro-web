@@ -9,19 +9,38 @@
       "url": "/services"
     },
     {
-      "name": "Technologie",
-      "url": "/gallery"
+      "name": "Dokumentace",
+      "url": "/dokumentace"
     },
-    {
-      "name": "Reference",
-      "url": "/blog"
-    },
+    
     {
       "name": "Contact",
       "url": "/appointment"
     }
   ],
   "footer": [
+    
+    {
+      "title": "Produkty",
+      "children": [
+        {
+          "name": "Natrix",
+          "url": "/services/natrix"
+        },
+        {
+          "name": "Prix",
+          "url": "/services/prix"
+        },
+        {
+          "name": "Fixit-A",
+          "url": ""
+        },
+        {
+          "name": "Fixit-B",
+          "url": ""
+        }
+      ]
+    },
     {
       "title": "Navigace",
       "children": [
@@ -29,42 +48,15 @@
           "name": "O nás",
           "url": "/about"
         },
+        
         {
-          "name": "Produkty",
-          "url": "/services"
+          "name": "Dokumentace",
+          "url": "/dokumentace"
         },
-        {
-          "name": "Technologie",
-          "url": "/gallery"
-        },
-        {
-          "name": "Reference",
-          "url": "/blog"
-        },
+        
         {
           "name": "Kontakt",
           "url": "/appointment"
-        }
-      ]
-    },
-    {
-      "title": "Produkty",
-      "children": [
-        {
-          "name": "H-Krystal",
-          "url": "/services/h-krystal"
-        },
-        {
-          "name": "H-Krystal MR",
-          "url": "/services/h-krystal-mr"
-        },
-        {
-          "name": "Hydra Plug A",
-          "url": "/services/hydra-plug-a"
-        },
-        {
-          "name": "Hydra Plug B",
-          "url": "/services/hydra-plug-b"
         }
       ]
     },
@@ -81,5 +73,7 @@
         }
       ]
     }
+    
+    
   ]
 }

@@ -1,5 +1,5 @@
 ---
-title: "H-KRYSTAL"
+title: "Natrix"
 product_details:
   type: "Krystalizační ochrana"
   usage: "Beton / železobeton"
