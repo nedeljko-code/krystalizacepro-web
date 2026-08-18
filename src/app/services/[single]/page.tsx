@@ -56,6 +56,7 @@ const ServiceSingle = async (props: {
             {/* LEVI BLOK */}
             <div
               className={`col-12 lg:col-7 xl:col-6 content ${styles.productContent}`}
+              data-aos="fade-up-sm"
             >
               {title && (
                 <CustomHeading

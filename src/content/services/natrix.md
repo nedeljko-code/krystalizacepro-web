@@ -19,11 +19,11 @@ draft: false
 
 ### Pokročilá ochrana betonových konstrukcí
 
-H-KRYSTAL je moderní krystalizační hydroizolační systém určený pro dlouhodobou ochranu betonových a železobetonových konstrukcí proti vodě, vlhkosti a degradaci. Aktivní složky pronikají hluboko do struktury betonu, kde vytvářejí nerozpustné krystaly, které vyplňují póry a mikrotrhliny.
+Natrix je moderní krystalizační hydroizolační systém určený pro dlouhodobou ochranu betonových a železobetonových konstrukcí proti vodě, vlhkosti a degradaci. Aktivní složky pronikají hluboko do struktury betonu, kde vytvářejí nerozpustné krystaly, které vyplňují póry a mikrotrhliny.
 
 Díky této technologii dochází ke snížení propustnosti vody a zároveň ke zvýšení odolnosti konstrukce vůči nepříznivým vlivům prostředí. Systém pomáhá chránit beton před dlouhodobým opotřebením, korozí výztuže a snižuje riziko vzniku dalších poškození.
 
-H-KRYSTAL je vhodný pro novostavby i rekonstrukce a nabízí spolehlivé řešení pro projekty, kde je klíčová dlouhá životnost, vysoká odolnost a efektivní hydroizolace.
+Natrix je vhodný pro novostavby i rekonstrukce a nabízí spolehlivé řešení pro projekty, kde je klíčová dlouhá životnost, vysoká odolnost a efektivní hydroizolace.
 
 ### Přehled použití
 
@@ -35,4 +35,4 @@ Aplikace je jednoduchá a efektivní formou nátěru nebo nástřiku. Aktivní s
 
 Krystalizační technologie poskytuje trvalou ochranu bez nutnosti dodatečných vrstev. Výsledkem je zvýšená vodotěsnost, lepší ochrana výztuže před korozí a prodloužení životnosti konstrukce.
 
-H-KRYSTAL představuje spolehlivé řešení pro profesionální ochranu betonu v moderním stavebnictví.
+Natrix představuje spolehlivé řešení pro profesionální ochranu betonu v moderním stavebnictví.

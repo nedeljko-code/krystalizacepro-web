@@ -4,7 +4,7 @@ product_details:
   type: "Krystalizační ochrana"
   usage: "Beton / železobeton"
   package_info: "18 kg / 6×3 kg"
-  application: "Nátěr / nástřik"
+  application: "Přísada"
 meta_title: ""
 description: "Krystalizační přísada do čerstvého betonu"
 # icon: "FaCube"
@@ -19,11 +19,11 @@ draft: false
 
 ### Krystalizační hydroizolace již při výrobě betonu
 
-H-KRYSTAL MR je krystalizační přísada určená pro přímé přidání do čerstvé betonové směsi. Aktivní složky během hydratace cementu vytvářejí nerozpustné krystaly, které trvale utěsňují póry a kapiláry v celé hmotě betonu.
+Prix je krystalizační přísada určená pro přímé přidání do čerstvé betonové směsi. Aktivní složky během hydratace cementu vytvářejí nerozpustné krystaly, které trvale utěsňují póry a kapiláry v celé hmotě betonu.
 
 Výsledkem je vodotěsná betonová konstrukce s vyšší odolností proti průniku vody, agresivním látkám i dlouhodobému působení vlhkosti. Ochrana je součástí samotného betonu, nikoliv pouze jeho povrchu.
 
-H-KRYSTAL MR je ideální pro nové betonové konstrukce, kde je požadována dlouhodobá hydroizolace bez použití dodatečných membrán.
+Prix je ideální pro nové betonové konstrukce, kde je požadována dlouhodobá hydroizolace bez použití dodatečných membrán.
 
 ###### Přehled použití
 
