@@ -18,7 +18,7 @@ const About = () => {
             <div className="lg:w-[55%]">
               <div className="relative">
                 <ImageFallback
-                  src="/images/about/1.png"
+                  src="/images/about/1.jpeg"
                   alt="Hydroizolace betonových konstrukcí"
                   width={549}
                   height={465}
@@ -27,11 +27,11 @@ const About = () => {
                 />
 
                 <ImageFallback
-                  src="/images/about/2.png"
+                  src="/images/about/2.jpeg"
                   alt="Krystalizační směsi pro beton"
                   width={470}
                   height={317}
-                  className="absolute rounded right-0 -bottom-14 w-[52%] object-cover shadow-lg max-md:hidden"
+                    className="absolute rounded right-[-20]  -bottom-20 w-[52%] object-cover shadow-lg max-md:hidden"
                   data_aos="zoom-in-sm"
                   data_aos_delay="20"
                 />
