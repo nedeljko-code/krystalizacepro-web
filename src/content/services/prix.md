@@ -1,10 +1,10 @@
 ---
 title: "Prix"
 product_details:
-  type: "Krystalizační ochrana"
+  type: "Přísada"
   usage: "Beton / železobeton"
   package_info: "18 kg / 6×3 kg"
-  application: "Přísada"
+  application: "do betonové směsi"
 meta_title: ""
 description: "Krystalizační přísada do čerstvého betonu"
 # icon: "FaCube"
@@ -15,6 +15,8 @@ date: 2025-04-04T05:00:00Z
 categories: ["Kitchen"]
 weight: 1
 draft: false
+
+laboratory_note: "Výrobek může být na vyžádání dodán také s laboratorními protokoly a protokoly o vodotěsnosti."
 ---
 
 ### Krystalizační hydroizolace již při výrobě betonu
@@ -34,3 +36,5 @@ Přidává se přímo do čerstvé betonové směsi během výroby nebo míchán
 ###### Hlavní výhody
 
 Krystalizační technologie vytváří trvalou hydroizolační ochranu bez nutnosti dodatečných izolačních vrstev. Produkt zvyšuje životnost betonu, chrání výztuž před korozí a přispívá ke snížení nákladů na budoucí opravy a údržbu.
+
+

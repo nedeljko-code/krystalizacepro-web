@@ -5,21 +5,33 @@ meta_title: "Kontakt | KrystalizacePro"
 description: "Kontaktujte KrystalizacePro pro technickou konzultaci, cenovou nabídku nebo výběr vhodného řešení hydroizolace betonu."
 
 contact_way:
+  - name: "Společnost"
+    icon: "FaBuilding"
+    value: "Krystalizace PRO s.r.o."
+
+  - name: "Adresa"
+    icon: "FaLocationDot"
+    value: "Bavorská 856/14, Stodůlky, 155 00 Praha 5, Česká republika"
+
   - name: "Telefon"
     icon: "FaPhone"
     value: "+420 778 200 100"
 
-  - name: "Adresa"
-    icon: "FaLocationDot"
-    value: "Praha, Česká republika"
+  - name: "E-mail"
+    icon: "FaEnvelope"
+    value: "info@krystalizacepro.cz"
 
   - name: "Pracovní doba"
     icon: "FaClock"
     value: "Po–Pá: 8:00 – 16:00"
 
-  - name: "E-mail"
-    icon: "FaEnvelope"
-    value: "info@krystalizacepro.cz"
+  - name: "IČO"
+    icon: "FaIdCard"
+    value: "12345678"
+
+  - name: "DIČ"
+    icon: "FaFileInvoice"
+    value: "CZ12345678"
 form:
     first_name_label: "Jméno"
     first_name_placeholder: "Vaše jméno"

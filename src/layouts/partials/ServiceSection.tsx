@@ -9,6 +9,9 @@ const ServiceSection = ({ hero }: { hero?: boolean }) => {
   const { homepage_section_enable, subtitle, descriptions, title, home_title } =
     getListPage("services/-index.md").frontmatter;
   const allServices = getSinglePage("services");
+  const visibleServices = allServices.filter(
+    (service) => service.slug === "prix" || service.slug === "natrix",
+  );
   return (
     <>
       {homepage_section_enable && (
@@ -55,8 +58,8 @@ const ServiceSection = ({ hero }: { hero?: boolean }) => {
               </div>
 
               <div className="col-12">
-                <div className="mt-16 grid grid-cols-1 gap-7 sm:grid-cols-2 lg:mt-24 lg:grid-cols-4">
-                  {allServices.map((service: Service, i: number) => {
+                <div className="mt-16 grid grid-cols-1 gap-7 sm:grid-cols-2 lg:mt-24 lg:grid-cols-3">
+                  {visibleServices.map((service: Service, i: number) => {
                     const comingSoon = service.frontmatter.coming_soon;
 
                     const cardContent = (
@@ -89,16 +92,16 @@ const ServiceSection = ({ hero }: { hero?: boolean }) => {
                         )}
 
                         <span
-  className={`mt-auto font-semibold ${
-    comingSoon ? "text-gray-500" : "text-[#e07a00]"
-  }`}
->
-  {comingSoon ? "Připravujeme" : "Zobrazit produkt →"}
-</span>
+                          className={`mt-auto font-semibold ${
+                            comingSoon ? "text-gray-500" : "text-[#e07a00]"
+                          }`}
+                        >
+                          {comingSoon ? "Připravujeme" : "Zobrazit produkt →"}
+                        </span>
                       </>
                     );
 
-                    const cardClassName = `group flex h-full flex-col  rounded-2xl bg-white p-8 shadow-sm transition-all duration-300 ${
+                    const cardClassName = `group flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all duration-300 ${
                       comingSoon
                         ? "cursor-default"
                         : "hover:-translate-y-2 hover:shadow-2xl"
@@ -129,6 +132,23 @@ const ServiceSection = ({ hero }: { hero?: boolean }) => {
                       </a>
                     );
                   })}
+                  <div className="flex h-full flex-col items-center justify-center rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-sm">
+                    <div className="mb-6 text-5xl font-bold text-[#e07a00]">
+                      •••
+                    </div>
+
+                    <h5 className="mb-3 text-xl font-bold text-[#070735]">
+                      Další produkty
+                    </h5>
+
+                    <p className="mb-5 max-w-[280px] text-sm leading-relaxed text-gray-600">
+                      Naše produktové portfolio dále rozšiřujeme.
+                    </p>
+
+                    <span className="mt-auto font-semibold text-gray-500">
+                      Připravujeme
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

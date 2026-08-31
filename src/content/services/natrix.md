@@ -1,10 +1,10 @@
 ---
 title: "Natrix"
 product_details:
-  type: "Krystalizační ochrana"
+  type: "Nátěr / nástřik"
   usage: "Beton / železobeton"
   package_info: "6 kg / 15 kg"
-  application: "Nátěr / nástřik"
+  application: "Válečkem / stříkacím zařízením"
 meta_title: ""
 description: "this is meta descriptio"
 # icon: "FaDroplet"
@@ -13,8 +13,10 @@ card_image: "/images/products/h-krystal-cutout.png"
 card_description: "Pokročilá krystalizační hydroizolace pro dlouhodobou ochranu betonových konstrukcí proti vodě, vlhkosti a degradaci. Ideální pro nové stavby i rekonstrukce."
 date: 2025-04-04T05:00:00Z
 categories: ["Kitchen"]
-weight: 4
+weight: 2
 draft: false
+
+laboratory_note: "Výrobek může být na vyžádání dodán také s laboratorními protokoly a protokoly o vodotěsnosti."
 ---
 
 ### Pokročilá ochrana betonových konstrukcí

@@ -33,8 +33,16 @@ const ServiceSingle = async (props: {
     return null;
   }
 
-  const { title, meta_title, description, image, banner, card_image, product_details } =
-    service.frontmatter;
+  const {
+    title,
+    meta_title,
+    description,
+    image,
+    banner,
+    card_image,
+    product_details,
+    laboratory_note,
+  } = service.frontmatter;
 
   const productImage = card_image || image || banner;
 
@@ -72,7 +80,16 @@ const ServiceSingle = async (props: {
                   <MDXContent content={service.content} />
                 </div>
               </article>
+              {service.frontmatter.laboratory_note && (
+    <div className="mt-8 max-w-[760px] border-l-2 border-primary pl-5">
+      <p className="mb-0 font-medium leading-relaxed">
+        {service.frontmatter.laboratory_note}
+      </p>
+    </div>
+  )}
+              
             </div>
+            
 
             {/* DESNI BLOK */}
             <div
@@ -96,13 +113,13 @@ const ServiceSingle = async (props: {
 
                 <div className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
                   <ProductCard
-                      type={product_details.type}
-                      usage={product_details.usage}
-                      packageInfo={product_details.package_info}
-                      application={product_details.application}
-                      documentationHref={`/dokumentace#${service.slug}`}
-                      contactLink={config.navigation_button.link}
-                    />
+                    type={product_details.type}
+                    usage={product_details.usage}
+                    packageInfo={product_details.package_info}
+                    application={product_details.application}
+                    documentationHref={`/dokumentace#${service.slug}`}
+                    contactLink={config.navigation_button.link}
+                  />
                 </div>
               </div>
             </div>
@@ -110,33 +127,40 @@ const ServiceSingle = async (props: {
         </div>
       </section>
 
-      <section className="section pt-0">
-        <div className="container">
-  <h2
-    className="mb-16 text-center text-h3 md:text-h2"
-    data-aos="fade-up-sm"
-  >
-    Další produkty
-  </h2>
+    <section className="section pt-0">
+  <div className="container">
+    <h2
+      className="mb-16 text-center text-h3 md:text-h2"
+      data-aos="fade-up-sm"
+    >
+      Další produkt
+    </h2>
 
-  <div className="row gy-5">
-    {similarServices.slice(0, 3).map((service, i: number) => {
-      const product = service as Service;
+    <div className="row justify-center gy-5">
+      {similarServices
+        .filter(
+          (item) =>
+            (item.slug === "prix" || item.slug === "natrix") &&
+            item.slug !== service.slug,
+        )
+        .slice(0, 1)
+        .map((item, i: number) => {
+          const product = item as Service;
 
-      return (
-        <div
-          key={product.slug}
-          className="col-12 sm:col-6 lg:col-4"
-          data-aos="fade-up-sm"
-          data-aos-delay={100 + i * 50}
-        >
-          <ServiceCard service={product} />
-        </div>
-      );
-    })}
+          return (
+            <div
+              key={product.slug}
+              className="col-12 sm:col-8 lg:col-4"
+              data-aos="fade-up-sm"
+              data-aos-delay={100 + i * 50}
+            >
+              <ServiceCard service={product} />
+            </div>
+          );
+        })}
+    </div>
   </div>
-</div>
-      </section>
+</section>
 
       <CallToAction />
     </>

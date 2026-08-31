@@ -1,11 +1,11 @@
 ---
 hero:
-  title: "Vodotěsné řešení<br> pro betonové konstrukce."
-  subtitle: "PROFESIONÁLNÍ HYDROIZOLACE BETONU"
+  title: "Profesionální řešení<br> pro trvalé stavby."
+  subtitle: "STÁLÁ OCHRANA BETONU ZEVNITŘ"
   buttons:
     - enable: true
-      label: "Zavolajte + 420 778 200 100"
-      link: "Zavolajte + 420 778 200 100"
+      label: "Zavolejte + 420 778 200 100"
+      link: "tel:+420778200100"
       icon: "FaPhone"
     - enable: false
       label: "Kontaktujte nás"
@@ -22,7 +22,7 @@ hero:
 about:
   enable: true
   title: "Trvalá ochrana <br> proti vodě a vlhkosti"
-  subtitle: "PROBLÉM + ŘEŠENÍ"
+  subtitle: "SÍLA KRYSTALIZACE"
   content: "Krystalizační technologie aktivně proniká do struktury betonu, utěsňuje póry a mikrotrhliny a poskytuje dlouhodobou ochranu betonových a železobetonových konstrukcí."
   schedule: []
   button:
@@ -37,7 +37,7 @@ about:
 responsibility:
   enable: true
   title: "Technologie, <br>která chrání beton dlouhodobě"
-  subtitle: "PROČ KRYSTALIZACEPRO"
+  subtitle: "PROČ KRYSTALIZACE"
   content: |
     Krystalizační technologie aktivně proniká do struktury betonu, <br>kde vytváří nerozpustné krystaly v pórech, kapilárách a mikrotrhlinách.<br>
 
@@ -55,8 +55,8 @@ responsibility:
     content: "Lokální výroba, ověřená kvalita a spolehlivé řešení pro profesionální použití ve stavebnictví."
 
   - icon: "shield"
-    title: "Garance realizace"
-    content: "Pokud aplikaci provádí náš tým, garantujeme kvalitu provedení a v případě problému zajistíme opravu."
+    title: "Garance kvality"
+    content: "Dodržení doporučených postupů je základem naší garance kvality. Pokud by i přesto došlo k problému, zajistíme jeho rychlé a profesionální odstranění."
 
 customer:
   enable: true

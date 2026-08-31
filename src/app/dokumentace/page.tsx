@@ -59,6 +59,7 @@ export default function DokumentacePage() {
     <section className="section">
       <div className="container"
       data-aos="fade-up-sm"
+      
       >
 
         <div className="mb-16 mt-8 text-center">
@@ -74,6 +75,14 @@ export default function DokumentacePage() {
 
         <div className="mx-auto max-w-[1080px]">
           <div className="row gy-8">
+            <div className="col-12 lg:col-6">
+            <Dokumentace
+              id="prix"
+              productName="Prix"
+              documents={prixDocuments}
+              downloadAllHref="/documents/prix/prix-dokumentace.zip"
+            />
+          </div>
           <div className="col-12 lg:col-6">
             <Dokumentace
               id="natrix"
@@ -83,14 +92,7 @@ export default function DokumentacePage() {
             />
           </div>
 
-          <div className="col-12 lg:col-6">
-            <Dokumentace
-              id="prix"
-              productName="Prix"
-              documents={prixDocuments}
-              downloadAllHref="/documents/prix/prix-dokumentace.zip"
-            />
-          </div>
+          
           </div>
         </div>
 

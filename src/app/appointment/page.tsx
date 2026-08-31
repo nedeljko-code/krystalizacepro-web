@@ -8,9 +8,15 @@ import CallToAction from "@/partials/CallToAction";
 import SeoMeta from "@/partials/SeoMeta";
 
 const AppointmentPage = () => {
-  const { title, subtitle, description, meta_title, contact_way, form, contact_title } = getListPage(
-    "appointment/-index.md",
-  ).frontmatter;
+  const {
+    title,
+    subtitle,
+    description,
+    meta_title,
+    contact_way,
+    form,
+    contact_title,
+  } = getListPage("appointment/-index.md").frontmatter;
 
   const { appointment_form_action }: { appointment_form_action: string } =
     config.params;
@@ -69,6 +75,7 @@ const AppointmentPage = () => {
                         />
                       </div>
                     </div>
+
                     <div className="col-12">
                       <div
                         className="mb-6"
@@ -86,6 +93,24 @@ const AppointmentPage = () => {
                           placeholder={form.last_name_placeholder}
                           type="text"
                           required
+                        />
+                      </div>
+                    </div>
+                    <div className="col-12">
+                      <div
+                        className="mb-6"
+                        data-aos="fade-up-sm"
+                        data-aos-delay="160"
+                      >
+                        <label htmlFor="company" className="form-label">
+                          {form.company_label}
+                        </label>
+                        <input
+                          id="company"
+                          name="company"
+                          className="form-input"
+                          placeholder={form.company_placeholder}
+                          type="text"
                         />
                       </div>
                     </div>
@@ -155,23 +180,43 @@ const AppointmentPage = () => {
               >
                 {contact_title}
               </h2>
-              {contact_way.map((contact: { icon: string; value: string; name: string }, i: number) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-3 mb-6 last:mb-0"
-                  data-aos="fade-up-sm"
-                  data-aos-delay={100 + i * 20}
-                >
-                  <DynamicIcon
-                    icon={contact.icon}
-                    className="mr-4 shrink-0 text-primary text-xl"
-                  />
-                  <p
-                    className="mb-0"
-                    dangerouslySetInnerHTML={markdownify(contact.value)}
-                  />
-                </div>
-              ))}
+              {contact_way.map(
+                (
+                  contact: { icon: string; value: string; name: string },
+                  i: number,
+                ) => (
+                  <div
+                    key={i}
+                    className="flex items-center gap-3 mb-6 last:mb-0"
+                    data-aos="fade-up-sm"
+                    data-aos-delay={100 + i * 20}
+                  >
+                    <DynamicIcon
+                      icon={contact.icon}
+                      className="mr-4 shrink-0 text-primary text-xl"
+                    />
+                    <p
+                      className="mb-0"
+                      dangerouslySetInnerHTML={markdownify(contact.value)}
+                    />
+                  </div>
+                ),
+              )}
+              <div
+                className="mt-28 overflow-hidden rounded-lg"
+                data-aos="fade-up-sm"
+                data-aos-delay="220"
+              >
+                <iframe
+                  src="https://www.google.com/maps?q=Bavorsk%C3%A1%20856%2F14%2C%20Praha%205%2C%20Czechia&output=embed"
+                  width="100%"
+                  height="320"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Krystalizace PRO - Bavorská 856/14, Praha 5"
+                />
+              </div>
             </div>
           </div>
         </div>

@@ -60,13 +60,18 @@ export const getSinglePage = (folder: string) => {
       content,
     };
   });
-
+  
   const publishedPages = singlePages.filter(
     (page) => !page.frontmatter.draft && page,
   );
   const filterByDate = publishedPages.filter(
-    (page) => new Date(page.frontmatter.date || new Date()) <= new Date(),
-  );
+  (page) => new Date(page.frontmatter.date || new Date()) <= new Date(),
+);
 
-  return filterByDate;
+const sortedPages = filterByDate.sort(
+  (a, b) =>
+    (a.frontmatter.weight ?? 999) - (b.frontmatter.weight ?? 999),
+);
+
+return sortedPages;
 };

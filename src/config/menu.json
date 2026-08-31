@@ -4,6 +4,12 @@
       "name": "O nás",
       "url": "/about"
     },
+
+    {
+      "name": "O Krystalizaci",
+      "url": "/krystalizace"
+    },
+
     {
       "name": "Produkty",
       "url": "/services"
@@ -23,22 +29,16 @@
     {
       "title": "Produkty",
       "children": [
-        {
-          "name": "Natrix",
-          "url": "/services/natrix"
-        },
+        
         {
           "name": "Prix",
           "url": "/services/prix"
         },
         {
-          "name": "Fixit-A",
-          "url": ""
-        },
-        {
-          "name": "Fixit-B",
-          "url": ""
+          "name": "Natrix",
+          "url": "/services/natrix"
         }
+       
       ]
     },
     {
@@ -47,6 +47,11 @@
         {
           "name": "O nás",
           "url": "/about"
+        },
+
+        {
+          "name": "O Krystalizaci",
+          "url": "/krystalizace"
         },
         
         {

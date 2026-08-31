@@ -13,7 +13,7 @@ card_image: "/images/products/hidra-plug-b-cutout.png"
 card_description: "Trvale odolná opravná a těsnicí hmota pro opravy spár, trhlin a poškozených betonových konstrukcí. Vytváří pevné a vodotěsné spojení."
 date: 2025-04-04T05:00:00Z
 categories: ["Kitchen"]
-weight: 2
+weight: 4
 draft: false
 coming_soon: true
 ---

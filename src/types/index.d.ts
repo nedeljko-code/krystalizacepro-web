@@ -29,6 +29,7 @@ export type Post = {
 export type Service = {
   frontmatter: {
     title: string;
+    laboratory_note?: string;
     meta_title?: string;
     description?: string;
     icon: string;
@@ -46,6 +47,7 @@ export type Service = {
     usage: string;
     package_info: string;
     application: string;
+    
     
   };
   };

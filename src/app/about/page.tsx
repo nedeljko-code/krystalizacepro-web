@@ -1,86 +1,98 @@
 import CustomButton from "@/components/CustomButton";
 import CustomHeading from "@/components/CustomHeading";
 import ImageFallback from "@/helpers/ImageFallback";
+import { getListPage } from "@/lib/contentParser";
 import SeoMeta from "@/partials/SeoMeta";
 
 const About = () => {
+  const {
+    title,
+    subtitle,
+    meta_title,
+    description,
+    image_primary,
+    image_secondary,
+    paragraphs,
+    button_label,
+    button_link,
+  } = getListPage("about/-index.md").frontmatter;
+
   return (
     <>
       <SeoMeta
-        title="O nás"
-        meta_title="O nás"
-        description="Specialisté na hydroizolaci betonových konstrukcí"
+        title={title}
+        meta_title={meta_title}
+        description={description}
       />
 
       <section className="section">
-        <div className="container">
-          <div className="flex flex-col lg:flex-row justify-between gap-14 lg:gap-10 items-center">
+        <div
+          className="container pt-16 lg:pt-20"
+          
+          data-aos="fade-up-sm"
+          data-aos-delay="100"
+        >
+          <div className="flex flex-col items-center justify-between gap-14 lg:flex-row lg:gap-10">
             <div className="lg:w-[55%]">
               <div className="relative">
                 <ImageFallback
-                  src="/images/about/1.jpeg"
-                  alt="Hydroizolace betonových konstrukcí"
+                  src={image_primary}
+                  alt={title}
                   width={549}
                   height={465}
-                  className="rounded w-full lg:w-[92%] object-cover"
+                  className="w-full rounded object-cover lg:w-[92%]"
                   data_aos="zoom-in-sm"
                 />
 
                 <ImageFallback
-                  src="/images/about/2.jpeg"
-                  alt="Krystalizační směsi pro beton"
+                  src={image_secondary}
+                  alt={title}
                   width={470}
                   height={317}
-                    className="absolute rounded right-[-20]  -bottom-20 w-[52%] object-cover shadow-lg max-md:hidden"
+                  className="absolute -bottom-20 right-[-20px] w-[52%] rounded object-cover shadow-lg max-md:hidden"
                   data_aos="zoom-in-sm"
                   data_aos_delay="20"
                 />
               </div>
             </div>
 
-            <div className="lg:w-[38%]">
+            <div className="lg:w-[38%] ">
               <p
-                className="mb-6 text-base-sm text-primary text-center lg:text-left uppercase font-medium"
+                className="mb-6 text-center text-base-sm font-medium uppercase text-primary lg:text-left"
                 data-aos="fade-up-sm"
               >
-                O NÁS
+                {subtitle}
               </p>
 
               <CustomHeading
                 as="h1"
-                text="Specialisté na hydroizolaci betonových konstrukcí"
-                className="text-h3 md:text-h2 text-balance mb-7 text-center lg:text-left"
+                text={title}
+                className="mb-8 text-balance text-center text-h3 md:text-h2 lg:text-left"
                 dataAos="fade-up-sm"
                 dataAosDelay="50"
               />
 
-              <p
-                className="mb-6 text-center lg:text-left text-text/80"
-                data-aos="fade-up-sm"
-                data-aos-delay="100"
-              >
-                Specializujeme se na vývoj a výrobu vysoce kvalitních
-                hydroizolačních krystalizačních směsí pro dlouhodobou ochranu
-                betonových konstrukcí.
-              </p>
-
-              <p
-                className="mb-8 text-center lg:text-left text-text/80"
-                data-aos="fade-up-sm"
-                data-aos-delay="130"
-              >
-                Díky osobnímu přístupu, odborným znalostem a otevřené komunikaci
-                pomáháme nacházet řešení, která skutečně fungují.
-              </p>
+              {paragraphs.map((paragraph: string, i: number) => (
+                <p
+                  key={i}
+                  className={`text-center text-text/80 lg:text-left ${
+                    i === paragraphs.length - 1 ? "mb-8" : "mb-6"
+                  }`}
+                  data-aos="fade-up-sm"
+                  data-aos-delay={100 + i * 30}
+                >
+                  {paragraph}
+                </p>
+              ))}
 
               <div
-                className="w-full flex justify-center lg:justify-start"
+                className="flex w-full justify-center lg:justify-start"
                 data-aos="fade-up-sm"
                 data-aos-delay="160"
               >
                 <CustomButton
-                  link="/services"
-                  label="Prohlédnout produkty"
+                  link={button_link}
+                  label={button_label}
                   className="btn-sm! sm:btn!"
                   variant="secondary"
                   icon="FaArrowRightLong"
