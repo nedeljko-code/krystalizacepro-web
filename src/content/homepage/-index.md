@@ -47,7 +47,7 @@ responsibility:
 
   image: "/images/home/radnik.png"
 
-  side_image: "/images/home/radnik1.png"
+  side_image: "/images/home/nova.jpeg"
 
   job:
   - icon: "cz"
