@@ -31,7 +31,7 @@ about:
     link: "/technologie"
   badge: ""
   images:
-    - "/images/home/about/concrete-3.png"
+    - "/images/home/about/concrete-3.jpg"
     - "/images/home/about/concrete-2.jpg"
 
 responsibility:
