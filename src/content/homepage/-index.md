@@ -10,7 +10,7 @@ hero:
     - enable: false
       label: "Kontaktujte nás"
       link: "appointment"
-  image: "/images/home/banner.png"
+  image: "/images/home/banner2.jpeg"
   reviews:
     - name: "Company Logo with star ratings"
       company_logo: "/images/home/PastedGraphic-5.tiff"

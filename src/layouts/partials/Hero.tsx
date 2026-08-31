@@ -80,7 +80,7 @@ const Hero = () => {
       <ReferralText />
 
       <div
-        className="absolute inset-0 w-[78%] h-full z-10 bg-gradient-to-r from-black/80 via-black/55 to-transparent"
+        className="absolute inset-0 w-[78%] h-full z-10 bg-gradient-to-r from-black/50 via-black/30 to-transparent"
         data-aos="fade-right-sm"
       />
     </section>
