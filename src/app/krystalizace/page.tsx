@@ -2,6 +2,7 @@ import CustomHeading from "@/components/CustomHeading";
 import { getListPage } from "@/lib/contentParser";
 import CallToAction from "@/partials/CallToAction";
 import SeoMeta from "@/partials/SeoMeta";
+import Image from "next/image";
 
 const KrystalizacePage = () => {
   const {
@@ -27,10 +28,7 @@ const KrystalizacePage = () => {
       <section className="section mt-32 sm:mt-28">
         <div className="container">
           <div className="max-w-[900px]">
-            <p
-              className="mb-4 text-primary text-base-sm"
-              data-aos="fade-up-sm"
-            >
+            <p className="mb-4 text-primary text-base-sm" data-aos="fade-up-sm">
               {subtitle}
             </p>
 
@@ -55,10 +53,7 @@ const KrystalizacePage = () => {
       <section className="section-sm">
         <div className="container">
           <div className="max-w-[900px]">
-            <h2
-              className="mb-8 text-h3 lg:text-h2"
-              data-aos="fade-up-sm"
-            >
+            <h2 className="mb-8 text-h3 lg:text-h2" data-aos="fade-up-sm">
               {section_title}
             </h2>
 
@@ -77,14 +72,10 @@ const KrystalizacePage = () => {
           </div>
         </div>
       </section>
-
       <section className="section-sm bg-light">
         <div className="container">
           <div className="max-w-[900px]">
-            <h2
-              className="mb-10 text-h3 lg:text-h2"
-              data-aos="fade-up-sm"
-            >
+            <h2 className="mb-10 text-h3 lg:text-h2" data-aos="fade-up-sm">
               {process_title}
             </h2>
 
@@ -100,12 +91,20 @@ const KrystalizacePage = () => {
                     {i + 1}
                   </div>
 
-                  <p className="mb-0 pt-2 leading-relaxed">
-                    {step}
-                  </p>
+                  <p className="mb-0 pt-2 leading-relaxed">{step}</p>
                 </div>
               ))}
             </div>
+          </div>
+
+          <div className="mt-12" data-aos="fade-up-sm" data-aos-delay="100">
+            <Image
+              src="/images/krystalizace/princip-krystalizace.jpg"
+              alt="Princip krystalizace betonu – pronikání vody, aktivace krystalizačního procesu a trvalé utěsnění kapilár"
+              width={1279}
+              height={582}
+              className="h-auto w-full"
+            />
           </div>
         </div>
       </section>
