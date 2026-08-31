@@ -80,16 +80,14 @@ const ServiceSingle = async (props: {
                   <MDXContent content={service.content} />
                 </div>
               </article>
-              {service.frontmatter.laboratory_note && (
-    <div className="mt-8 max-w-[760px] border-l-2 border-primary pl-5">
-      <p className="mb-0 font-medium leading-relaxed">
-        {service.frontmatter.laboratory_note}
-      </p>
-    </div>
-  )}
-              
+              {laboratory_note && (
+                <div className="mt-8 border-l-2 border-primary pl-5">
+                  <p className="mb-0 font-medium leading-relaxed">
+                    {laboratory_note}
+                  </p>
+                </div>
+              )}
             </div>
-            
 
             {/* DESNI BLOK */}
             <div
@@ -127,40 +125,40 @@ const ServiceSingle = async (props: {
         </div>
       </section>
 
-    <section className="section pt-0">
-  <div className="container">
-    <h2
-      className="mb-16 text-center text-h3 md:text-h2"
-      data-aos="fade-up-sm"
-    >
-      Další produkt
-    </h2>
+      <section className="section pt-0">
+        <div className="container">
+          <h2
+            className="mb-16 text-center text-h3 md:text-h2"
+            data-aos="fade-up-sm"
+          >
+            Další produkt
+          </h2>
 
-    <div className="row justify-center gy-5">
-      {similarServices
-        .filter(
-          (item) =>
-            (item.slug === "prix" || item.slug === "natrix") &&
-            item.slug !== service.slug,
-        )
-        .slice(0, 1)
-        .map((item, i: number) => {
-          const product = item as Service;
+          <div className="row justify-center gy-5">
+            {similarServices
+              .filter(
+                (item) =>
+                  (item.slug === "prix" || item.slug === "natrix") &&
+                  item.slug !== service.slug,
+              )
+              .slice(0, 1)
+              .map((item, i: number) => {
+                const product = item as Service;
 
-          return (
-            <div
-              key={product.slug}
-              className="col-12 sm:col-8 lg:col-4"
-              data-aos="fade-up-sm"
-              data-aos-delay={100 + i * 50}
-            >
-              <ServiceCard service={product} />
-            </div>
-          );
-        })}
-    </div>
-  </div>
-</section>
+                return (
+                  <div
+                    key={product.slug}
+                    className="col-12 sm:col-8 lg:col-4"
+                    data-aos="fade-up-sm"
+                    data-aos-delay={100 + i * 50}
+                  >
+                    <ServiceCard service={product} />
+                  </div>
+                );
+              })}
+          </div>
+        </div>
+      </section>
 
       <CallToAction />
     </>
