@@ -8,8 +8,7 @@ import menu from "@/config/menu.json";
 import DynamicIcon from "@/helpers/DynamicIcon";
 import { markdownify } from "@/lib/utils/textConverter";
 import { usePathname } from "next/navigation";
-import React, { useEffect,useState } from "react";
-
+import React, { useEffect, useState } from "react";
 
 export interface ChildNavigationLink {
   name: string;
@@ -35,44 +34,44 @@ const Header = () => {
 
   // scroll to top on route change and initialize sticky header
   useEffect(() => {
-  window.scrollTo(0, 0);
-  setIsScrolled(false);
+    window.scrollTo(0, 0);
+    setIsScrolled(false);
 
-  const header = document.querySelector(".header");
-  let lastScroll = 0;
+    const header = document.querySelector(".header");
+    let lastScroll = 0;
 
-  const onScroll = () => {
-    const currentScroll = window.scrollY;
+    const onScroll = () => {
+      const currentScroll = window.scrollY;
 
-    setIsScrolled(currentScroll > 250);
+      setIsScrolled(currentScroll > 250);
 
-    if (
-      sticky_header &&
-      currentScroll > 300 &&
-      currentScroll > lastScroll &&
-      header
-    ) {
-      header.classList.add("header-reveal");
-      header.classList.remove("absolute");
-    } else if (currentScroll < 250 && header) {
-      header.classList.remove("header-reveal");
-      header.classList.add("absolute");
-    }
+      if (
+        sticky_header &&
+        currentScroll > 300 &&
+        currentScroll > lastScroll &&
+        header
+      ) {
+        header.classList.add("header-reveal");
+        header.classList.remove("absolute");
+      } else if (currentScroll < 250 && header) {
+        header.classList.remove("header-reveal");
+        header.classList.add("absolute");
+      }
 
-    lastScroll = currentScroll;
-  };
+      lastScroll = currentScroll;
+    };
 
-  window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll);
 
-  const frame = requestAnimationFrame(() => {
-    onScroll();
-  });
+    const frame = requestAnimationFrame(() => {
+      onScroll();
+    });
 
-  return () => {
-    cancelAnimationFrame(frame);
-    window.removeEventListener("scroll", onScroll);
-  };
-}, [pathname, sticky_header]);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, [pathname, sticky_header]);
 
   return (
     <>
@@ -97,7 +96,11 @@ const Header = () => {
       <header className="header z-50 absolute top-26 sm:top-12">
         <nav className="navbar mx-auto max-w-[1356px]! px-[30px]">
           {/* logo  */}
-          <div className="order-0 flex items-center" data-aos="zoom-in" data-aos-delay="20">
+          <div
+            className="order-0 flex items-center"
+            data-aos="zoom-in"
+            data-aos-delay="20"
+          >
             <Logo />
           </div>
           <div className="flex items-center gap-4.5">
@@ -153,7 +156,9 @@ const Header = () => {
                       <a
                         href={menu.url}
                         className={`nav-link text-base-lg ${
-                          isHome || isScrolled ? "text-white" : "text-text"
+                          isHome || isScrolled
+                            ? "text-text lg:text-white"
+                            : "text-text"
                         }`}
                       >
                         {menu.name}

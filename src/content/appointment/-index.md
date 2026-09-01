@@ -27,11 +27,11 @@ contact_way:
 
   - name: "IČO"
     icon: "FaIdCard"
-    value: "12345678"
+    value: "IČO: 12345678"
 
   - name: "DIČ"
     icon: "FaFileInvoice"
-    value: "CZ12345678"
+    value: "DIČ: CZ12345678"
 form:
     first_name_label: "Jméno"
     first_name_placeholder: "Vaše jméno"

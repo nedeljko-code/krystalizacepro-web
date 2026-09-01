@@ -71,8 +71,8 @@ const CustomerSection = () => {
                   className={`mx-auto max-h-[64px] w-auto object-contain ${
                     logo.toLowerCase().includes("skanska") ||
                     logo.toLowerCase().includes("cemex")
-                      ? "scale-145"
-                      : ""
+                      ? "scale-100 md:scale-[1.45]"
+                      : "scale-[0.70] md:scale-100"
                   }`}
                 />
               </div>

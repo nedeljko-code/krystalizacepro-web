@@ -56,46 +56,43 @@ const prixDocuments = [
 
 export default function DokumentacePage() {
   return (
-    <section className="section">
-      <div className="container"
-      data-aos="fade-up-sm"
-      
-      >
+    <section className="section mt-32 sm:mt-28">
+  <div
+    className="container"
+    data-aos="fade-up-sm"
+  >
+    <div className="mb-16 text-center">
+      <h1 className="mb-4 text-h2">
+        Dokumentace
+      </h1>
 
-        <div className="mb-16 mt-8 text-center">
-          <h1 className="mb-4 text-h2">
-            Dokumentace
-          </h1>
-
-          <p className="mx-auto max-w-[650px] text-gray-600">
-            Veškerá technická a produktová dokumentace přehledně
-            na jednom místě.
-          </p>
-        </div>
+      <p className="mx-auto max-w-[650px] text-gray-600">
+        Veškerá technická a produktová dokumentace přehledně
+        na jednom místě.
+      </p>
+    </div>
 
         <div className="mx-auto max-w-[1080px]">
-          <div className="row gy-8">
+          <div className="row">
             <div className="col-12 lg:col-6">
-            <Dokumentace
-              id="prix"
-              productName="Prix"
-              documents={prixDocuments}
-              downloadAllHref="/documents/prix/prix-dokumentace.zip"
-            />
-          </div>
-          <div className="col-12 lg:col-6">
-            <Dokumentace
-              id="natrix"
-              productName="Natrix"
-              documents={natrixDocuments}
-              downloadAllHref="/documents/natrix/natrix-dokumentace.zip"
-            />
-          </div>
+              <Dokumentace
+                id="prix"
+                productName="Prix"
+                documents={prixDocuments}
+                downloadAllHref="/documents/prix/prix-dokumentace.zip"
+              />
+            </div>
 
-          
+            <div className="col-12 mt-8 lg:mt-0 lg:col-6">
+              <Dokumentace
+                id="natrix"
+                productName="Natrix"
+                documents={natrixDocuments}
+                downloadAllHref="/documents/natrix/natrix-dokumentace.zip"
+              />
+            </div>
           </div>
         </div>
-
       </div>
     </section>
   );
