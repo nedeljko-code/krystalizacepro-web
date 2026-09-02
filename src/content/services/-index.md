@@ -1,13 +1,13 @@
 ---
-title: "Moderní řešení pro <br> hydroizolaci **betonu**"
+title: "Moderní řešení pro <br> vodotěsnost **betonu**"
 homepage_section_enable: true
-home_title: "Moderní řešení pro <br> hydroizolaci **betonu**"
+home_title: "Moderní řešení pro <br> vodotěsnost **betonu**"
 meta_title: ""
 description: "Produkty a technologie pro ochranu betonových konstrukcí."
 subtitle: "PRODUKTY"
 descriptions:
-  - "Zaměřujeme se na krystalizační hydroizolační systémy pro betonové a železobetonové konstrukce."
-  - "Naším cílem je nabídnout profesionální řešení pro ochranu betonu proti vodě, vlhkosti a dlouhodobé degradaci."
+  - "Zaměřujeme se na krystalizační vodotěsné systémy pro betonové a železobetonové konstrukce."
+  - "Naším posláním je poskytovat spolehlivé krystalizační směsi, které zvyšují odolnost betonových konstrukcí a pomáhají vytvářet trvale vodotěsná řešení."
 process:
   title: "The process we have been doing <br> for **over 25 years** of service"
   content: "Our clinic provides a wide range of oral care services, from checkups to fitting braces. We use only advanced technologies to keep your smile looking the best. Our clinic provides a wide range of oral care services,"

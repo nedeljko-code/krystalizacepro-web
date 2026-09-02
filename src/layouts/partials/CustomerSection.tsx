@@ -29,9 +29,9 @@ const CustomerSection = () => {
                 <ImageFallback
                   src={bbLogo}
                   alt="Budžak Building"
-                  width={240}
+                  width={210}
                   height={90}
-                  className="h-auto max-h-[90px] w-auto object-contain"
+                  className="h-auto w-[210px] object-contain"
                 />
               </div>
             </div>

@@ -76,7 +76,7 @@ const ServiceSingle = async (props: {
               )}
 
               <article className="max-w-[760px]">
-                <div className="content">
+                <div className="content [&_h3+p]:!mt-6">
                   <MDXContent content={service.content} />
                 </div>
               </article>

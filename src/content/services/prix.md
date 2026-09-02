@@ -19,22 +19,22 @@ draft: false
 laboratory_note: "Výrobek může být na vyžádání dodán také s laboratorními protokoly a protokoly o vodotěsnosti."
 ---
 
-### Krystalizační hydroizolace již při výrobě betonu
+### Krystalizace již při výrobě betonu
 
 Prix je krystalizační přísada určená pro přímé přidání do čerstvé betonové směsi. Aktivní složky během hydratace cementu vytvářejí nerozpustné krystaly, které trvale utěsňují póry a kapiláry v celé hmotě betonu.
 
-Výsledkem je vodotěsná betonová konstrukce s vyšší odolností proti průniku vody, agresivním látkám i dlouhodobému působení vlhkosti. Ochrana je součástí samotného betonu, nikoliv pouze jeho povrchu.
+Výsledkem je vodotěsná betonová konstrukce s vyšší odolností proti průniku vody, dalším agresivním látkám i dlouhodobému působení vlhkosti.
 
-Prix je ideální pro nové betonové konstrukce, kde je požadována dlouhodobá hydroizolace bez použití dodatečných membrán.
+Prix je ideální pro nové betonové konstrukce, kde je požadována dlouhodobá vodotěsnost bez použití dodatečných membrán.
 
-###### Přehled použití
+### Přehled použití
 
 Produkt se používá při výrobě základových desek, opěrných stěn, podzemních staveb, vodních nádrží, tunelů, výtahových šachet i dalších železobetonových konstrukcí vystavených působení vody.
 
 Přidává se přímo do čerstvé betonové směsi během výroby nebo míchání betonu. Díky rovnoměrnému rozptýlení aktivních složek vzniká ochrana v celém objemu konstrukce.
 
-###### Hlavní výhody
+### Hlavní výhody
 
-Krystalizační technologie vytváří trvalou hydroizolační ochranu bez nutnosti dodatečných izolačních vrstev. Produkt zvyšuje životnost betonu, chrání výztuž před korozí a přispívá ke snížení nákladů na budoucí opravy a údržbu.
+Krystalizační technologie vytváří trvalou vodotěsnou ochranu bez nutnosti dodatečných izolačních vrstev. Produkt zvyšuje životnost betonu, chrání výztuž před korozí a přispívá ke snížení nákladů na budoucí opravy a údržbu.
 
 

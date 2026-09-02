@@ -1,6 +1,6 @@
 ---
 hero:
-  title: "Profesionální řešení<br> pro trvalé stavby."
+  title: "Profesionální řešení<br> pro trvalé stavby"
   subtitle: "STÁLÁ OCHRANA BETONU ZEVNITŘ"
   buttons:
     - enable: true
@@ -47,7 +47,7 @@ responsibility:
 
   image: "/images/home/radnik.png"
 
-  side_image: "/images/home/nova.jpeg"
+  side_image: "/images/home/foto.png"
 
   job:
   - icon: "cz"
@@ -66,7 +66,7 @@ customer:
   logo:
     - "/images/partners/DEK.png"
     - "/images/partners/PRO-DOMA.svg"
-    - "/images/partners/budzak.png"
+    - "/images/partners/budzak-building.svg"
     - "/images/partners/CEMEX.jpg"
     - "/images/partners/skanska.svg"
 
