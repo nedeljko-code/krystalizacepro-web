@@ -11,7 +11,7 @@ section_title: "Krystalizace produktu"
 section_text:
   - "Krystalizace betonu představuje moderní technologii trvalé hydroizolační ochrany, která využívá chemickou reakci mezi aktivními složkami krystalizačního materiálu, volným hydroxidem vápenatým, vodou a dalšími produkty hydratace cementu. Výsledkem této reakce je vznik nerozpustných krystalických struktur, které pronikají hluboko do betonu a postupně vyplňují jeho póry, kapiláry a mikrotrhliny."
 
-  - "Na rozdíl od běžných povrchových hydroizolačních systémů nevytváří krystalizační technologie pouze ochrannou vrstvu na povrchu konstrukce. Stává se nedílnou součástí samotné betonové hmoty a vytváří v ní trvalou vnitřní ochranu proti pronikání vody, vlhkosti a dalších agresivních látek. Krystalická struktura je pevně spojena s betonem, neodlupuje se, není náchylná k mechanickému poškození a zachovává svou funkčnost po celou dobu životnosti betonové konstrukce."
+  - "Na rozdíl od běžných povrchových hydroizolačních systémů nevytváří krystalizační technologie pouze ochrannou vrstvu na povrchu konstrukce. Stává se nedílnou součástí samotné betonové hmoty a vytváří v ní trvalou vnitřní ochranu proti pronikání vody, vlhkosti a dalším agresivním látkám. Krystalická struktura je pevně spojena s betonem, neodlupuje se, není náchylná k mechanickému poškození a zachovává svou funkčnost po celou dobu životnosti betonové konstrukce."
 
   - "Výsledkem je beton s výrazně nižší propustností vody, vyšší odolností proti mrazu, chemickým vlivům, pronikání chloridů a korozi ocelové výztuže. Krystalizační technologie tak významně prodlužuje životnost betonových konstrukcí a snižuje náklady na jejich údržbu a opravy."
 
