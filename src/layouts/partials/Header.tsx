@@ -9,6 +9,7 @@ import DynamicIcon from "@/helpers/DynamicIcon";
 import { markdownify } from "@/lib/utils/textConverter";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import LanguageSwitcher from "@/layouts/components/LanguageSwitcher";
 
 export interface ChildNavigationLink {
   name: string;
@@ -168,7 +169,9 @@ const Header = () => {
                 </React.Fragment>
               ))}
             </ul>
+            
           </div>
+          <LanguageSwitcher light={isHome || isScrolled} />
           {navigation_button.enable && !hideNavigationButton && (
             <CustomButton
               link={navigation_button.link}
