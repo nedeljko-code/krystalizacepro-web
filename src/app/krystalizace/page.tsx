@@ -15,7 +15,7 @@ const KrystalizacePage = () => {
     section_text,
     process_title,
     process_steps,
-  } = getListPage("krystalizace/-index.md").frontmatter;
+  } = getListPage("krystalizace/-index.md", "cs").frontmatter;
 
   return (
     <>

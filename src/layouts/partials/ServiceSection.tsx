@@ -7,8 +7,8 @@ import ImageFallback from "@/helpers/ImageFallback";
 
 const ServiceSection = ({ hero }: { hero?: boolean }) => {
   const { homepage_section_enable, subtitle, descriptions, title, home_title } =
-    getListPage("services/-index.md").frontmatter;
-  const allServices = getSinglePage("services");
+    getListPage("services/-index.md", "cs").frontmatter;
+  const allServices = getSinglePage("services", "cs");
   const visibleServices = allServices.filter(
     (service) => service.slug === "prix" || service.slug === "natrix",
   );

@@ -5,7 +5,7 @@ import { getListPage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
 
 const AboutSection = () => {
-  const { about } = getListPage("homepage/-index.md").frontmatter;
+  const { about } = getListPage("homepage/-index.md", "cs").frontmatter;
 
   return (
     <>

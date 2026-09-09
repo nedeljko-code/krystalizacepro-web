@@ -16,7 +16,7 @@ const AppointmentPage = () => {
     contact_way,
     form,
     contact_title,
-  } = getListPage("appointment/-index.md").frontmatter;
+  } = getListPage("appointment/-index.md", "cs").frontmatter;
 
   const { appointment_form_action }: { appointment_form_action: string } =
     config.params;

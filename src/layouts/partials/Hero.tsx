@@ -6,7 +6,7 @@ import { markdownify } from "@/lib/utils/textConverter";
 import ReferralText from "@/layouts/components/ReferralText";
 
 const Hero = () => {
-  const { hero } = getListPage("homepage/-index.md").frontmatter;
+  const { hero } = getListPage("homepage/-index.md", "cs").frontmatter;
 
   return (
     <section

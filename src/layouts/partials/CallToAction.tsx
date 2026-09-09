@@ -6,7 +6,7 @@ import { markdownify } from "@/lib/utils/textConverter";
 
 const CallToAction = () => {
   const { enable, image, title, subtitle, content, buttons } = getListPage(
-    "sections/call-to-action.md",
+    "sections/call-to-action.md", "cs"
   ).frontmatter;
   return (
     <>

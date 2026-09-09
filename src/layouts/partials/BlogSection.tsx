@@ -7,8 +7,8 @@ import { Post } from "@/types";
 import Link from "next/link";
 
 const BlogSection = () => {
-  const allPosts = getSinglePage("blog");
-  const { blog } = getListPage("homepage/-index.md").frontmatter;
+  const allPosts = getSinglePage("blog", "cs");
+  const { blog } = getListPage("homepage/-index.md", "cs").frontmatter;
   return (
     <>
       {blog.enable && (

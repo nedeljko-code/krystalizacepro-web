@@ -5,7 +5,7 @@ import ServiceSection from "@/partials/ServiceSection";
 
 const Services = () => {
   const { title, meta_title, description, image } =
-    getListPage("services/-index.md").frontmatter;
+    getListPage("services/-index.md", "cs").frontmatter;
   return (
     <>
       <SeoMeta

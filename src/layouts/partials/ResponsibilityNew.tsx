@@ -12,7 +12,7 @@ type ResponsibilityJob = {
 
 const ResponsibilityNew = () => {
   const { responsibility } = getListPage(
-    "homepage/-index.md",
+    "homepage/-index.md", "cs"
   ).frontmatter;
 
   return (

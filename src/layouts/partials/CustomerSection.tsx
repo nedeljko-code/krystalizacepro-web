@@ -2,7 +2,7 @@ import ImageFallback from "@/helpers/ImageFallback";
 import { getListPage } from "@/lib/contentParser";
 
 const CustomerSection = () => {
-  const { customer } = getListPage("homepage/-index.md").frontmatter;
+  const { customer } = getListPage("homepage/-index.md", "cs").frontmatter;
   const bbLogo = customer.logo.find((logo: string) =>
     logo.toLowerCase().includes("budzak"),
   );

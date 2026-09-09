@@ -15,7 +15,7 @@ const About = () => {
     paragraphs,
     button_label,
     button_link,
-  } = getListPage("about/-index.md").frontmatter;
+  } = getListPage("about/-index.md", "cs").frontmatter;
 
   return (
     <>

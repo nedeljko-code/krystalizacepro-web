@@ -11,7 +11,7 @@ import Testimonials from "@/partials/Testimonials";
 import Responsibility from "@/partials/ResponsibilityNew";
 
 const Home = () => {
-  const { testimonial } = getListPage("homepage/-index.md").frontmatter;
+  const { testimonial } = getListPage("homepage/-index.md", "cs").frontmatter;
 
   return (
     <>

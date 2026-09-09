@@ -7,7 +7,7 @@ import SeoMeta from "@/partials/SeoMeta";
 
 const GalleryPage = () => {
   const { title, subtitle, images, description, meta_title } =
-    getListPage("gallery/-index.md").frontmatter;
+    getListPage("gallery/-index.md","cs").frontmatter;
 
   return (
     <>

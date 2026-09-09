@@ -17,11 +17,14 @@ const parseFrontmatter = (frontmatter: any) => {
 };
 
 // get list page data, ex: _index.md
-export const getListPage = (filePath: string) => {
-  const pageDataPath = path.join(contentPath, filePath);
+// get list page data, ex: -index.md
+export const getListPage = (filePath: string, locale?: string) => {
+  const pageDataPath = locale
+    ? path.join(contentPath, locale, filePath)
+    : path.join(contentPath, filePath);
 
   if (!fs.existsSync(pageDataPath)) {
-    notFound();
+    throw new Error(`Content file not found: ${pageDataPath}`);
   }
 
   const pageData = readFile(pageDataPath);
@@ -34,11 +37,13 @@ export const getListPage = (filePath: string) => {
 };
 
 // get all single pages, ex: blog/post.md
-export const getSinglePage = (folder: string) => {
-  const folderPath = path.join(contentPath, folder);
+export const getSinglePage = (folder: string, locale?: string) => {
+  const folderPath = locale
+    ? path.join(contentPath, locale, folder)
+    : path.join(contentPath, folder);
 
   if (!fs.existsSync(folderPath) || !fs.lstatSync(folderPath).isDirectory()) {
-    notFound();
+    throw new Error(`Content folder not found: ${folderPath}`);
   }
 
   const filesPath = fs.readdirSync(folderPath);
@@ -60,18 +65,17 @@ export const getSinglePage = (folder: string) => {
       content,
     };
   });
-  
+
   const publishedPages = singlePages.filter(
     (page) => !page.frontmatter.draft && page,
   );
   const filterByDate = publishedPages.filter(
-  (page) => new Date(page.frontmatter.date || new Date()) <= new Date(),
-);
+    (page) => new Date(page.frontmatter.date || new Date()) <= new Date(),
+  );
 
-const sortedPages = filterByDate.sort(
-  (a, b) =>
-    (a.frontmatter.weight ?? 999) - (b.frontmatter.weight ?? 999),
-);
+  const sortedPages = filterByDate.sort(
+    (a, b) => (a.frontmatter.weight ?? 999) - (b.frontmatter.weight ?? 999),
+  );
 
-return sortedPages;
+  return sortedPages;
 };
