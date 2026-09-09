@@ -1,5 +1,3 @@
-
-
 type DocumentItem = {
   title: string;
   href: string;
@@ -70,7 +68,7 @@ const Dokumentace = ({
     >
       <div className="p-7">
         <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-[#e07a00]">
-          Dokumentace k produktu
+          {productLabel}
         </p>
 
         <h2 className="mb-3 text-3xl font-bold text-[#070735]">
@@ -98,8 +96,8 @@ const Dokumentace = ({
                   href={document.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`Zobrazit ${document.title}`}
-                  title="Zobrazit"
+                  aria-label={`${previewLabel} ${document.title}`}
+                  title={previewLabel}
                   className="text-gray-400 transition-colors duration-300 hover:text-[#e07a00]"
                 >
                   <PreviewIcon />
@@ -108,8 +106,8 @@ const Dokumentace = ({
                 <a
                   href={document.href}
                   download
-                  aria-label={`Stáhnout ${document.title}`}
-                  title="Stáhnout"
+                  aria-label={`${downloadLabel} ${document.title}`}
+                  title={downloadLabel}
                   className="text-[#e07a00] transition-transform duration-300 hover:translate-y-0.5"
                 >
                   <DownloadIcon />
@@ -125,7 +123,7 @@ const Dokumentace = ({
           href={downloadAllHref}
           className="mt-auto rounded-b-2xl bg-[#e07a00] px-8 py-3 text-center font-semibold text-white transition-opacity duration-300 hover:opacity-90"
         >
-          Stáhnout vše ↓
+          {downloadAllLabel} ↓
         </a>
       )}
     </div>

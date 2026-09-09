@@ -8,10 +8,10 @@ import { Post, RegularPage } from "@/types";
 
 // for all regular pages
 const Posts = () => {
-  const postIndex: RegularPage = getListPage(`blog/-index.md`);
+  const postIndex: RegularPage = getListPage(`blog/-index.md`,"cs");
   const { title, meta_title, description, image, badge } =
     postIndex.frontmatter;
-  const posts: Post[] = getSinglePage("blog");
+  const posts: Post[] = getSinglePage("blog","cs");
   const sortedPosts = sortByDate(posts);
 
   return (

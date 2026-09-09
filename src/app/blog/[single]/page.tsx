@@ -15,7 +15,7 @@ export const dynamicParams = false;
 
 // generate static params
 export const generateStaticParams: () => { single: string }[] = () => {
-  const posts: Post[] = getSinglePage("blog");
+  const posts: Post[] = getSinglePage("blog","cs");
 
   const paths = posts.map((post) => ({
     single: post.slug!,
@@ -26,7 +26,7 @@ export const generateStaticParams: () => { single: string }[] = () => {
 
 const PostSingle = async (props: { params: Promise<{ single: string }> }) => {
   const params = await props.params;
-  const posts: Post[] = getSinglePage("blog");
+  const posts: Post[] = getSinglePage("blog", "cs");
   const post = posts.filter((page: Post) => page.slug === params.single)[0];
 
   const { title, meta_title, description, image, categories, date } =

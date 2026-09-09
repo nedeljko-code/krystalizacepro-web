@@ -14,7 +14,7 @@ import styles from "./product-page.module.css";
 export const dynamicParams = false;
 
 export const generateStaticParams: () => { single: string }[] = () => {
-  const services: Service[] = getSinglePage("services");
+  const services: Service[] = getSinglePage("services", "cs");
 
   return services.map((service) => ({
     single: service.slug!,
@@ -26,7 +26,7 @@ const ServiceSingle = async (props: {
 }) => {
   const params = await props.params;
 
-  const allServices: Service[] = getSinglePage("services");
+  const allServices: Service[] = getSinglePage("services", "cs");
   const service = allServices.find((page) => page.slug === params.single);
 
   if (!service) {
