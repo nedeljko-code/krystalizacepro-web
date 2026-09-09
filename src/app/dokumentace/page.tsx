@@ -1,55 +1,60 @@
 import Dokumentace from "@/components/Dokumentace";
+import { getListPage } from "@/lib/contentParser";
+
+const { frontmatter } = getListPage("dokumentace/-index.md", "cs");
+
+const { title, description, product_label, documents, actions } = frontmatter;
 
 const natrixDocuments = [
   {
-    title: "Technický list",
+    title: documents.technical_sheet,
     href: "/documents/natrix/technicky-list.pdf",
   },
   {
-    title: "Bezpečnostní list",
+    title: documents.safety_sheet,
     href: "/documents/natrix/bezpecnostni-list.pdf",
   },
   {
-    title: "Prohlášení o vlastnostech",
+    title: documents.declaration,
     href: "/documents/natrix/prohlaseni-o-vlastnostech.pdf",
   },
   {
-    title: "Aplikační návod",
+    title: documents.application_guide,
     href: "/documents/natrix/aplikacni-navod.pdf",
   },
   {
-    title: "Dopravní podmínky",
+    title: documents.transport_conditions,
     href: "/documents/natrix/dopravni-podminky.pdf",
   },
   {
-    title: "Všeobecné obchodní podmínky",
+    title: documents.terms_conditions,
     href: "/documents/natrix/vseobecne-obchodni-podminky.pdf",
   },
 ];
 
 const prixDocuments = [
   {
-    title: "Technický list",
+    title: documents.technical_sheet,
     href: "/documents/prix/technicky-list.pdf",
   },
   {
-    title: "Bezpečnostní list",
+    title: documents.safety_sheet,
     href: "/documents/prix/bezpecnostni-list.pdf",
   },
   {
-    title: "Prohlášení o vlastnostech",
+    title: documents.declaration,
     href: "/documents/prix/prohlaseni-o-vlastnostech.pdf",
   },
   {
-    title: "Aplikační návod",
+    title: documents.application_guide,
     href: "/documents/prix/aplikacni-navod.pdf",
   },
   {
-    title: "Dopravní podmínky",
+    title: documents.transport_conditions,
     href: "/documents/prix/dopravni-podminky.pdf",
   },
   {
-    title: "Všeobecné obchodní podmínky",
+    title: documents.terms_conditions,
     href: "/documents/prix/vseobecne-obchodni-podminky.pdf",
   },
 ];
@@ -57,20 +62,12 @@ const prixDocuments = [
 export default function DokumentacePage() {
   return (
     <section className="section mt-32 sm:mt-28">
-  <div
-    className="container"
-    data-aos="fade-up-sm"
-  >
-    <div className="mb-16 text-center">
-      <h1 className="mb-4 text-h2">
-        Dokumentace
-      </h1>
+      <div className="container" data-aos="fade-up-sm">
+        <div className="mb-16 text-center">
+          <h1 className="mb-4 text-h2">{title}</h1>
 
-      <p className="mx-auto max-w-[650px] text-gray-600">
-        Veškerá technická a produktová dokumentace přehledně
-        na jednom místě.
-      </p>
-    </div>
+          <p className="mx-auto max-w-[650px] text-gray-600">{description}</p>
+        </div>
 
         <div className="mx-auto max-w-[1080px]">
           <div className="row">
@@ -80,6 +77,10 @@ export default function DokumentacePage() {
                 productName="Prix"
                 documents={prixDocuments}
                 downloadAllHref="/documents/prix/prix-dokumentace.zip"
+                productLabel={product_label}
+                previewLabel={actions.preview}
+                downloadLabel={actions.download}
+                downloadAllLabel={actions.download_all}
               />
             </div>
 
@@ -89,6 +90,10 @@ export default function DokumentacePage() {
                 productName="Natrix"
                 documents={natrixDocuments}
                 downloadAllHref="/documents/natrix/natrix-dokumentace.zip"
+                productLabel={product_label}
+                previewLabel={actions.preview}
+                downloadLabel={actions.download}
+                downloadAllLabel={actions.download_all}
               />
             </div>
           </div>

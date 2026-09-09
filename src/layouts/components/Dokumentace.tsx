@@ -11,6 +11,10 @@ type DokumentaceProps = {
   description?: string;
   documents: DocumentItem[];
   downloadAllHref?: string;
+  productLabel: string;
+  previewLabel: string;
+  downloadLabel: string;
+  downloadAllLabel: string;
 };
 
 const PreviewIcon = () => (
@@ -54,6 +58,10 @@ const Dokumentace = ({
   description,
   documents,
   downloadAllHref,
+  productLabel,
+  previewLabel,
+  downloadLabel,
+  downloadAllLabel,
 }: DokumentaceProps) => {
   return (
     <div
