@@ -10,9 +10,14 @@ type ResponsibilityJob = {
   content: string;
 };
 
-const ResponsibilityNew = () => {
+type ResponsibilityNewProps = {
+  locale: string;
+};
+
+const ResponsibilityNew = ({ locale }: ResponsibilityNewProps) => {
   const { responsibility } = getListPage(
-    "homepage/-index.md", "cs"
+    "homepage/-index.md",
+    locale,
   ).frontmatter;
 
   return (

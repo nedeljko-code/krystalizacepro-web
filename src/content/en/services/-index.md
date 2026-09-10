@@ -1,31 +1,31 @@
 ---
-title: "Moderní řešení pro <br> vodotěsnost **betonu**"
+title: "Modern solutions for <br> waterproofing **concrete**"
 homepage_section_enable: true
-home_title: "Moderní řešení pro <br> vodotěsnost **betonu**"
+home_title: "Modern solutions for <br> waterproofing **concrete**"
 meta_title: ""
-description: "Produkty a technologie pro ochranu betonových konstrukcí."
-subtitle: "PRODUKTY"
-
+description: "Products and technologies for the protection of concrete structures."
+subtitle: "PRODUCTS"
+other_product: "Other product"
 
 descriptions:
-  - "Zaměřujeme se na krystalizační vodotěsné systémy pro betonové a železobetonové konstrukce."
-  - "Naším posláním je poskytovat spolehlivé krystalizační směsi, které zvyšují odolnost betonových konstrukcí a pomáhají vytvářet trvale vodotěsná řešení."
+  - "We specialize in crystalline waterproofing systems for concrete and reinforced concrete structures."
+  - "Our mission is to provide reliable crystalline compounds that improve the durability of concrete structures and help create permanently waterproof solutions."
 
 card_ui:
-  coming_soon: "Připravujeme"
-  view_product: "Zobrazit produkt →"
-  more_products_title: "Další produkty"
-  more_products_description: "Naše produktové portfolio dále rozšiřujeme."
-  product_alt: "Produkt"
+  coming_soon: "Coming soon"
+  view_product: "View product →"
+  more_products_title: "More products"
+  more_products_description: "We are continuously expanding our product portfolio."
+  product_alt: "Product"
 
 product_card:
-  technical_info: "Technické informace"
-  type: "Typ produktu"
-  usage: "Použití"
-  package: "Balení"
-  application: "Aplikace"
-  documentation: "Dokumentace"
-  contact: "Kontaktujte nás"
+  technical_info: "Technical information"
+  type: "Product type"
+  usage: "Application"
+  package: "Packaging"
+  application: "Application method"
+  documentation: "Documentation"
+  contact: "Contact us"
   
 process:
   title: "The process we have been doing <br> for **over 25 years** of service"

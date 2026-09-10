@@ -1,12 +1,15 @@
-
 import CustomButton from "@/components/CustomButton";
 import CustomHeading from "@/components/CustomHeading";
 import { getListPage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
 import ReferralText from "@/layouts/components/ReferralText";
 
-const Hero = () => {
-  const { hero } = getListPage("homepage/-index.md", "cs").frontmatter;
+type HeroProps = {
+  locale: string;
+};
+
+const Hero = ({ locale }: HeroProps) => {
+  const { hero } = getListPage("homepage/-index.md", locale).frontmatter;
 
   return (
     <section
@@ -39,43 +42,42 @@ const Hero = () => {
           data-aos-delay="60"
         >
           {hero.buttons.map(
-  (
-    b: {
-      enable: boolean;
-      link: string;
-      label: string;
-      icon?: string;
-    },
-    i: number,
-  ) =>
-    b.enable && (
-      <div key={i} className="contents">
-        {/* MOBILE - direktan poziv */}
-        <CustomButton
-          link={b.link}
-          label={b.label}
-          className="w-fit md:hidden"
-          variant={i % 2 === 0 ? "secondary" : "primary"}
-          icon={b?.icon}
-          data_aos="zoom-in-sm"
-          data_aos_delay={80 + i * 20}
-        />
+            (
+              b: {
+                enable: boolean;
+                link: string;
+                label: string;
+                icon?: string;
+              },
+              i: number,
+            ) =>
+              b.enable && (
+                <div key={i} className="contents">
+                  {/* MOBILE - direktan poziv */}
+                  <CustomButton
+                    link={`/${locale}/appointment`}
+                    label={hero.desktop_button_label}
+                    className="w-fit md:hidden"
+                    variant={i % 2 === 0 ? "secondary" : "primary"}
+                    icon={b?.icon}
+                    data_aos="zoom-in-sm"
+                    data_aos_delay={80 + i * 20}
+                  />
 
-        {/* DESKTOP - kontakt stranica */}
-        <CustomButton
-          link="/appointment"
-          label="Kontaktujte nás"
-          className="hidden w-fit md:inline-flex"
-          variant={i % 2 === 0 ? "secondary" : "primary"}
-          icon="FaArrowRightLong"
-          data_aos="zoom-in-sm"
-          data_aos_delay={80 + i * 20}
-        />
-      </div>
-    ),
-)}
+                  {/* DESKTOP - kontakt stranica */}
+                  <CustomButton
+                    link="/appointment"
+                    label="Kontaktujte nás"
+                    className="hidden w-fit md:inline-flex"
+                    variant={i % 2 === 0 ? "secondary" : "primary"}
+                    icon="FaArrowRightLong"
+                    data_aos="zoom-in-sm"
+                    data_aos_delay={80 + i * 20}
+                  />
+                </div>
+              ),
+          )}
         </div>
-        
       </div>
       <ReferralText />
 

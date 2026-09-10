@@ -5,10 +5,22 @@ import { Service } from "@/types";
 import React from "react";
 import ImageFallback from "@/helpers/ImageFallback";
 
-const ServiceSection = ({ hero }: { hero?: boolean }) => {
-  const { homepage_section_enable, subtitle, descriptions, title, home_title } =
-    getListPage("services/-index.md", "cs").frontmatter;
-  const allServices = getSinglePage("services", "cs");
+type ServiceSectionProps = {
+  hero?: boolean;
+  locale: string;
+};
+
+const ServiceSection = ({ hero, locale }: ServiceSectionProps) => {
+  const {
+    homepage_section_enable,
+    subtitle,
+    descriptions,
+    title,
+    home_title,
+    card_ui,
+  } = getListPage("services/-index.md", locale).frontmatter;
+
+  const allServices = getSinglePage("services", locale);
   const visibleServices = allServices.filter(
     (service) => service.slug === "prix" || service.slug === "natrix",
   );
@@ -68,7 +80,9 @@ const ServiceSection = ({ hero }: { hero?: boolean }) => {
                           <div className="mb-7 flex h-[170px] items-center justify-center">
                             <ImageFallback
                               src={service.frontmatter.card_image}
-                              alt={service.frontmatter.title || "Produkt"}
+                              alt={
+                                service.frontmatter.title || card_ui.product_alt
+                              }
                               width={260}
                               height={190}
                               className={`h-[160px] w-auto object-contain drop-shadow-xl transition-transform duration-300 ${
@@ -96,7 +110,7 @@ const ServiceSection = ({ hero }: { hero?: boolean }) => {
                             comingSoon ? "text-gray-500" : "text-[#e07a00]"
                           }`}
                         >
-                          {comingSoon ? "Připravujeme" : "Zobrazit produkt →"}
+                          {comingSoon ? card_ui.coming_soon : card_ui.view_product}
                         </span>
                       </>
                     );
@@ -123,7 +137,7 @@ const ServiceSection = ({ hero }: { hero?: boolean }) => {
                     return (
                       <a
                         key={service.slug}
-                        href={`/services/${service.slug}`}
+                        href={`/${locale}/services/${service.slug}`}
                         className={cardClassName}
                         data-aos="fade-up-sm"
                         data-aos-delay={100 + i * 50}
@@ -138,15 +152,15 @@ const ServiceSection = ({ hero }: { hero?: boolean }) => {
                     </div>
 
                     <h5 className="mb-3 text-xl font-bold text-[#070735]">
-                      Další produkty
+                      {card_ui.more_products_title}
                     </h5>
 
                     <p className="mb-5 max-w-[280px] text-sm leading-relaxed text-gray-600">
-                      Naše produktové portfolio dále rozšiřujeme.
+                      {card_ui.more_products_description}
                     </p>
 
                     <span className="mt-auto font-semibold text-gray-500">
-                      Připravujeme
+                      {card_ui.coming_soon}
                     </span>
                   </div>
                 </div>

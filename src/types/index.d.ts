@@ -42,6 +42,7 @@ export type Service = {
     draft?: boolean;
     card_image?: string;
     card_description?: string;
+    other_product?: string;
     product_details: {
     type: string;
     usage: string;

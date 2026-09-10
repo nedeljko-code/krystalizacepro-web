@@ -6,9 +6,13 @@ import { markdownify } from "@/lib/utils/textConverter";
 import { Post } from "@/types";
 import Link from "next/link";
 
-const BlogSection = () => {
-  const allPosts = getSinglePage("blog", "cs");
-  const { blog } = getListPage("homepage/-index.md", "cs").frontmatter;
+type BlogSectionProps = {
+  locale: string;
+};
+
+const BlogSection = ({ locale }: BlogSectionProps) => {
+  const allPosts = getSinglePage("blog", locale);
+  const { blog } = getListPage("homepage/-index.md", locale).frontmatter;
   return (
     <>
       {blog.enable && (
@@ -42,7 +46,7 @@ const BlogSection = () => {
 
             <div className="flex items-center justify-center">
               <Link
-                href="/blog"
+                href={`/${locale}/blog`}
                 className="font-semibold flex items-center"
                 data-aos="fade-up-sm"
                 data-aos-delay="150"

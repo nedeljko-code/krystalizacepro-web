@@ -26,4 +26,6 @@ process_steps:
   - "Při opětovném kontaktu s vodou se může krystalizační proces znovu aktivovat a dále utěsňovat nově vzniklé mikrotrhliny"
 
 image: ""
+
+process_image_alt: "Princip krystalizace betonu – pronikání vody, aktivace krystalizačního procesu a trvalé utěsnění kapilár"
 ---

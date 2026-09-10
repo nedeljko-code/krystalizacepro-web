@@ -29,7 +29,7 @@ const Header = () => {
 
   // get current path
   const pathname = usePathname();
-  const isHome = pathname === "/";
+  const isHome = /^\/(cs|en|de|sk|mk)\/?$/.test(pathname);
   const [isScrolled, setIsScrolled] = useState(false);
   const hideNavigationButton = pathname === "/" || pathname === "/appointment";
 

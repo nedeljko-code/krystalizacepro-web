@@ -4,8 +4,12 @@ import ImageFallback from "@/helpers/ImageFallback";
 import { getListPage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
 
-const AboutSection = () => {
-  const { about } = getListPage("homepage/-index.md", "cs").frontmatter;
+type AboutSectionProps = {
+  locale: string;
+};
+
+const AboutSection = ({ locale }: AboutSectionProps) => {
+  const { about } = getListPage("homepage/-index.md", locale).frontmatter;
 
   return (
     <>
@@ -64,17 +68,19 @@ const AboutSection = () => {
                   data-aos-delay="100"
                 />
 
-                {about.schedule.map((s: { day: string; time: string }, i: number) => (
-                  <p
-                    key={i}
-                    className="font-medium text-base text-center lg:text-left"
-                    data-aos="fade-up-sm"
-                    data-aos-delay={100 + i * 50}
-                  >
-                    <span dangerouslySetInnerHTML={markdownify(s.day)} />
-                    <span dangerouslySetInnerHTML={markdownify(s.time)} />
-                  </p>
-                ))}
+                {about.schedule.map(
+                  (s: { day: string; time: string }, i: number) => (
+                    <p
+                      key={i}
+                      className="font-medium text-base text-center lg:text-left"
+                      data-aos="fade-up-sm"
+                      data-aos-delay={100 + i * 50}
+                    >
+                      <span dangerouslySetInnerHTML={markdownify(s.day)} />
+                      <span dangerouslySetInnerHTML={markdownify(s.time)} />
+                    </p>
+                  ),
+                )}
                 {about.button.enable && (
                   <div
                     className="w-full flex justify-center lg:justify-start"
@@ -82,7 +88,7 @@ const AboutSection = () => {
                     data-aos-delay="150"
                   >
                     <CustomButton
-                      link={about.button.link}
+                      link={`/${locale}/${about.button.link.replace(/^\/+/, "")}`}
                       label={about.button.label}
                       className="mt-8 btn-sm! sm:btn!"
                       variant="secondary"

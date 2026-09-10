@@ -1,8 +1,12 @@
 import ImageFallback from "@/helpers/ImageFallback";
 import { getListPage } from "@/lib/contentParser";
 
-const CustomerSection = () => {
-  const { customer } = getListPage("homepage/-index.md", "cs").frontmatter;
+type CustomerSectionProps = {
+  locale: string;
+};
+
+const CustomerSection = ({ locale }: CustomerSectionProps) => {
+  const { customer } = getListPage("homepage/-index.md", locale).frontmatter;
   const bbLogo = customer.logo.find((logo: string) =>
     logo.toLowerCase().includes("budzak"),
   );
@@ -22,7 +26,7 @@ const CustomerSection = () => {
           {bbLogo && (
             <div className="mb-16 lg:mb-20 text-center" data-aos="fade-up-sm">
               <p className="mb-6 text-sm font-medium uppercase tracking-[0.18em] text-gray-500">
-                VE SPOLUPRÁCI S
+                {customer.collaboration_label}
               </p>
 
               <div className="flex justify-center">
@@ -39,16 +43,13 @@ const CustomerSection = () => {
 
           {/* Partneri */}
           <div className="mb-16 text-center lg:mb-20">
-            <p className="mb-6 font-medium uppercase text-primary">PARTNEŘI</p>
-
-            <h2 className="mb-8 text-h3 lg:text-h2">
-              Firmy, které nám důvěřují
-            </h2>
-
-            <p className="mx-auto max-w-[700px]">
-              Spolupracujeme s předními firmami ve stavebnictví a dodáváme
-              ověřená řešení pro profesionální použití.
+            <p className="mb-6 font-medium uppercase text-primary">
+              {customer.title.value}
             </p>
+
+            <h2 className="mb-8 text-h3 lg:text-h2">{customer.title.text}</h2>
+
+            <p className="mx-auto max-w-[700px]">{customer.description}</p>
           </div>
 
           <div className="mx-auto grid max-w-[1050px] grid-cols-2 items-center gap-8 md:grid-cols-4 lg:gap-12">

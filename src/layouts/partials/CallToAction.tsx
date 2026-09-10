@@ -4,9 +4,14 @@ import ImageFallback from "@/helpers/ImageFallback";
 import { getListPage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
 
-const CallToAction = () => {
+type CallToActionProps = {
+  locale: string;
+};
+
+const CallToAction = ({ locale }: CallToActionProps) => {
   const { enable, image, title, subtitle, content, buttons } = getListPage(
-    "sections/call-to-action.md", "cs"
+    "sections/call-to-action.md",
+    locale,
   ).frontmatter;
   return (
     <>
@@ -45,16 +50,30 @@ const CallToAction = () => {
             <div className="flex flex-col md:flex-row justify-center lg:justify-start items-center gap-4">
               {buttons &&
                 buttons.map(
-                  (b: { enable: boolean; link: string; label: string; icon?: string }, i: number) =>
+                  (
+                    b: {
+                      enable: boolean;
+                      link: string;
+                      label: string;
+                      icon?: string;
+                    },
+                    i: number,
+                  ) =>
                     b.enable && (
                       <CustomButton
                         key={i}
-                        link={b.link}
+                        link={
+                          b.link.startsWith("http") ||
+                          b.link.startsWith("tel:") ||
+                          b.link.startsWith("mailto:")
+                            ? b.link
+                            : `/${locale}/${b.link.replace(/^\/+/, "")}`
+                        }
                         label={b.label}
                         className="w-fit"
                         variant={i % 2 === 0 ? "secondary" : "light"}
                         data_aos="fade-up-sm"
-                        data_aos_delay={(100 + i * 50)}
+                        data_aos_delay={100 + i * 50}
                         icon={b?.icon && b?.icon}
                       />
                     ),
@@ -62,9 +81,11 @@ const CallToAction = () => {
             </div>
           </div>
           {image && (
-            <div className="lg:absolute lg:bottom-0 lg:right-0 lg:w-[48%] xl:bottom-16 xl:right-20 xl:w-auto max-lg:mx-auto max-lg:w-[80%]"
-            data-aos="fade-up-sm"
-                data-aos-delay="200">
+            <div
+              className="lg:absolute lg:bottom-0 lg:right-0 lg:w-[48%] xl:bottom-16 xl:right-20 xl:w-auto max-lg:mx-auto max-lg:w-[80%]"
+              data-aos="fade-up-sm"
+              data-aos-delay="200"
+            >
               <ImageFallback
                 src={image}
                 width={750}

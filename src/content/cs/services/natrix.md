@@ -17,6 +17,7 @@ weight: 2
 draft: false
 
 laboratory_note: "Výrobek může být na vyžádání dodán také s laboratorními protokoly a protokoly o vodotěsnosti."
+other_product: "Další produkt"
 ---
 
 ### Pokročilá ochrana betonových konstrukcí

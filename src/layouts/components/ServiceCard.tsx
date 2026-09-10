@@ -2,7 +2,19 @@ import ImageFallback from "@/helpers/ImageFallback";
 import { markdownify } from "@/lib/utils/textConverter";
 import { Service } from "@/types";
 
-const ServiceCard = ({ service }: { service: Service }) => {
+type ServiceCardProps = {
+  service: Service;
+  locale: string;
+  comingSoonLabel: string;
+  viewProductLabel: string;
+};
+
+const ServiceCard = ({
+  service,
+  locale,
+  comingSoonLabel,
+  viewProductLabel,
+}: ServiceCardProps) => {
   const {
     title,
     card_image,
@@ -37,9 +49,7 @@ const ServiceCard = ({ service }: { service: Service }) => {
       />
 
       {text && (
-        <p className="mb-5 text-sm leading-relaxed text-gray-600">
-          {text}
-        </p>
+        <p className="mb-5 text-sm leading-relaxed text-gray-600">{text}</p>
       )}
 
       <span
@@ -47,7 +57,7 @@ const ServiceCard = ({ service }: { service: Service }) => {
           coming_soon ? "text-gray-500" : "text-[#e07a00]"
         }`}
       >
-        {coming_soon ? "Připravujeme" : "Zobrazit produkt →"}
+        {coming_soon ? comingSoonLabel : viewProductLabel}
       </span>
     </>
   );
@@ -63,7 +73,7 @@ const ServiceCard = ({ service }: { service: Service }) => {
   }
 
   return (
-    <a href={`/services/${service.slug}`} className={cardClassName}>
+    <a href={`/${locale}/services/${service.slug}`} className={cardClassName}>
       {content}
     </a>
   );

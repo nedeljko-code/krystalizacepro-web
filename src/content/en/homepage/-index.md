@@ -1,33 +1,27 @@
 ---
 hero:
-  title: "Profesionální řešení<br> pro trvalé stavby"
-  subtitle: "STÁLÁ OCHRANA BETONU ZEVNITŘ"
+  title: "Professional solutions<br> for lasting structures"
+  subtitle: "PERMANENT PROTECTION OF CONCRETE FROM WITHIN"
   buttons:
     - enable: true
-      label: "Zavolejte + 420 778 200 100"
+      label: "Call +420 778 200 100"
       link: "tel:+420778200100"
       icon: "FaPhone"
     - enable: false
-      label: "Kontaktujte nás"
+      label: "Contact us"
       link: "appointment"
   image: "/images/home/banner2.jpeg"
-  reviews:
-    - name: "Company Logo with star ratings"
-      company_logo: "/images/home/PastedGraphic-5.tiff"
-      rating: 4.7
-    - name: "Company Logo with star ratings"
-      company_logo: "/images/home/PastedGrafic-5.tiff"
-      rating: 4.8
+  
 
 about:
   enable: true
-  title: "Trvalá ochrana <br> proti vodě a vlhkosti"
-  subtitle: "SÍLA KRYSTALIZACE"
-  content: "Krystalizační technologie aktivně proniká do struktury betonu, utěsňuje póry a mikrotrhliny a poskytuje dlouhodobou ochranu betonových a železobetonových konstrukcí."
+  title: "Long-lasting protection <br> against water and moisture"
+  subtitle: "THE POWER OF CRYSTALLIZATION"
+  content: "Crystalline technology actively penetrates the concrete structure, seals pores and microcracks, and provides long-lasting protection for concrete and reinforced concrete structures."
   schedule: []
   button:
     enable: false
-    label: "Zjistit více"
+    label: "Learn more"
     link: "/technologie"
   badge: ""
   images:
@@ -36,38 +30,38 @@ about:
 
 responsibility:
   enable: true
-  title: "Technologie, <br>která chrání beton dlouhodobě"
-  subtitle: "PROČ KRYSTALIZACE"
+  title: "Technology that protects <br>concrete for the long term"
+  subtitle: "WHY CRYSTALLIZATION"
   content: |
-    Krystalizační technologie aktivně proniká do struktury betonu, <br>kde vytváří nerozpustné krystaly v pórech, kapilárách a mikrotrhlinách.<br>
+    Crystalline technology actively penetrates the concrete structure,<br>where it forms insoluble crystals in pores, capillaries and microcracks.<br>
 
-    Při kontaktu s vodou se proces krystalizace znovu aktivuje,<br> čímž dochází k postupnému utěsnění nových mikrotrhlin a omezení pronikání vlhkosti.<br>
+    When it comes into contact with water, the crystallization process is reactivated,<br>gradually sealing new microcracks and reducing moisture penetration.<br>
 
-    Díky tomu beton získává dlouhodobou ochranu proti vodě,<br> vyšší odolnost vůči degradaci a prodlužuje se jeho životnost.<br>
+    As a result, concrete gains long-lasting protection against water,<br>greater resistance to degradation and an extended service life.<br>
 
   image: "/images/home/radnik.png"
-  image_alt: "Profesionální aplikace H-KRYSTAL"
+  image_alt: "Professional application of H-KRYSTAL"
   side_image: "/images/home/foto.png"
 
   job:
   - icon: "cz"
-    title: "Vyrobeno v České republice"
-    content: "Lokální výroba, ověřená kvalita a spolehlivé řešení pro profesionální použití ve stavebnictví."
+    title: "Made in the Czech Republic"
+    content: "Local production, proven quality and reliable solutions for professional use in the construction industry."
 
   - icon: "shield"
-    title: "Garance kvality"
-    content: "Dodržení doporučených postupů je základem naší garance kvality. Pokud by i přesto došlo k problému, zajistíme jeho rychlé a profesionální odstranění."
+    title: "Quality guarantee"
+    content: "Following the recommended procedures is the foundation of our quality guarantee. Should a problem nevertheless occur, we will ensure its prompt and professional resolution."
 
 customer:
   enable: true
 
-  collaboration_label: "VE SPOLUPRÁCI S"
+  collaboration_label: "IN COOPERATION WITH"
 
   title:
-    value: "PARTNEŘI"
-    text: "Firmy, které nám důvěřují"
+    value: "PARTNERS"
+    text: "Companies that trust us"
 
-  description: "Spolupracujeme s předními firmami ve stavebnictví a dodáváme ověřená řešení pro profesionální použití."
+  description: "We cooperate with leading companies in the construction industry and provide proven solutions for professional use."
 
   logo:
     - "/images/partners/DEK.png"
