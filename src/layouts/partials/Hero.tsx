@@ -55,8 +55,8 @@ const Hero = ({ locale }: HeroProps) => {
                 <div key={i} className="contents">
                   {/* MOBILE - direktan poziv */}
                   <CustomButton
-                    link={`/${locale}/appointment`}
-                    label={hero.desktop_button_label}
+                    link={b.link}
+                    label={b.label}
                     className="w-fit md:hidden"
                     variant={i % 2 === 0 ? "secondary" : "primary"}
                     icon={b?.icon}
@@ -66,8 +66,8 @@ const Hero = ({ locale }: HeroProps) => {
 
                   {/* DESKTOP - kontakt stranica */}
                   <CustomButton
-                    link="/appointment"
-                    label="Kontaktujte nás"
+                    link={`/${locale}/appointment`}
+                    label={hero.desktop_button_label}
                     className="hidden w-fit md:inline-flex"
                     variant={i % 2 === 0 ? "secondary" : "primary"}
                     icon="FaArrowRightLong"
@@ -79,7 +79,7 @@ const Hero = ({ locale }: HeroProps) => {
           )}
         </div>
       </div>
-      <ReferralText />
+      <ReferralText text={hero.referral_text} />
 
       <div
         className="absolute inset-0 w-[78%] h-full z-10 bg-gradient-to-r from-black/50 via-black/30 to-transparent"

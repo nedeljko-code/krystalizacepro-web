@@ -2,6 +2,8 @@
 hero:
   title: "Professional solutions<br> for lasting structures"
   subtitle: "PERMANENT PROTECTION OF CONCRETE FROM WITHIN"
+  referral_text: "Help us grow and earn a reward for every successful referral."  
+  desktop_button_label: "Contact us"
   buttons:
     - enable: true
       label: "Call +420 778 200 100"
@@ -11,7 +13,7 @@ hero:
       label: "Contact us"
       link: "appointment"
   image: "/images/home/banner2.jpeg"
-  
+
 
 about:
   enable: true

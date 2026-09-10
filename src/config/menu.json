@@ -1,35 +1,66 @@
 {
   "main": [
     {
-      "name": "O nás",
+      "name": {
+        "cs": "O nás",
+        "en": "About us",
+        "de": "Über uns",
+        "sk": "O nás",
+        "mk": "За нас"
+      },
       "url": "/about"
     },
-
     {
-      "name": "O Krystalizaci",
+      "name": {
+        "cs": "O Krystalizaci",
+        "en": "About crystallization",
+        "de": "Über Kristallisation",
+        "sk": "O kryštalizácii",
+        "mk": "За кристализацијата"
+      },
       "url": "/krystalizace"
     },
-
     {
-      "name": "Produkty",
+      "name": {
+        "cs": "Produkty",
+        "en": "Products",
+        "de": "Produkte",
+        "sk": "Produkty",
+        "mk": "Производи"
+      },
       "url": "/services"
     },
     {
-      "name": "Dokumentace",
+      "name": {
+        "cs": "Dokumentace",
+        "en": "Documentation",
+        "de": "Dokumentation",
+        "sk": "Dokumentácia",
+        "mk": "Документација"
+      },
       "url": "/dokumentace"
     },
-    
     {
-      "name": "Kontakt",
+      "name": {
+        "cs": "Kontakt",
+        "en": "Contact",
+        "de": "Kontakt",
+        "sk": "Kontakt",
+        "mk": "Контакт"
+      },
       "url": "/appointment"
     }
   ],
   "footer": [
-    
     {
-      "title": "Produkty",
+      "title": {
+        "cs": "Produkty",
+        "en": "Products",
+        "de": "Produkte",
+        "sk": "Produkty",
+        "mk": "Производи"
+      },
       "children": [
-        
         {
           "name": "Prix",
           "url": "/services/prix"
@@ -38,35 +69,67 @@
           "name": "Natrix",
           "url": "/services/natrix"
         }
-       
       ]
     },
     {
-      "title": "Navigace",
+      "title": {
+        "cs": "Navigace",
+        "en": "Navigation",
+        "de": "Navigation",
+        "sk": "Navigácia",
+        "mk": "Навигација"
+      },
       "children": [
         {
-          "name": "O nás",
+          "name": {
+            "cs": "O nás",
+            "en": "About us",
+            "de": "Über uns",
+            "sk": "O nás",
+            "mk": "За нас"
+          },
           "url": "/about"
         },
-
         {
-          "name": "O Krystalizaci",
+          "name": {
+            "cs": "O Krystalizaci",
+            "en": "About crystallization",
+            "de": "Über Kristallisation",
+            "sk": "O kryštalizácii",
+            "mk": "За кристализацијата"
+          },
           "url": "/krystalizace"
         },
-        
         {
-          "name": "Dokumentace",
+          "name": {
+            "cs": "Dokumentace",
+            "en": "Documentation",
+            "de": "Dokumentation",
+            "sk": "Dokumentácia",
+            "mk": "Документација"
+          },
           "url": "/dokumentace"
         },
-        
         {
-          "name": "Kontakt",
+          "name": {
+            "cs": "Kontakt",
+            "en": "Contact",
+            "de": "Kontakt",
+            "sk": "Kontakt",
+            "mk": "Контакт"
+          },
           "url": "/appointment"
         }
       ]
     },
     {
-      "title": "Kontakt",
+      "title": {
+        "cs": "Kontakt",
+        "en": "Contact",
+        "de": "Kontakt",
+        "sk": "Kontakt",
+        "mk": "Контакт"
+      },
       "children": [
         {
           "name": "+420 778 200 100",
@@ -78,7 +141,5 @@
         }
       ]
     }
-    
-    
   ]
 }

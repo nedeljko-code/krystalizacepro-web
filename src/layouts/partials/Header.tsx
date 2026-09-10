@@ -2,43 +2,71 @@
 
 import CustomButton from "@/components/CustomButton";
 import Logo from "@/components/Logo";
-import NavDropDown from "@/components/NavDropDown";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
 import DynamicIcon from "@/helpers/DynamicIcon";
 import { markdownify } from "@/lib/utils/textConverter";
 import { usePathname } from "next/navigation";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import LanguageSwitcher from "@/layouts/components/LanguageSwitcher";
 
+type Locale = "cs" | "en" | "de" | "sk" | "mk";
+
+type LocalizedText = Record<Locale, string>;
+
 export interface ChildNavigationLink {
-  name: string;
+  name: string | LocalizedText;
   url: string;
 }
+
 export interface NavigationLink {
-  name: string;
+  name: string | LocalizedText;
   url: string;
   hasChildren?: boolean;
   children?: ChildNavigationLink[];
 }
+
+const locales: Locale[] = ["cs", "en", "de", "sk", "mk"];
 
 const Header = () => {
   const { main }: { main: NavigationLink[] } = menu;
   const { navigation_button, notification } = config;
   const sticky_header = config.settings?.sticky_header;
 
-  // get current path
   const pathname = usePathname();
-  const isHome = /^\/(cs|en|de|sk|mk)\/?$/.test(pathname);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const hideNavigationButton = pathname === "/" || pathname === "/appointment";
 
-  // scroll to top on route change and initialize sticky header
+  const pathLocale = pathname.split("/")[1] as Locale;
+  const locale: Locale = locales.includes(pathLocale) ? pathLocale : "cs";
+
+  const isHome = /^\/(cs|en|de|sk|mk)\/?$/.test(pathname);
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const hideNavigationButton = isHome || pathname === `/${locale}/appointment`;
+
+  const getLabel = (name: string | LocalizedText) =>
+    typeof name === "string" ? name : name[locale];
+
+  const getLocalizedUrl = (url: string) => {
+    if (
+      url.startsWith("http://") ||
+      url.startsWith("https://") ||
+      url.startsWith("mailto:") ||
+      url.startsWith("tel:")
+    ) {
+      return url;
+    }
+
+    return `/${locale}/${url.replace(/^\/+/, "")}`;
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
+
     setIsScrolled(false);
 
     const header = document.querySelector(".header");
+
     let lastScroll = 0;
 
     const onScroll = () => {
@@ -96,7 +124,6 @@ const Header = () => {
 
       <header className="header z-50 absolute top-26 sm:top-12">
         <nav className="navbar mx-auto max-w-[1356px]! px-[30px]">
-          {/* logo  */}
           <div
             className="order-0 flex items-center"
             data-aos="zoom-in"
@@ -104,19 +131,20 @@ const Header = () => {
           >
             <Logo />
           </div>
+
           <div className="flex items-center gap-4.5">
             {navigation_button.enable && !hideNavigationButton && (
               <CustomButton
-                link={navigation_button.link}
-                label={navigation_button.label}
+                link={getLocalizedUrl(navigation_button.link)}
+                label={navigation_button.label[locale]}
                 type="btn-sm"
                 className="order-1 hidden lg:hidden! sm:inline-block"
                 data_aos="zoom-in-sm"
               />
             )}
 
-            {/* navbar toggler  */}
             <input id="nav-toggle" type="checkbox" className="hidden" />
+
             <label
               htmlFor="nav-toggle"
               className="order-3 cursor-pointer flex items-center lg:hidden text-text lg:order-1 bg-primary p-2 rounded"
@@ -129,6 +157,7 @@ const Header = () => {
                 <title>Menu Open</title>
                 <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
               </svg>
+
               <svg
                 id="hide-button"
                 className="h-5 fill-text-light hidden"
@@ -142,40 +171,35 @@ const Header = () => {
               </svg>
             </label>
 
-            {/* /navbar toggler  */}
             <ul id="nav-menu" className="navbar-nav">
-              {main.map((menu, i: number) => (
-                <React.Fragment key={i}>
-                  {menu.hasChildren ? (
-                    <NavDropDown menu={menu} pathname={pathname} />
-                  ) : (
-                    <li
-                      className="nav-item"
-                      data-aos="fade-up-sm"
-                      data-aos-delay={100 + i * 50}
-                    >
-                      <a
-                        href={menu.url}
-                        className={`nav-link text-base-lg ${
-                          isHome || isScrolled
-                            ? "text-text lg:text-white"
-                            : "text-text"
-                        }`}
-                      >
-                        {menu.name}
-                      </a>
-                    </li>
-                  )}
-                </React.Fragment>
+              {main.map((menuItem, i: number) => (
+                <li
+                  key={menuItem.url}
+                  className="nav-item"
+                  data-aos="fade-up-sm"
+                  data-aos-delay={100 + i * 50}
+                >
+                  <a
+                    href={getLocalizedUrl(menuItem.url)}
+                    className={`nav-link text-base-lg ${
+                      isHome || isScrolled
+                        ? "text-text lg:text-white"
+                        : "text-text"
+                    }`}
+                  >
+                    {getLabel(menuItem.name)}
+                  </a>
+                </li>
               ))}
             </ul>
-            
           </div>
+
           <LanguageSwitcher light={isHome || isScrolled} />
+
           {navigation_button.enable && !hideNavigationButton && (
             <CustomButton
-              link={navigation_button.link}
-              label={navigation_button.label}
+              link={getLocalizedUrl(navigation_button.link)}
+              label={navigation_button.label[locale]}
               type="btn-sm"
               className="order-1 hidden lg:inline-block!"
               data_aos="zoom-in-sm"

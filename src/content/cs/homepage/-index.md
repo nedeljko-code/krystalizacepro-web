@@ -2,6 +2,8 @@
 hero:
   title: "Profesionální řešení<br> pro trvalé stavby"
   subtitle: "STÁLÁ OCHRANA BETONU ZEVNITŘ"
+  referral_text: "Pomozte nám růst a získejte odměnu za každé úspěšné doporučení."
+  desktop_button_label: "Kontaktujte nás"
   buttons:
     - enable: true
       label: "Zavolejte + 420 778 200 100"

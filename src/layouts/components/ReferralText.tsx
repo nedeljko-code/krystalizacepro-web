@@ -2,7 +2,11 @@
 
 import { motion } from "framer-motion";
 
-const ReferralText = () => {
+interface ReferralTextProps {
+  text: string;
+}
+
+const ReferralText = ({ text }: ReferralTextProps) => {
   return (
     <motion.p
       initial={{ x: "100vw", opacity: 0 }}
@@ -21,7 +25,7 @@ const ReferralText = () => {
         leading-snug
       "
     >
-      Pomozte nám růst a získejte odměnu za každé úspěšné doporučení.
+      {text}
     </motion.p>
   );
 };

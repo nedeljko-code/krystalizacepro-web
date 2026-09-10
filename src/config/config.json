@@ -17,11 +17,25 @@
   },
 
   "params": {
-    "contact_form_action": "#",
-    "appointment_form_action": "#",
-    "footer_description": "Profesionální řešení pro vodotěsnost, ochranu a sanaci betonových konstrukcí.",
-    "copyright": "© 2026 KrystalizacePro. Všechna práva vyhrazena."
+  "contact_form_action": "#",
+  "appointment_form_action": "#",
+
+  "footer_description": {
+    "cs": "Profesionální řešení pro vodotěsnost, ochranu a sanaci betonových konstrukcí.",
+    "en": "Professional solutions for waterproofing, protection and repair of concrete structures.",
+    "de": "Professionelle Lösungen für Abdichtung, Schutz und Sanierung von Betonkonstruktionen.",
+    "sk": "Profesionálne riešenia pre vodotesnosť, ochranu a sanáciu betónových konštrukcií.",
+    "mk": "Професионални решенија за водонепропустливост, заштита и санација на бетонски конструкции."
   },
+
+  "copyright": {
+    "cs": "© 2026 KrystalizacePro. Všechna práva vyhrazena.",
+    "en": "© 2026 KrystalizacePro. All rights reserved.",
+    "de": "© 2026 KrystalizacePro. Alle Rechte vorbehalten.",
+    "sk": "© 2026 KrystalizacePro. Všetky práva vyhradené.",
+    "mk": "© 2026 KrystalizacePro. Сите права се задржани."
+  }
+},
 
   "notification": {
     "enable": true,
@@ -31,11 +45,17 @@
     "icon": "FaPhone"
   },
 
-  "navigation_button": {
-    "enable": true,
-    "label": "Kontaktujte nás ",
-    "link": "/appointment"
+ "navigation_button": {
+  "enable": true,
+  "label": {
+    "cs": "Kontaktujte nás",
+    "en": "Contact us",
+    "de": "Kontaktieren Sie uns",
+    "sk": "Kontaktujte nás",
+    "mk": "Контактирајте нè"
   },
+  "link": "/appointment"
+},
 
   "google_tag_manager": {
     "enable": false,

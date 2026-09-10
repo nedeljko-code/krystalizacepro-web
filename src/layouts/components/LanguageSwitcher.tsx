@@ -1,13 +1,14 @@
 "use client";
 
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 
 const languages = [
-  { code: "CZ", flag: "/images/flags/cz.svg" },
-  { code: "EN", flag: "/images/flags/gb.svg" },
-  { code: "DE", flag: "/images/flags/de.svg" },
-  { code: "SK", flag: "/images/flags/sk.svg" },
-  { code: "MK", flag: "/images/flags/mk.svg" },
+  { code: "CZ", locale: "cs", flag: "/images/flags/cz.svg" },
+  { code: "EN", locale: "en", flag: "/images/flags/gb.svg" },
+  { code: "DE", locale: "de", flag: "/images/flags/de.svg" },
+  { code: "SK", locale: "sk", flag: "/images/flags/sk.svg" },
+  { code: "MK", locale: "mk", flag: "/images/flags/mk.svg" },
 ];
 
 interface LanguageSwitcherProps {
@@ -15,16 +16,34 @@ interface LanguageSwitcherProps {
 }
 
 const LanguageSwitcher = ({ light = false }: LanguageSwitcherProps) => {
-  const [currentLanguage, setCurrentLanguage] = useState("CZ");
+  const pathname = usePathname();
+  const router = useRouter();
+
   const [isOpen, setIsOpen] = useState(false);
 
+  const currentLocale = pathname.split("/")[1] || "cs";
+
+  const currentLanguage =
+    languages.find((language) => language.locale === currentLocale) ??
+    languages[0];
+
   const otherLanguages = languages.filter(
-    (language) => language.code !== currentLanguage,
+    (language) => language.locale !== currentLanguage.locale,
   );
+
+  const changeLanguage = (locale: string) => {
+    const segments = pathname.split("/");
+
+    segments[1] = locale;
+
+    const newPath = segments.join("/") || `/${locale}`;
+
+    setIsOpen(false);
+    router.push(newPath);
+  };
 
   return (
     <div className="relative hidden lg:block">
-      {/* current language / dropdown trigger */}
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
@@ -34,7 +53,7 @@ const LanguageSwitcher = ({ light = false }: LanguageSwitcherProps) => {
         aria-expanded={isOpen}
         aria-label="Vybrat jazyk"
       >
-        <span>{currentLanguage}</span>
+        <span>{currentLanguage.code}</span>
 
         <svg
           viewBox="0 0 20 20"
@@ -46,17 +65,13 @@ const LanguageSwitcher = ({ light = false }: LanguageSwitcherProps) => {
         </svg>
       </button>
 
-      {/* dropdown */}
       {isOpen && (
         <div className="absolute left-0 top-full z-50 mt-3 min-w-[90px] rounded bg-white py-2 shadow-lg">
           {otherLanguages.map((language) => (
             <button
-              key={language.code}
+              key={language.locale}
               type="button"
-              onClick={() => {
-                setCurrentLanguage(language.code);
-                setIsOpen(false);
-              }}
+              onClick={() => changeLanguage(language.locale)}
               className="flex w-full items-center gap-2 px-4 py-2 text-left text-base text-text transition-colors hover:bg-gray-100"
             >
               <img
