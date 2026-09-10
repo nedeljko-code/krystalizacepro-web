@@ -2,7 +2,13 @@ import config from "@/config/config.json";
 import Image from "next/image";
 import Link from "next/link";
 
-const Logo = ({ src }: { src?: string }) => {
+const Logo = ({
+  src,
+  locale = "cs",
+}: {
+  src?: string;
+  locale?: string;
+}) => {
   // destructuring items from config object
   const {
     logo,
@@ -31,7 +37,7 @@ const Logo = ({ src }: { src?: string }) => {
       : logo_height;
 
   return (
-    <Link href="/" className="navbar-brand inline-block">
+    <Link href={`/${locale}`} className="navbar-brand inline-block">
       {logoPath ? (
         <Image
           width={width * 2}

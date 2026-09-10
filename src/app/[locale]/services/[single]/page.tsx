@@ -14,7 +14,7 @@ import styles from "./product-page.module.css";
 export const dynamicParams = false;
 
 export const generateStaticParams = () => {
-  const locales = ["cs", "en"];
+  const locales = ["cs", "en", "de", "sk", "mk"];
 
   return locales.flatMap((locale) => {
     const services: Service[] = getSinglePage("services", locale);

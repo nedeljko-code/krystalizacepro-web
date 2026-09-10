@@ -129,7 +129,7 @@ const Header = () => {
             data-aos="zoom-in"
             data-aos-delay="20"
           >
-            <Logo />
+            <Logo locale={locale} />
           </div>
 
           <div className="flex items-center gap-4.5">
