@@ -9,7 +9,7 @@ buttons:
     label: "Zavolejte +420 778 200 100"
     link: "tel:+420778200100"
 
-  - enable: true
+  - enable: false
     label: "Kontaktujte nás"
     link: /appointment
 ---

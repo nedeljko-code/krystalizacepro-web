@@ -9,7 +9,7 @@ buttons:
     label: "Rufen Sie uns an: +420 778 200 100"
     link: "tel:+420778200100"
 
-  - enable: true
+  - enable: false
     label: "Kontaktieren Sie uns"
     link: /appointment
 ---

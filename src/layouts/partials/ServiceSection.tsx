@@ -44,14 +44,20 @@ const ServiceSection = ({ hero, locale }: ServiceSectionProps) => {
                   <CustomHeading
                     as="h1"
                     text={title}
-                    className={`text-h2-sm lg:text-h1-sm lg:leading-[70px] text-center md:text-left max-xl:[&>br]:hidden`}
+                    className={`text-center md:text-left lg:text-h1-sm lg:leading-[70px] max-xl:[&>br]:hidden ${
+                      locale === "mk"
+                        ? "text-[24px] leading-[1.2]"
+                        : "text-h2-sm"
+                    }`}
                     dataAos="fade-up-sm"
                   />
                 ) : (
                   <CustomHeading
                     as="h2"
                     text={home_title}
-                    className="text-h3 md:text-h2-sm text-balance text-center md:text-left"
+                    className={`text-balance text-center md:text-left md:text-h2-sm ${
+                      locale === "mk" ? "text-[24px] leading-[1.25]" : "text-h3"
+                    }`}
                     dataAos="fade-up-sm"
                   />
                 )}
@@ -110,7 +116,9 @@ const ServiceSection = ({ hero, locale }: ServiceSectionProps) => {
                             comingSoon ? "text-gray-500" : "text-[#e07a00]"
                           }`}
                         >
-                          {comingSoon ? card_ui.coming_soon : card_ui.view_product}
+                          {comingSoon
+                            ? card_ui.coming_soon
+                            : card_ui.view_product}
                         </span>
                       </>
                     );

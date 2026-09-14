@@ -60,22 +60,29 @@ const CallToAction = ({ locale }: CallToActionProps) => {
                     i: number,
                   ) =>
                     b.enable && (
-                      <CustomButton
-                        key={i}
-                        link={
-                          b.link.startsWith("http") ||
-                          b.link.startsWith("tel:") ||
-                          b.link.startsWith("mailto:")
-                            ? b.link
-                            : `/${locale}/${b.link.replace(/^\/+/, "")}`
-                        }
-                        label={b.label}
-                        className="w-fit"
-                        variant={i % 2 === 0 ? "secondary" : "light"}
-                        data_aos="fade-up-sm"
-                        data_aos_delay={100 + i * 50}
-                        icon={b?.icon && b?.icon}
-                      />
+                      <>
+                        {/* MOBILE - poziv */}
+                        <CustomButton
+                          link={b.link}
+                          label={b.label}
+                          className="w-fit md:hidden"
+                          variant={i % 2 === 0 ? "secondary" : "light"}
+                          data_aos="fade-up-sm"
+                          data_aos_delay={100 + i * 50}
+                          icon={b?.icon && b?.icon}
+                        />
+
+                        {/* DESKTOP - kontakt */}
+                        <CustomButton
+                          link={`/${locale}/appointment`}
+                          label={b.label}
+                          className="hidden w-fit md:inline-flex"
+                          variant={i % 2 === 0 ? "secondary" : "light"}
+                          data_aos="fade-up-sm"
+                          data_aos_delay={100 + i * 50}
+                          icon={b?.icon && b?.icon}
+                        />
+                      </>
                     ),
                 )}
             </div>

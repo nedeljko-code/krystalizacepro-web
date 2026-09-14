@@ -13,9 +13,13 @@ const languages = [
 
 interface LanguageSwitcherProps {
   light?: boolean;
+  mobile?: boolean;
 }
 
-const LanguageSwitcher = ({ light = false }: LanguageSwitcherProps) => {
+const LanguageSwitcher = ({
+  light = false,
+  mobile = false,
+}: LanguageSwitcherProps) => {
   const pathname = usePathname();
   const router = useRouter();
 
@@ -39,11 +43,11 @@ const LanguageSwitcher = ({ light = false }: LanguageSwitcherProps) => {
     const newPath = segments.join("/") || `/${locale}`;
 
     setIsOpen(false);
-    router.push(newPath);
+    router.push(newPath, { scroll: false });
   };
 
   return (
-    <div className="relative hidden lg:block">
+    <div className={mobile ? "relative block lg:hidden" : "relative hidden lg:block"}>
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}

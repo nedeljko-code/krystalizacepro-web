@@ -5,10 +5,10 @@ import Logo from "@/components/Logo";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
 import DynamicIcon from "@/helpers/DynamicIcon";
-import { markdownify } from "@/lib/utils/textConverter";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 import LanguageSwitcher from "@/layouts/components/LanguageSwitcher";
+import { markdownify } from "@/lib/utils/textConverter";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 type Locale = "cs" | "en" | "de" | "sk" | "mk";
 
@@ -34,6 +34,7 @@ const Header = () => {
   const sticky_header = config.settings?.sticky_header;
 
   const pathname = usePathname();
+  const router = useRouter();
 
   const pathLocale = pathname.split("/")[1] as Locale;
   const locale: Locale = locales.includes(pathLocale) ? pathLocale : "cs";
@@ -42,7 +43,8 @@ const Header = () => {
 
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const hideNavigationButton = isHome || pathname === `/${locale}/appointment`;
+  const hideNavigationButton =
+    isHome || pathname === `/${locale}/appointment`;
 
   const getLabel = (name: string | LocalizedText) =>
     typeof name === "string" ? name : name[locale];
@@ -58,6 +60,24 @@ const Header = () => {
     }
 
     return `/${locale}/${url.replace(/^\/+/, "")}`;
+  };
+
+  const changeLanguage = (newLocale: Locale) => {
+    const segments = pathname.split("/");
+
+    segments[1] = newLocale;
+
+    const newPath = segments.join("/") || `/${newLocale}`;
+
+    const navToggle = document.getElementById(
+      "nav-toggle",
+    ) as HTMLInputElement | null;
+
+    if (navToggle) {
+      navToggle.checked = false;
+    }
+
+    router.push(newPath);
   };
 
   useEffect(() => {
@@ -191,6 +211,26 @@ const Header = () => {
                   </a>
                 </li>
               ))}
+
+              {/* MOBILE LANGUAGE SWITCHER */}
+              <li className="nav-item lg:hidden">
+                <div className="flex gap-4 px-4 py-3">
+                  {locales.map((lang) => (
+                    <button
+                      key={lang}
+                      type="button"
+                      onClick={() => changeLanguage(lang)}
+                      className={`text-base ${
+                        locale === lang
+                          ? "font-semibold text-primary"
+                          : "text-text"
+                      }`}
+                    >
+                      {lang === "cs" ? "CZ" : lang.toUpperCase()}
+                    </button>
+                  ))}
+                </div>
+              </li>
             </ul>
           </div>
 

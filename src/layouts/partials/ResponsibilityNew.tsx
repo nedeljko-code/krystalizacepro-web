@@ -27,12 +27,14 @@ const ResponsibilityNew = ({ locale }: ResponsibilityNewProps) => {
           Na desktopu je preko grida i prati globalni container. */}
       <div className="relative z-10 w-full lg:pointer-events-none lg:absolute lg:inset-x-0 lg:top-0">
         <div className="container">
-          <div className="flex py-14 lg:h-[342px] lg:w-[60%] lg:items-center lg:py-0">
+          <div
+            className={`flex py-14 lg:w-[60%] lg:items-center lg:py-0 ${
+              locale === "mk" ? "lg:h-[350px]" : "lg:h-[342px]"
+            }`}
+          >
             <div className="w-full lg:pointer-events-auto lg:pr-12 -mt-8 ">
               <p
-                dangerouslySetInnerHTML={markdownify(
-                  responsibility.subtitle,
-                )}
+                dangerouslySetInnerHTML={markdownify(responsibility.subtitle)}
                 className="mb-6 text-base-sm text-primary max-lg:text-center"
                 data-aos="fade-up-sm"
               />
@@ -46,9 +48,7 @@ const ResponsibilityNew = ({ locale }: ResponsibilityNewProps) => {
               />
 
               <p
-                dangerouslySetInnerHTML={markdownify(
-                  responsibility.content,
-                )}
+                dangerouslySetInnerHTML={markdownify(responsibility.content)}
                 className="text-text/80 max-lg:text-center lg:pl-[80px]"
                 data-aos="fade-up-sm"
                 data-aos-delay="40"
@@ -59,9 +59,19 @@ const ResponsibilityNew = ({ locale }: ResponsibilityNewProps) => {
       </div>
 
       {/* ZAKLJUČANI GRID */}
-      <div className="grid grid-cols-1 lg:min-h-[760px] lg:grid-cols-[60%_40%]">
+      <div
+        className={`grid grid-cols-1 lg:grid-cols-[60%_40%] ${
+          locale === "mk" ? "lg:min-h-[808px]" : "lg:min-h-[760px]"
+        }`}
+      >
         {/* LEVI DEO */}
-        <div className="grid lg:grid-rows-[45%_55%]">
+        <div
+          className={`grid ${
+            locale === "mk"
+              ? "lg:grid-rows-[390px_1fr]"
+              : "lg:grid-rows-[342px_1fr]"
+          }`}
+        >
           {/* Na desktopu rezerviše prostor iza apsolutnog teksta */}
           <div className="hidden lg:block" />
 
@@ -85,44 +95,42 @@ const ResponsibilityNew = ({ locale }: ResponsibilityNewProps) => {
 
             {/* NARANDŽASTI BLOK */}
             <div className="flex flex-col justify-center gap-9 bg-primary p-8 xl:p-10">
-              {responsibility.job.map(
-                (job: ResponsibilityJob, i: number) => (
-                  <div
-                    key={`${job.icon}-${job.title}`}
-                    data-aos="fade-up-sm"
-                    data-aos-delay={80 + i * 20}
-                  >
-                    <div className="mb-2 flex items-center gap-3">
-                      {job.icon === "cz" ? (
-                        <span className="flex h-4 w-4 shrink-0 items-center justify-center overflow-hidden rounded-full">
-                          <ImageFallback
-                            src="/images/icons/cz.svg"
-                            alt=""
-                            width={16}
-                            height={16}
-                            className="h-full w-full object-cover"
-                          />
-                        </span>
-                      ) : (
-                        <ShieldCheck
-                          className="h-5 w-5 shrink-0 text-white"
-                          aria-hidden="true"
+              {responsibility.job.map((job: ResponsibilityJob, i: number) => (
+                <div
+                  key={`${job.icon}-${job.title}`}
+                  data-aos="fade-up-sm"
+                  data-aos-delay={80 + i * 20}
+                >
+                  <div className="mb-2 flex items-center gap-3">
+                    {job.icon === "cz" ? (
+                      <span className="flex h-4 w-4 shrink-0 items-center justify-center overflow-hidden rounded-full">
+                        <ImageFallback
+                          src="/images/icons/cz.svg"
+                          alt=""
+                          width={16}
+                          height={16}
+                          className="h-full w-full object-cover"
                         />
-                      )}
-
-                      <h6
-                        dangerouslySetInnerHTML={markdownify(job.title)}
-                        className="mb-0 text-text-light"
+                      </span>
+                    ) : (
+                      <ShieldCheck
+                        className="h-5 w-5 shrink-0 text-white"
+                        aria-hidden="true"
                       />
-                    </div>
+                    )}
 
-                    <p
-                      dangerouslySetInnerHTML={markdownify(job.content)}
-                      className="text-base-sm text-text-light/80"
+                    <h6
+                      dangerouslySetInnerHTML={markdownify(job.title)}
+                      className="mb-0 text-text-light"
                     />
                   </div>
-                ),
-              )}
+
+                  <p
+                    dangerouslySetInnerHTML={markdownify(job.content)}
+                    className="text-base-sm text-text-light/80"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
