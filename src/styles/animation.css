@@ -110,3 +110,11 @@
     opacity: 1;
   }
 }
+
+
+/* PRIVREMENO: iskljucene AOS animacije tokom razvoja */
+[data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}

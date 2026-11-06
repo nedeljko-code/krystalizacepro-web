@@ -1,5 +1,5 @@
 ---
-title: "Prix"
+title: "KrystalizacePRO"
 
 product_details:
   type: "Zusatzmittel"
@@ -35,11 +35,11 @@ other_product: "Weiteres Produkt"
 
 ### Kristallisation bereits bei der Betonherstellung
 
-Prix ist ein kristallines Zusatzmittel zur direkten Zugabe in die frische Betonmischung. Während der Zementhydratation bilden die aktiven Bestandteile unlösliche Kristalle, die Poren und Kapillaren in der gesamten Betonmasse dauerhaft abdichten.
+KrystalizacePRO ist ein kristallines Zusatzmittel zur direkten Zugabe in die frische Betonmischung. Während der Zementhydratation bilden die aktiven Bestandteile unlösliche Kristalle, die Poren und Kapillaren in der gesamten Betonmasse dauerhaft abdichten.
 
 Das Ergebnis ist eine wasserdichte Betonkonstruktion mit höherer Widerstandsfähigkeit gegen das Eindringen von Wasser, weiteren aggressiven Stoffen und langfristiger Feuchtigkeitseinwirkung.
 
-Prix eignet sich ideal für neue Betonkonstruktionen, bei denen eine dauerhafte Wasserdichtheit ohne den Einsatz zusätzlicher Abdichtungsmembranen erforderlich ist.
+KrystalizacePRO eignet sich ideal für neue Betonkonstruktionen, bei denen eine dauerhafte Wasserdichtheit ohne den Einsatz zusätzlicher Abdichtungsmembranen erforderlich ist.
 
 ### Anwendungsbereiche
 

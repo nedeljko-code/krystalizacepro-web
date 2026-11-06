@@ -49,7 +49,7 @@ const ResponsibilityNew = ({ locale }: ResponsibilityNewProps) => {
 
               <p
                 dangerouslySetInnerHTML={markdownify(responsibility.content)}
-                className="text-text/80 max-lg:text-center lg:pl-[80px]"
+                className="text-text/80 max-lg:text-center lg:pl-[80px] lg:text-[22px] lg:leading-[1.5] lg:-mt-5"
                 data-aos="fade-up-sm"
                 data-aos-delay="40"
               />
@@ -127,7 +127,7 @@ const ResponsibilityNew = ({ locale }: ResponsibilityNewProps) => {
 
                   <p
                     dangerouslySetInnerHTML={markdownify(job.content)}
-                    className="text-base-sm text-text-light/80"
+                    className="text-base-sm text-text-light/80 lg:text-[19px] lg:leading-[1.5]"
                   />
                 </div>
               ))}

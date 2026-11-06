@@ -1,5 +1,5 @@
 ---
-title: "Prix"
+title: "KrystalizacePRO"
 product_details:
   type: "Přísada"
   usage: "Beton / železobeton"
@@ -22,11 +22,11 @@ other_product: "Další produkt"
 
 ### Krystalizace již při výrobě betonu
 
-Prix je krystalizační přísada určená pro přímé přidání do čerstvé betonové směsi. Aktivní složky během hydratace cementu vytvářejí nerozpustné krystaly, které trvale utěsňují póry a kapiláry v celé hmotě betonu.
+KrystalizacePRO je krystalizační přísada určená pro přímé přidání do čerstvé betonové směsi. Aktivní složky během hydratace cementu vytvářejí nerozpustné krystaly, které trvale utěsňují póry a kapiláry v celé hmotě betonu.
 
 Výsledkem je vodotěsná betonová konstrukce s vyšší odolností proti průniku vody, dalším agresivním látkám i dlouhodobému působení vlhkosti.
 
-Prix je ideální pro nové betonové konstrukce, kde je požadována dlouhodobá vodotěsnost bez použití dodatečných membrán.
+KrystalizacePRO je ideální pro nové betonové konstrukce, kde je požadována dlouhodobá vodotěsnost bez použití dodatečných membrán.
 
 ### Přehled použití
 

@@ -41,7 +41,7 @@ const CallToAction = ({ locale }: CallToActionProps) => {
             {content && (
               <p
                 dangerouslySetInnerHTML={markdownify(content)}
-                className="mb-10 text-text-light/80 text-balance font-light max-lg:text-center"
+                className="mb-10 text-text-light/80 text-balance font-light max-lg:text-center lg:text-[22px] lg:leading-[1.5]"
                 data-aos="fade-up-sm"
                 data-aos-delay="100"
               />

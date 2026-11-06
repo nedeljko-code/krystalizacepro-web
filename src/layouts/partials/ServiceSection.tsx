@@ -62,13 +62,13 @@ const ServiceSection = ({ hero, locale }: ServiceSectionProps) => {
                   />
                 )}
               </div>
-              <div className="col-6 md:w-[44%] col-12">
+              <div className="col-6 md:w-[44%] col-12 md:pt-12">
                 {descriptions &&
                   descriptions.map((desc: string, i: number) => (
                     <p
                       key={i}
                       dangerouslySetInnerHTML={markdownify(desc)}
-                      className={`mb-6 last:mb-0 text-center md:text-left`}
+                      className="mb-6 last:mb-0 text-center md:text-left lg:text-[22px] lg:leading-[1.6]"
                       data-aos="fade-up-sm"
                       data-aos-delay={50 + i * 50}
                     />

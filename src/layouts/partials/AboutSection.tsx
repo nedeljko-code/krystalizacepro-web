@@ -63,7 +63,7 @@ const AboutSection = ({ locale }: AboutSectionProps) => {
                 />
                 <p
                   dangerouslySetInnerHTML={markdownify(about.content)}
-                  className="mb-8 text-center lg:text-left"
+                  className="mb-8 text-center lg:text-left lg:text-[22px] lg:leading-[1.5]"
                   data-aos="fade-up-sm"
                   data-aos-delay="100"
                 />

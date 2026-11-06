@@ -1,5 +1,5 @@
 ---
-title: "Prix"
+title: "KrystalizacePRO"
 
 product_details:
   type: "Admixture"
@@ -26,11 +26,11 @@ other_product: "Other product"
 
 ### Crystallization during concrete production
 
-Prix is a crystalline admixture designed to be added directly to fresh concrete. During cement hydration, its active components form insoluble crystals that permanently seal pores and capillaries throughout the concrete mass.
+KrystalizacePRO is a crystalline admixture designed to be added directly to fresh concrete. During cement hydration, its active components form insoluble crystals that permanently seal pores and capillaries throughout the concrete mass.
 
 The result is a watertight concrete structure with increased resistance to water penetration, other aggressive substances, and long-term exposure to moisture.
 
-Prix is ideal for new concrete structures where long-term watertightness is required without the use of additional membranes.
+KrystalizacePRO is ideal for new concrete structures where long-term watertightness is required without the use of additional membranes.
 
 ### Applications
 

@@ -80,7 +80,7 @@ export default async function DokumentacePage({
         <div className="mb-16 text-center">
           <h1 className="mb-4 text-h2">{title}</h1>
 
-          <p className="mx-auto max-w-[650px] text-gray-600">
+          <p className="mx-auto max-w-[650px] text-gray-600 lg:text-[22px] lg:leading-[1.5]" >
             {description}
           </p>
         </div>
@@ -90,7 +90,7 @@ export default async function DokumentacePage({
             <div className="col-12 lg:col-6">
               <Dokumentace
                 id="prix"
-                productName="Prix"
+                productName="KrystalizacePRO"
                 documents={prixDocuments}
                 downloadAllHref="/documents/prix/prix-dokumentace.zip"
                 productLabel={product_label}

@@ -25,7 +25,7 @@ const CustomerSection = ({ locale }: CustomerSectionProps) => {
           {/* BB — poseban nivo */}
           {bbLogo && (
             <div className="mb-16 lg:mb-20 text-center" data-aos="fade-up-sm">
-              <p className="mb-6 text-sm font-medium uppercase tracking-[0.18em] text-gray-500">
+              <p className="mb-6 text-sm lg:text-[18px] font-medium uppercase tracking-[0.18em] text-gray-500">
                 {customer.collaboration_label}
               </p>
 
@@ -49,7 +49,9 @@ const CustomerSection = ({ locale }: CustomerSectionProps) => {
 
             <h2 className="mb-8 text-h3 lg:text-h2">{customer.title.text}</h2>
 
-            <p className="mx-auto max-w-[700px]">{customer.description}</p>
+            <p className="mx-auto max-w-[700px] lg:text-[22px] lg:leading-[1.5]">
+              {customer.description}
+            </p>
           </div>
 
           <div className="mx-auto grid max-w-[1050px] grid-cols-2 items-center gap-8 md:grid-cols-4 lg:gap-12">

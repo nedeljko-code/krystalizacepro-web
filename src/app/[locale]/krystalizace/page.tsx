@@ -47,7 +47,7 @@ const KrystalizacePage = async ({ params }: KrystalizacePageProps) => {
             />
 
             <p
-              className="text-lg leading-relaxed"
+              className="text-lg leading-relaxed lg:text-[22px] lg:leading-[1.5]"
               data-aos="fade-up-sm"
               data-aos-delay="100"
             >
@@ -68,7 +68,7 @@ const KrystalizacePage = async ({ params }: KrystalizacePageProps) => {
               {section_text.map((text: string, i: number) => (
                 <p
                   key={i}
-                  className="leading-relaxed"
+                  className="leading-relaxed lg:text-[22px] lg:leading-[1.5]"
                   data-aos="fade-up-sm"
                   data-aos-delay={i * 50}
                 >
@@ -99,7 +99,9 @@ const KrystalizacePage = async ({ params }: KrystalizacePageProps) => {
                     {i + 1}
                   </div>
 
-                  <p className="mb-0 pt-2 leading-relaxed">{step}</p>
+                  <p className="text-lg leading-relaxed lg:text-[22px] lg:leading-[1.5]">
+                    {step}
+                  </p>
                 </div>
               ))}
             </div>
