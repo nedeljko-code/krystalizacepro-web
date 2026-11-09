@@ -46,8 +46,9 @@ const Logo = ({
           alt={title}
           priority
           style={{
-            height: `${height}px`,
+            height: "auto",
             width: `${width}px`,
+            maxWidth: "100%",
           }}
         />
       ) : logo_text ? (

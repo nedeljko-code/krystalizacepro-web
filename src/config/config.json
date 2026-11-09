@@ -5,10 +5,10 @@
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
-    "logo": "/images/logo-dark.png",
-    "footer_logo": "/images/logo-dark.png",
+    "logo": "/images/4beton-logo.svg",
+    "footer_logo": "/images/4beton-logo.svg",
     "logo_width": "142",
-    "logo_height": "40",
+    "logo_height": "70",
     "logo_text": "4 BETON"
   },
 

@@ -8,7 +8,7 @@ import DynamicIcon from "@/helpers/DynamicIcon";
 import LanguageSwitcher from "@/layouts/components/LanguageSwitcher";
 import { markdownify } from "@/lib/utils/textConverter";
 import { usePathname, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Locale = "cs" | "en" | "de" | "sk" | "mk";
 
@@ -42,6 +42,7 @@ const Header = () => {
   const isHome = /^\/(cs|en|de|sk|mk)\/?$/.test(pathname);
 
   const [isScrolled, setIsScrolled] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
 
   const hideNavigationButton =
     isHome || pathname === `/${locale}/appointment`;
@@ -81,44 +82,97 @@ const Header = () => {
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    const header = headerRef.current;
+    if (!header) return;
 
-    setIsScrolled(false);
+    let lastScroll = window.scrollY;
+    let sticky = false;
+    let hovering = false;
+    let nearTop = false;
+    let timer: ReturnType<typeof setTimeout> | undefined;
 
-    const header = document.querySelector(".header");
+    const clearTimer = () => clearTimeout(timer);
+    const reveal = () => header.classList.remove("header-auto-hidden");
+    const interacting = () =>
+      hovering || nearTop || header.contains(document.activeElement) ||
+      !!header.querySelector('#nav-toggle:checked, [aria-expanded="true"]');
 
-    let lastScroll = 0;
-
-    const onScroll = () => {
-      const currentScroll = window.scrollY;
-
-      setIsScrolled(currentScroll > 250);
-
-      if (
-        sticky_header &&
-        currentScroll > 300 &&
-        currentScroll > lastScroll &&
-        header
-      ) {
-        header.classList.add("header-reveal");
-        header.classList.remove("absolute");
-      } else if (currentScroll < 250 && header) {
-        header.classList.remove("header-reveal");
-        header.classList.add("absolute");
-      }
-
-      lastScroll = currentScroll;
+    const scheduleHide = () => {
+      clearTimer();
+      if (!sticky) return;
+      timer = setTimeout(() => {
+        if (!interacting()) header.classList.add("header-auto-hidden");
+      }, 3000);
     };
 
-    window.addEventListener("scroll", onScroll);
+    const onScroll = () => {
+      const currentScroll = Math.max(0, window.scrollY);
+      const nextSticky = !!sticky_header && currentScroll > window.innerHeight;
+      setIsScrolled(nextSticky);
+      if (nextSticky !== sticky) {
+        sticky = nextSticky;
+        header.classList.toggle("header-reveal", sticky);
+        header.classList.toggle("absolute", !sticky);
+        reveal();
+      }
+      if (!sticky || currentScroll < lastScroll || interacting()) reveal();
+      lastScroll = currentScroll;
+      scheduleHide();
+    };
+    const onPointerMove = (event: PointerEvent) => {
+      if (event.pointerType !== "mouse") return;
+      const wasNearTop = nearTop;
+      nearTop = event.clientY <= 40;
+      if (nearTop) {
+        reveal();
+        clearTimer();
+      } else if (wasNearTop) scheduleHide();
+    };
+    const onPointerEnter = (event: PointerEvent) => {
+      if (event.pointerType !== "mouse") return;
+      hovering = true;
+      reveal();
+      clearTimer();
+    };
+    const onPointerLeave = () => {
+      hovering = false;
+      scheduleHide();
+    };
+    const onInteraction = () => {
+      reveal();
+      scheduleHide();
+    };
+    const onKeyDown = (event: KeyboardEvent) => {
+      // Restore navigation before the browser chooses the next Tab target.
+      if (event.key === "Tab") onInteraction();
+    };
 
-    const frame = requestAnimationFrame(() => {
-      onScroll();
-    });
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    window.addEventListener("pointermove", onPointerMove, { passive: true });
+    document.addEventListener("keydown", onKeyDown, true);
+    header.addEventListener("pointerenter", onPointerEnter);
+    header.addEventListener("pointerleave", onPointerLeave);
+    header.addEventListener("focusin", onInteraction);
+    header.addEventListener("focusout", scheduleHide);
+    header.addEventListener("click", onInteraction);
+    header.addEventListener("change", onInteraction);
+    onScroll();
 
     return () => {
-      cancelAnimationFrame(frame);
+      clearTimer();
       window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      window.removeEventListener("pointermove", onPointerMove);
+      document.removeEventListener("keydown", onKeyDown, true);
+      header.removeEventListener("pointerenter", onPointerEnter);
+      header.removeEventListener("pointerleave", onPointerLeave);
+      header.removeEventListener("focusin", onInteraction);
+      header.removeEventListener("focusout", scheduleHide);
+      header.removeEventListener("click", onInteraction);
+      header.removeEventListener("change", onInteraction);
+      header.classList.remove("header-reveal", "header-auto-hidden");
+      header.classList.add("absolute");
     };
   }, [pathname, sticky_header]);
 
@@ -142,10 +196,11 @@ const Header = () => {
         </a>
       </div>
 
-      <header className="header z-50 absolute top-26 sm:top-12">
+      <header ref={headerRef} className="header z-50 absolute top-26 sm:top-12">
         <nav className="navbar mx-auto max-w-[1356px]! px-[30px]">
           <div
-            className="order-0 flex items-center"
+            className="order-0 flex shrink-0 items-center rounded-sm bg-white px-2 py-1"
+            style={{ scale: "0.72", transformOrigin: "center" }}
             data-aos="zoom-in"
             data-aos-delay="20"
           >
@@ -163,11 +218,11 @@ const Header = () => {
               />
             )}
 
-            <input id="nav-toggle" type="checkbox" className="hidden" />
+            <input id="nav-toggle" type="checkbox" className="peer sr-only lg:hidden" aria-label="Toggle navigation" aria-controls="nav-menu" />
 
             <label
               htmlFor="nav-toggle"
-              className="order-3 cursor-pointer flex items-center lg:hidden text-text lg:order-1 bg-primary p-2 rounded"
+              className="order-3 peer-focus-visible:outline peer-focus-visible:outline-2 cursor-pointer flex items-center lg:hidden text-text lg:order-1 bg-primary p-2 rounded"
             >
               <svg
                 id="show-button"
