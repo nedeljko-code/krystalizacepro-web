@@ -38,7 +38,7 @@ const About = async ({ params }: AboutPageProps) => {
           data-aos-delay="100"
         >
           <div className="flex flex-col items-center justify-between gap-14 lg:flex-row lg:items-start lg:gap-10">
-            <div className="lg:w-[55%] lg:self-stretch lg:pt-12">
+            <div className="max-w-full lg:w-[55%] lg:self-stretch lg:pt-12">
               <div className="lg:sticky lg:top-32">
                 <div className="relative">
                   <ImageFallback
@@ -63,7 +63,7 @@ const About = async ({ params }: AboutPageProps) => {
               </div>
             </div>
 
-            <div className="lg:w-[45%]">
+            <div className="min-w-0 max-w-full lg:w-[45%] [overflow-wrap:anywhere]">
               <p
                 className="mb-6 text-center text-base-sm font-medium uppercase text-primary lg:text-left"
                 data-aos="fade-up-sm"

@@ -81,7 +81,7 @@ const LanguageSwitcher = ({
               <img
                 src={language.flag}
                 alt=""
-                className="h-3.5 w-5 object-cover"
+                className="h-[17px] w-[17px] shrink-0 object-cover"
               />
 
               <span>{language.code}</span>

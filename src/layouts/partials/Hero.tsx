@@ -57,7 +57,7 @@ const Hero = ({ locale }: HeroProps) => {
                   <CustomButton
                     link={b.link}
                     label={b.label}
-                    className="w-fit md:hidden"
+                    className="w-fit md:hidden normal-case!"
                     variant={i % 2 === 0 ? "secondary" : "primary"}
                     icon={b?.icon}
                     data_aos="zoom-in-sm"
