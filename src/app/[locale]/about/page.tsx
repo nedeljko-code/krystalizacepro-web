@@ -38,7 +38,7 @@ const About = async ({ params }: AboutPageProps) => {
           data-aos-delay="100"
         >
           <div className="flex flex-col items-center justify-between gap-14 lg:flex-row lg:items-start lg:gap-10">
-            <div className="max-w-full lg:w-[55%] lg:self-stretch lg:pt-12">
+            <div className="max-w-full md:pb-20 lg:w-[55%] lg:self-stretch lg:pb-0 lg:pt-12">
               <div className="lg:sticky lg:top-32">
                 <div className="relative">
                   <ImageFallback

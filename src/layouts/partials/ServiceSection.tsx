@@ -31,8 +31,8 @@ const ServiceSection = ({ hero, locale }: ServiceSectionProps) => {
           className={`section ${hero && "mt-24 sm:mt-20"} ${!hero && "pt-0"}`}
         >
           <div className="container">
-            <div className="row max-md:gy-5 md:g-1 lg:g-4 justify-center md:justify-between items-center">
-              <div className="md:col-6 col-12">
+            <div className="row max-lg:gy-5 md:gx-1 lg:g-4 justify-center lg:justify-between items-center">
+              <div className="col-12 min-w-0 lg:col-6 [overflow-wrap:anywhere]">
                 {subtitle && (
                   <p
                     dangerouslySetInnerHTML={markdownify(subtitle)}
@@ -62,7 +62,7 @@ const ServiceSection = ({ hero, locale }: ServiceSectionProps) => {
                   />
                 )}
               </div>
-              <div className="col-6 md:w-[44%] col-12 md:pt-12">
+              <div className="col-12 min-w-0 lg:w-[44%] lg:pt-12 [overflow-wrap:anywhere]">
                 {descriptions &&
                   descriptions.map((desc: string, i: number) => (
                     <p

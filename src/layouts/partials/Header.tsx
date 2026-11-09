@@ -106,6 +106,11 @@ const Header = () => {
     };
 
     const onScroll = () => {
+      // This handler also runs on resize; discard mobile-only menu state on desktop.
+      if (window.matchMedia("(min-width: 64rem)").matches) {
+        const navToggle = header.querySelector<HTMLInputElement>("#nav-toggle");
+        if (navToggle) navToggle.checked = false;
+      }
       const currentScroll = Math.max(0, window.scrollY);
       const nextSticky = !!sticky_header && currentScroll > window.innerHeight;
       setIsScrolled(nextSticky);

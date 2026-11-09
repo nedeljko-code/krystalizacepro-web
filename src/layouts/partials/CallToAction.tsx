@@ -65,7 +65,7 @@ const CallToAction = ({ locale }: CallToActionProps) => {
                         <CustomButton
                           link={b.link}
                           label={b.label}
-                          className="w-fit md:hidden"
+                          className="w-fit md:hidden normal-case!"
                           variant={i % 2 === 0 ? "secondary" : "light"}
                           data_aos="fade-up-sm"
                           data_aos_delay={100 + i * 50}
@@ -76,7 +76,7 @@ const CallToAction = ({ locale }: CallToActionProps) => {
                         <CustomButton
                           link={`/${locale}/appointment`}
                           label={b.label}
-                          className="hidden w-fit md:inline-flex"
+                          className="hidden w-fit md:inline-flex normal-case!"
                           variant={i % 2 === 0 ? "secondary" : "light"}
                           data_aos="fade-up-sm"
                           data_aos_delay={100 + i * 50}
