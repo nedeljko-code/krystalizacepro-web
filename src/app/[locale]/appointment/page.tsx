@@ -226,7 +226,7 @@ const AppointmentPage = async ({ params }: AppointmentPageProps) => {
                   style={{ border: 0 }}
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Krystalizace PRO - Bavorská 856/14, Praha 5"
+                  title="4 BETON - Bavorská 856/14, Praha 5"
                 />
               </div>
             </div>

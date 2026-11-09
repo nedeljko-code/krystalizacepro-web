@@ -1,13 +1,13 @@
 ---
 title: "Контактирајте <br> **нè**"
 subtitle: "КОНТАКТ"
-meta_title: "Контакт | KrystalizacePro"
-description: "Контактирајте го KrystalizacePro за техничка консултација, понуда или избор на соодветно решение за хидроизолација на бетон."
+meta_title: "Контакт | 4 BETON"
+description: "Контактирајте го 4 BETON за техничка консултација, понуда или избор на соодветно решение за хидроизолација на бетон."
 
 contact_way:
   - name: "Компанија"
     icon: "FaBuilding"
-    value: "Krystalizace PRO s.r.o."
+    value: "4 Beton s.r.o."
   - name: "Адреса"
     icon: "FaLocationDot"
     value: "Bavorská 856/14, Stodůlky, 155 00 Praha 5, Česká republika"
@@ -16,16 +16,16 @@ contact_way:
     value: "+420 778 200 100"
   - name: "E-mail"
     icon: "FaEnvelope"
-    value: "info@krystalizacepro.cz"
+    value: "info@4beton.cz"
   - name: "Работно време"
     icon: "FaClock"
     value: "Пон–Пет: 8:00 – 16:00"
   - name: "IČO"
     icon: "FaIdCard"
-    value: "IČO: 12345678"
+    value: "IČO: 30025656"
   - name: "DIČ"
     icon: "FaFileInvoice"
-    value: "DIČ: CZ12345678"
+    value: "DIČ: CZ30025656"
 
 form:
   first_name_label: "Име"

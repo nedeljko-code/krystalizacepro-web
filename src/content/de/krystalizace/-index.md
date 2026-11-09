@@ -1,7 +1,7 @@
 ---
 title: "Über die Kristallisation"
 subtitle: "ÜBER DIE KRISTALLISATION"
-meta_title: "Über die Kristallisation | KrystalizacePro"
+meta_title: "Über die Kristallisation | 4 BETON"
 description: "Wie die Kristallisationstechnologie funktioniert und den Beton von innen schützt."
 
 intro: "Jedes unserer Produkte nutzt eine fortschrittliche Kristallisationstechnologie, die den Beton aktiv von innen schützt. Das Ergebnis ist ein zu 100 % wasserdichter, widerstandsfähigerer und langlebigerer Beton mit einer deutlich längeren Lebensdauer. Wir schützen nicht nur die Oberfläche – wir schützen den gesamten Beton."

@@ -1,13 +1,13 @@
 ---
 title: "Contact <br> **us**"
 subtitle: "CONTACT"
-meta_title: "Contact | KrystalizacePro"
-description: "Contact KrystalizacePro for technical consultation, a quotation, or help choosing the right concrete waterproofing solution."
+meta_title: "Contact | 4 BETON"
+description: "Contact 4 BETON for technical consultation, a quotation, or help choosing the right concrete waterproofing solution."
 
 contact_way:
   - name: "Company"
     icon: "FaBuilding"
-    value: "Krystalizace PRO s.r.o."
+    value: "4 Beton s.r.o."
 
   - name: "Address"
     icon: "FaLocationDot"
@@ -19,7 +19,7 @@ contact_way:
 
   - name: "E-mail"
     icon: "FaEnvelope"
-    value: "info@krystalizacepro.cz"
+    value: "info@4beton.cz"
 
   - name: "Business hours"
     icon: "FaClock"
@@ -27,11 +27,11 @@ contact_way:
 
   - name: "Company ID"
     icon: "FaIdCard"
-    value: "IČO: 12345678"
+    value: "IČO: 30025656"
 
   - name: "VAT ID"
     icon: "FaFileInvoice"
-    value: "DIČ: CZ12345678"
+    value: "DIČ: CZ30025656"
 
 form:
   first_name_label: "First name"

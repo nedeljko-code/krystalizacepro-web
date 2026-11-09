@@ -44,7 +44,7 @@ const Footer = () => {
                   src={config.site.footer_logo}
                   width={184}
                   height={53}
-                  alt="KrystalizacePro"
+                  alt="4 BETON"
                   data-aos="fade-in-sm"
                   className="mb-6"
                 />

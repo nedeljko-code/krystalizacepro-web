@@ -1,7 +1,7 @@
 ---
 title: "About crystallization"
 subtitle: "ABOUT CRYSTALLIZATION"
-meta_title: "About crystallization | KrystalizacePro"
+meta_title: "About crystallization | 4 BETON"
 description: "How crystallization technology works and how it protects concrete from within."
 
 intro: "Each of our products uses advanced crystallization technology that actively protects concrete from within. The result is 100% watertight, more resistant and more durable concrete with a significantly extended service life. We do not protect only the surface – we protect the entire concrete structure."

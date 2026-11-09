@@ -1,7 +1,7 @@
 ---
 title: "O krystalizaci"
 subtitle: "O KRYSTALIZACI"
-meta_title: "O krystalizaci | KrystalizacePro"
+meta_title: "O krystalizaci | 4 BETON"
 description: "Jak funguje technologie krystalizace a jak chrání beton zevnitř."
 
 intro: "Každý náš produkt využívá pokročilou technologii krystalizace, která aktivně chrání beton zevnitř. Výsledkem je 100% vodotěsný, odolnější a trvanlivější beton s výrazně delší životností. Nechráníme pouze povrch – chráníme celý beton."

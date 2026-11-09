@@ -1,7 +1,7 @@
 ---
 title: "O kryštalizácii"
 subtitle: "O KRYŠTALIZÁCII"
-meta_title: "O kryštalizácii | KrystalizacePro"
+meta_title: "O kryštalizácii | 4 BETON"
 description: "Ako funguje technológia kryštalizácie a ako chráni betón zvnútra."
 
 intro: "Každý náš produkt využíva pokročilú technológiu kryštalizácie, ktorá aktívne chráni betón zvnútra. Výsledkom je 100 % vodotesný, odolnejší a trvácnejší betón s výrazne dlhšou životnosťou. Nechránime iba povrch – chránime celý betón."

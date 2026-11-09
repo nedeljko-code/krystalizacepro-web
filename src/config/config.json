@@ -1,7 +1,7 @@
 {
   "site": {
-    "title": "KrystalizacePro",
-    "base_url": "https://cleaner-nextjs.vercel.app/",
+    "title": "4 BETON",
+    "base_url": "https://www.4beton.cz",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
@@ -9,7 +9,7 @@
     "footer_logo": "/images/logo-dark.png",
     "logo_width": "142",
     "logo_height": "40",
-    "logo_text": "KRYSTALIZACEPRO"
+    "logo_text": "4 BETON"
   },
 
   "settings": {
@@ -29,19 +29,19 @@
   },
 
   "copyright": {
-    "cs": "© 2026 KrystalizacePro. Všechna práva vyhrazena.",
-    "en": "© 2026 KrystalizacePro. All rights reserved.",
-    "de": "© 2026 KrystalizacePro. Alle Rechte vorbehalten.",
-    "sk": "© 2026 KrystalizacePro. Všetky práva vyhradené.",
-    "mk": "© 2026 KrystalizacePro. Сите права се задржани."
+    "cs": "© 2026 4 Beton s.r.o. Všechna práva vyhrazena.",
+    "en": "© 2026 4 Beton s.r.o. All rights reserved.",
+    "de": "© 2026 4 Beton s.r.o. Alle Rechte vorbehalten.",
+    "sk": "© 2026 4 Beton s.r.o. Všetky práva vyhradené.",
+    "mk": "© 2026 4 Beton s.r.o. Сите права се задржани."
   }
 },
 
   "notification": {
     "enable": true,
-    "message": "Need quick cleaning help?",
-    "link": "tel:+1-394-495-5993",
-    "label": "Call Us: +1 071 281 9795",
+    "message": "4 BETON",
+    "link": "tel:+420778200100",
+    "label": "+420 778 200 100",
     "icon": "FaPhone"
   },
 
@@ -63,8 +63,8 @@
   },
 
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "4 BETON",
     "meta_image": "/images/og-image.png",
-    "meta_description": "Cleaner - Nextjs Theme for Services Business"
+    "meta_description": "4 BETON – profesionální řešení pro vodotěsnost, ochranu a sanaci betonových konstrukcí."
   }
 }
