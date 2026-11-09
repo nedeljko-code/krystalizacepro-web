@@ -6,7 +6,7 @@ description: "How crystallization technology works and how it protects concrete 
 
 intro: "Each of our products uses advanced crystallization technology that actively protects concrete from within. The result is 100% watertight, more resistant and more durable concrete with a significantly extended service life. We do not protect only the surface – we protect the entire concrete structure."
 
-section_title: "Product crystallization"
+section_title: "Crystallization technology"
 
 section_text:
   - "Concrete crystallization is a modern technology for permanent waterproofing protection that uses a chemical reaction between the active components of the crystalline material, free calcium hydroxide, water and other products of cement hydration. This reaction forms insoluble crystalline structures that penetrate deep into the concrete and gradually fill its pores, capillaries and microcracks."

@@ -1,7 +1,7 @@
 ---
 hero:
-  title: "Professionelle Lösungen<br> für langlebige Bauwerke"
-  subtitle: "DAUERHAFTER SCHUTZ DES BETONS VON INNEN"
+  title: "Dauerhafter Schutz des Betons von innen"
+  subtitle: "PROFESSIONELLE LÖSUNGEN FÜR LANGLEBIGE BAUWERKE"
   referral_text: "Helfen Sie uns zu wachsen und erhalten Sie eine Prämie für jede erfolgreiche Empfehlung."
   desktop_button_label: "Kontaktieren Sie uns"
   buttons:

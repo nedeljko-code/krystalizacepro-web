@@ -1,7 +1,7 @@
 ---
 hero:
-  title: "Professional solutions<br> for lasting structures"
-  subtitle: "PERMANENT PROTECTION OF CONCRETE FROM WITHIN"
+  title: "Lasting protection of concrete from within"
+  subtitle: "PROFESSIONAL SOLUTIONS FOR LONG-LASTING STRUCTURES"
   referral_text: "Help us grow and earn a reward for every successful referral."  
   desktop_button_label: "Contact us"
   buttons:

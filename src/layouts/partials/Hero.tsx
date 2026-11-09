@@ -68,7 +68,7 @@ const Hero = ({ locale }: HeroProps) => {
                   <CustomButton
                     link={`/${locale}/appointment`}
                     label={hero.desktop_button_label}
-                    className="hidden w-fit md:inline-flex"
+                    className="hidden w-fit md:inline-flex normal-case!"
                     variant={i % 2 === 0 ? "secondary" : "primary"}
                     icon="FaArrowRightLong"
                     data_aos="zoom-in-sm"

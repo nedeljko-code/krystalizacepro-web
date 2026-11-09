@@ -6,7 +6,7 @@ description: "Wie die Kristallisationstechnologie funktioniert und den Beton von
 
 intro: "Jedes unserer Produkte nutzt eine fortschrittliche Kristallisationstechnologie, die den Beton aktiv von innen schützt. Das Ergebnis ist ein zu 100 % wasserdichter, widerstandsfähigerer und langlebigerer Beton mit einer deutlich längeren Lebensdauer. Wir schützen nicht nur die Oberfläche – wir schützen den gesamten Beton."
 
-section_title: "Kristallisation des Produkts"
+section_title: "Kristallisationstechnologie"
 
 section_text:
   - "Die Kristallisation von Beton ist eine moderne Technologie für dauerhaften Abdichtungsschutz. Sie basiert auf einer chemischen Reaktion zwischen den aktiven Bestandteilen des kristallinen Materials, freiem Calciumhydroxid, Wasser und weiteren Produkten der Zementhydratation. Durch diese Reaktion entstehen unlösliche kristalline Strukturen, die tief in den Beton eindringen und nach und nach Poren, Kapillaren und Mikrorisse ausfüllen."

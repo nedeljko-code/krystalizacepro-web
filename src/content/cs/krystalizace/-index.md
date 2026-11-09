@@ -6,7 +6,7 @@ description: "Jak funguje technologie krystalizace a jak chrání beton zevnitř
 
 intro: "Každý náš produkt využívá pokročilou technologii krystalizace, která aktivně chrání beton zevnitř. Výsledkem je 100% vodotěsný, odolnější a trvanlivější beton s výrazně delší životností. Nechráníme pouze povrch – chráníme celý beton."
 
-section_title: "Krystalizace produktu"
+section_title: "Krystalizační technologie"
 
 section_text:
   - "Krystalizace betonu představuje moderní technologii trvalé hydroizolační ochrany, která využívá chemickou reakci mezi aktivními složkami krystalizačního materiálu, volným hydroxidem vápenatým, vodou a dalšími produkty hydratace cementu. Výsledkem této reakce je vznik nerozpustných krystalických struktur, které pronikají hluboko do betonu a postupně vyplňují jeho póry, kapiláry a mikrotrhliny."

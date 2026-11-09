@@ -1,7 +1,7 @@
 ---
 hero:
-  title: "Profesionální řešení<br> pro trvalé stavby"
-  subtitle: "STÁLÁ OCHRANA BETONU ZEVNITŘ"
+  title: "Stálá ochrana betonu zevnitř"
+  subtitle: "PROFESIONÁLNÍ ŘEŠENÍ PRO TRVALÉ STAVBY"
   referral_text: "Pomozte nám růst a získejte odměnu za každé úspěšné doporučení."
   desktop_button_label: "Kontaktujte nás"
   buttons:

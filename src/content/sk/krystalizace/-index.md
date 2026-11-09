@@ -6,7 +6,7 @@ description: "Ako funguje technológia kryštalizácie a ako chráni betón zvn�
 
 intro: "Každý náš produkt využíva pokročilú technológiu kryštalizácie, ktorá aktívne chráni betón zvnútra. Výsledkom je 100 % vodotesný, odolnejší a trvácnejší betón s výrazne dlhšou životnosťou. Nechránime iba povrch – chránime celý betón."
 
-section_title: "Kryštalizácia produktu"
+section_title: "Kryštalizačná technológia"
 
 section_text:
   - "Kryštalizácia betónu predstavuje modernú technológiu trvalej hydroizolačnej ochrany, ktorá využíva chemickú reakciu medzi aktívnymi zložkami kryštalizačného materiálu, voľným hydroxidom vápenatým, vodou a ďalšími produktmi hydratácie cementu. Výsledkom tejto reakcie je vznik nerozpustných kryštalických štruktúr, ktoré prenikajú hlboko do betónu a postupne vypĺňajú jeho póry, kapiláry a mikrotrhliny."
