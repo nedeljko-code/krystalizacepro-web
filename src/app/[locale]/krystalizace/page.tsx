@@ -8,6 +8,14 @@ type KrystalizacePageProps = {
   params: Promise<{ locale: string }>;
 };
 
+const aiDisclosureLabels: Record<string, string> = {
+  cs: "AI ilustrace",
+  en: "AI illustration",
+  de: "KI-Illustration",
+  sk: "AI ilustrácia",
+  mk: "Илустрација создадена со ВИ",
+};
+
 const KrystalizacePage = async ({ params }: KrystalizacePageProps) => {
   const { locale } = await params;
 
@@ -107,7 +115,7 @@ const KrystalizacePage = async ({ params }: KrystalizacePageProps) => {
             </div>
           </div>
 
-          <div className="mt-12" data-aos="fade-up-sm" data-aos-delay="100">
+          <div className="relative mt-12" data-aos="fade-up-sm" data-aos-delay="100">
             <Image
               src="/images/krystalizace/princip-krystalizace.jpg"
               alt={process_image_alt}
@@ -115,6 +123,9 @@ const KrystalizacePage = async ({ params }: KrystalizacePageProps) => {
               height={582}
               className="h-auto w-full"
             />
+            <span className="absolute bottom-3 right-3 z-10 max-w-[calc(100%-1.5rem)] rounded-sm bg-black/65 px-2 py-1 text-right text-[12px] leading-snug text-white">
+              {aiDisclosureLabels[locale] || aiDisclosureLabels.cs}
+            </span>
           </div>
         </div>
       </section>

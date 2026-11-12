@@ -14,6 +14,14 @@ type ResponsibilityNewProps = {
   locale: string;
 };
 
+const aiDisclosureLabels: Record<string, string> = {
+  cs: "AI ilustrace",
+  en: "AI illustration",
+  de: "KI-Illustration",
+  sk: "AI ilustrácia",
+  mk: "Илустрација создадена со ВИ",
+};
+
 const ResponsibilityNew = ({ locale }: ResponsibilityNewProps) => {
   const { responsibility } = getListPage(
     "homepage/-index.md",
@@ -79,6 +87,11 @@ const ResponsibilityNew = ({ locale }: ResponsibilityNewProps) => {
               className="absolute inset-0 h-full w-full object-cover"
               loading="lazy"
             />
+            {responsibility.image === "/images/home/radnik.png" && (
+              <span className="absolute bottom-3 right-3 z-10 max-w-[calc(100%-1.5rem)] rounded-sm bg-black/65 px-2 py-1 text-right text-[12px] leading-snug text-white">
+                {aiDisclosureLabels[locale] || aiDisclosureLabels.cs}
+              </span>
+            )}
           </div>
 
           {/* NARANDŽASTI BLOK */}
