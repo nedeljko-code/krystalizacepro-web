@@ -79,7 +79,7 @@ const Hero = ({ locale }: HeroProps) => {
           )}
         </div>
       </div>
-      <ReferralText text={hero.referral_text} />
+      <ReferralText text={hero.referral_text} locale={locale} />
 
       <div
         className="absolute inset-0 w-[78%] h-full z-10 bg-gradient-to-r from-black/50 via-black/30 to-transparent"

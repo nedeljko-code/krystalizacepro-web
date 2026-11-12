@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
-import ImageFallback from "@/helpers/ImageFallback";
+import Logo from "@/components/Logo";
 import { markdownify } from "@/lib/utils/textConverter";
 
 type Locale = "cs" | "en" | "de" | "sk" | "mk";
@@ -16,7 +16,15 @@ const locales: Locale[] = ["cs", "en", "de", "sk", "mk"];
 
 const Footer = () => {
   const { copyright, footer_description } = config.params;
-  const { footer } = menu;
+  const referralLink = menu.main.find((item) => item.url === "/doporucte-nas");
+  const footer = menu.footer.map((group) => ({
+    ...group,
+    children: group.children.flatMap((child) =>
+      child.url === "/dokumentace" && referralLink
+        ? [child, referralLink]
+        : [child],
+    ),
+  }));
 
   const pathname = usePathname();
 
@@ -40,14 +48,14 @@ const Footer = () => {
               data-aos="fade-up-sm"
             >
               <div>
-                <ImageFallback
-                  src={config.site.footer_logo}
-                  width={184}
-                  height={91}
-                  alt="4 BETON"
-                  data-aos="fade-in-sm"
-                  className="mb-6 h-auto max-w-full"
-                />
+                <div className="mb-6 h-[91px]">
+                  <div
+                    className="flex w-fit shrink-0 items-center rounded-sm bg-white px-2 py-1"
+                    style={{ scale: "0.72", transformOrigin: "top left" }}
+                  >
+                    <Logo src={config.site.footer_logo} locale={locale} />
+                  </div>
+                </div>
 
                 <p
                   className="max-w-[390px] text-base-sm leading-relaxed text-text-light/60"

@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 
 interface ReferralTextProps {
   text: string;
+  locale: string;
 }
 
-const ReferralText = ({ text }: ReferralTextProps) => {
+const ReferralText = ({ text, locale }: ReferralTextProps) => {
   return (
     <motion.p
       initial={{ x: "100vw", opacity: 0 }}
@@ -25,7 +26,9 @@ const ReferralText = ({ text }: ReferralTextProps) => {
         leading-snug
       "
     >
-      {text}
+      <a href={`/${locale}/doporucte-nas`} className="rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+        {text}
+      </a>
     </motion.p>
   );
 };

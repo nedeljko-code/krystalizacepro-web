@@ -26,6 +26,19 @@
   }
 }
 
+/* Leave room for all six localized items without changing the menu breakpoint. */
+@media (min-width: 64rem) {
+  .navbar-nav {
+    gap: clamp(0px, 1vw - 10px, 12px);
+  }
+
+  .navbar-nav .nav-link {
+    font-size: clamp(14px, 1.25vw, 18px);
+    padding-inline: 6px;
+    overflow-wrap: anywhere;
+  }
+}
+
 .nav-dropdown {
   @apply mr-0;
 }
