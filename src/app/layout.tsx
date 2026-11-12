@@ -32,7 +32,10 @@ export default function RootLayout({
         />
 
         {/* favicon */}
-        <link rel="shortcut icon" href={config.site.favicon} />
+        <link rel="icon" href={config.site.favicon} type="image/svg+xml" sizes="any" />
+        <link rel="icon" href="/images/favicon-16x16.png" type="image/png" sizes="16x16" />
+        <link rel="icon" href="/images/favicon.png" type="image/png" sizes="32x32" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         {/* theme meta */}
         <meta name="theme-name" content="krystalizacepro" />
         <meta name="msapplication-TileColor" content="#000000" />
